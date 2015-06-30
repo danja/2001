@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<rdf:RDF xmlns:rdf = 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'  
+xmlns:rdfs = 'http://www.w3.org/2000/01/rdf-schema#'
+xmlns:dc= 'http://purl.org/dc/elements/1.0/' 
+xmlns:rdbe = 'http://www.isacat.net/ns/rdbe#'
+xmlns = 'http://goldilocks/visitors/'
+>
+
+<rdbe:Database rdf:about="mydatabase" >
+	<rdbe:name>Bear Diet</rdbe:name>
+	<rdbe:baseUri>http://goldilocks/visitors/</rdbe:baseUri>
+	<rdbe:xsdUrl>http://goldilocks/diet/diet.xsd</rdbe:xsdUrl>
+	<rdbe:queryUrl>http://goldilocks/diet/query</rdbe:queryUrl>
+<rdbe:description>A database of bear's preferred eating</rdbe:description> 
+
+<rdbe:hasConnection rdf:resource="#myconnection"/>
+	<rdfs:seeAlso rdf:resource="http://dmoz.org/Science/Biology/Zoology/"/>
+</rdbe:Database >
+
+ <rdbe:Connection rdf:about="myconnection">
+      <rdbe:name>My connection</rdbe:name>
+	<rdbe:driver>com.inet.tds.TdsDriver</rdbe:driver>
+	<rdbe:dbcType>JDBC</rdbe:dbcType>
+	<rdbe:connUrl>jdbc:inetdae:localhost:1433</rdbe:connUrl>
+	<rdbe:login>wrox</rdbe:login>
+	<rdbe:password>xorw</rdbe:password>
+</rdbe:Connection>
+
+</rdf:RDF>

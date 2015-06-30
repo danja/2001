@@ -1,0 +1,102 @@
+<?xml version="1.0" standalone="yes" ?>
+<un:pbmstore>
+  <un:pbmitem>
+    <un:ruleid>nspIMGwEquivalentALT</un:ruleid>
+    <un:fileurl>file:///C|/isacat_web/index.htm</un:fileurl>
+    <un:offset1>1127</un:offset1>
+    <un:offset2>1218</un:offset2>
+    <un:linenum>21</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message></un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGwEquivalentALT</un:ruleid>
+    <un:fileurl>file:///C|/isacat_web/index.htm</un:fileurl>
+    <un:offset1>5714</un:offset1>
+    <un:offset2>6108</un:offset2>
+    <un:linenum>114</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message></un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGneedsLongdesc</un:ruleid>
+    <un:fileurl>file:///C|/isacat_web/index.htm</un:fileurl>
+    <un:offset1>1127</un:offset1>
+    <un:offset2>1218</un:offset2>
+    <un:linenum>21</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>Non spacer image may need a LONGDESC attribute.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGneedsLongdesc</un:ruleid>
+    <un:fileurl>file:///C|/isacat_web/index.htm</un:fileurl>
+    <un:offset1>5714</un:offset1>
+    <un:offset2>6108</un:offset2>
+    <un:linenum>114</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>Non spacer image may need a LONGDESC attribute.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>DontRelyOnColorAlone</un:ruleid>
+    <un:fileurl>file:///C|/isacat_web/index.htm</un:fileurl>
+    <un:offset1>1127</un:offset1>
+    <un:offset2>1218</un:offset2>
+    <un:linenum>21</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message></un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>ColorsAreVisible</un:ruleid>
+    <un:fileurl>file:///C|/isacat_web/index.htm</un:fileurl>
+    <un:offset1>1127</un:offset1>
+    <un:offset2>1218</un:offset2>
+    <un:linenum>21</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message></un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>StyleSheetsNotNecessary</un:ruleid>
+    <un:fileurl>file:///C|/isacat_web/index.htm</un:fileurl>
+    <un:offset1>419</un:offset1>
+    <un:offset2>463</un:offset2>
+    <un:linenum>8</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The page uses style sheets to present its content. There might bebrowsers unable to understand style sheets or provided style sheetsmay conflict with user-specified style information.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>TableWithHeaders</un:ruleid>
+    <un:fileurl>file:///C|/isacat_web/index.htm</un:fileurl>
+    <un:offset1>1234</un:offset1>
+    <un:offset2>5714</un:offset2>
+    <un:linenum>21</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The page contains a table that might be used to present data. If this is the case, then the table has to have headers for rows and columns (i.e. TH elements).</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>SkipRepetitiveLinks</un:ruleid>
+    <un:fileurl>file:///C|/isacat_web/index.htm</un:fileurl>
+    <un:offset1>759</un:offset1>
+    <un:offset2>6108</un:offset2>
+    <un:linenum>12</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>Check if a textual link is present for skipping navigational links that are repeated in all the pages.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>ClearLANGUAGEforSiteContent</un:ruleid>
+    <un:fileurl>file:///C|/isacat_web/index.htm</un:fileurl>
+    <un:offset1>759</un:offset1>
+    <un:offset2>6108</un:offset2>
+    <un:linenum>12</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message></un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>ClarifyNaturalLANGUAGEusage</un:ruleid>
+    <un:fileurl>file:///C|/isacat_web/index.htm</un:fileurl>
+    <un:offset1>759</un:offset1>
+    <un:offset2>6108</un:offset2>
+    <un:linenum>12</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message></un:message>
+  </un:pbmitem>
+</un:pbmstore>

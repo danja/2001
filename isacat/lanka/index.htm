@@ -1,0 +1,205 @@
+<html>
+<head>
+<title>Sri Lanka </title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="keywords" content="Sri Lanka Ambalangoda postcards travel vacation holiday Randombe tidza buxton Danny Ayers brit">
+<meta name="description" content="Some personal views of Sri Lanka from a Englishman in Ambalangoda...">
+<style type="text/css">
+
+.ant {
+  height: 13px;
+  position: absolute;
+  visibility: hidden;
+  width: 13px;
+}
+
+</style>
+<script language="JavaScript" src="dhtmllib.js"></script>
+<script language="JavaScript">
+
+// These variables will hold the current mouse pointer position.
+
+var mouseX = 0;
+var mouseY = 0;
+
+// Set up event capturing.
+
+if (isMinNS4)
+  document.captureEvents(Event.MOUSEMOVE);
+document.onmousemove = getMousePosition;
+
+function getMousePosition(e) {
+
+  // Save cursor position using browser-specific code.
+
+  if (isMinNS4) {
+    mouseX = e.pageX;
+    mouseY = e.pageY;
+  }
+  if (isMinIE4) {
+    mouseX = event.clientX + document.body.scrollLeft;
+    mouseY = event.clientY + document.body.scrollTop;
+  }
+  return true;
+}
+
+var ants = new Array();
+
+function initAnts() {
+
+  var i, layer;
+
+  // Get handles to all the ant layers.
+
+  i = 0;
+  while ((layer = getLayer("ant" + (i + 1))) != null) {
+    ants[i] = layer;
+    if (isMinNS4)
+      ants[i].image = ants[i].document.images["antImg" + (i + 1)];
+    if (isMinIE4)
+      ants[i].image = document.images["antImg" + (i + 1)];
+    setAnt(i);
+    showLayer(ants[i]);
+    i++;
+  }
+  updateAnts();
+}
+
+function setAnt(n) {
+
+  var s, x, y;
+
+  // Randomly place an ant on the window.
+
+  x = Math.floor(Math.random() * getWindowWidth());
+  y = Math.floor(Math.random() * getWindowHeight());
+  s = Math.floor(Math.random() * 4);
+  if (s == 0)
+    x = -getWidth(ants[n]);
+  if (s == 1)
+    x = getWindowWidth();
+  if (s == 2)
+    y = -getHeight(ants[n]);
+  if (s == 3)
+    y = getWindowHeight();
+  x += getPageScrollX();
+  y += getPageScrollY();
+  moveLayerTo(ants[n], x, y);
+}
+
+function updateAnts() {
+
+  var i, dx, dy, theta, d;
+
+  // Move each ant toward the mouse pointer, if she hits it, drop her back onto
+  // the page randomly.
+
+  d = 3;
+  for (i = 0; i < ants.length; i++) {
+
+    // Find the angle between the ant and the pointer.
+
+    dx = mouseX - getLeft(ants[i]);
+    dy = mouseY - getTop(ants[i]);
+    theta = Math.round(Math.atan2(-dy, dx) * 180 / Math.PI);
+    if (theta < 0)
+      theta += 360;
+
+    // Hit the pointer?
+
+    if (Math.abs(dx) < d && Math.abs(dy) < d)
+      setAnt(i);
+
+    // If not, move the ant and set the image based on angle.
+
+    else if (theta > 23 && theta <= 68) {
+        moveLayerBy(ants[i], d, -d);
+        ants[i].image.src = "graphics/ant-ne.gif";
+    }
+    else if (theta > 68 && theta <= 113) {
+        moveLayerBy(ants[i], 0, -d);
+        ants[i].image.src = "graphics/ant-n.gif";
+    }
+    else if (theta > 113 && theta <= 158) {
+        moveLayerBy(ants[i], -d, -d);
+        ants[i].image.src = "graphics/ant-nw.gif";
+    }
+    else if (theta > 158 && theta <= 203) {
+        moveLayerBy(ants[i], -d, 0);
+        ants[i].image.src = "graphics/ant-w.gif";
+    }
+    else if (theta > 203 && theta <= 248) {
+        moveLayerBy(ants[i], -d, d);
+        ants[i].image.src = "graphics/ant-sw.gif";
+    }
+    else if (theta > 248 && theta <= 293) {
+        moveLayerBy(ants[i], 0, d);
+        ants[i].image.src = "graphics/ant-s.gif";
+    }
+    else if (theta > 293 && theta <= 338) {
+        moveLayerBy(ants[i], d, d);
+        ants[i].image.src = "graphics/ant-se.gif";
+    }
+    else {
+        moveLayerBy(ants[i], d, 0);
+        ants[i].image.src = "graphics/ant-e.gif";
+    }
+  }
+
+  // Set up next call.
+
+  setTimeout('updateAnts()', 50);
+  return;
+}
+
+</script>
+
+</head>
+
+<body bgcolor="#FFFFCC" text="#663333" link="#cccccc" onLoad="initAnts();">
+
+
+<!-- ants -->
+<div id="ant1" class="ant"><img name="antImg1" width=13 height=13 src="graphics/ant-ne.gif"></div>
+<div id="ant2" class="ant"><img name="antImg2" width=13 height=13 src="graphics/ant-n.gif"></div>
+<div id="ant3" class="ant"><img name="antImg3" width=13 height=13 src="graphics/ant-nw.gif"></div>
+<div id="ant4" class="ant"><img name="antImg4" width=13 height=13 src="graphics/ant-w.gif"></div>
+<div id="ant5" class="ant"><img name="antImg5" width=13 height=13 src="graphics/ant-sw.gif"></div>
+<div id="ant6" class="ant"><img name="antImg6" width=13 height=13 src="graphics/ant-s.gif"></div>
+<div id="ant7" class="ant"><img name="antImg7" width=13 height=13 src="graphics/ant-se.gif"></div>
+<div id="ant8" class="ant"><img name="antImg8" width=13 height=13 src="graphics/ant-e.gif"></div>
+
+<h2 align="center"><font face="Arial, Helvetica, sans-serif">Sri Lanka Stuff</font></h2>
+<p align="center">news from Randombe, Ambalangoda</p>
+<p align="center">Under construction, using wattle &amp; daub.</p>
+<table width="30%" border="0" cellspacing="10" cellpadding="10" height="314" align="center">
+  <tr> 
+    <td>
+      <p><font face="Arial, Helvetica, sans-serif"><a href="pp0.htm">Poya Postcard 
+        #0</a> </font></p>
+      <p><font face="Arial, Helvetica, sans-serif"><a href="pp1.htm">Poya Postcard 
+        #1</a></font></p>
+      <p><font face="Arial, Helvetica, sans-serif"><a href="pp2.htm">Poya Postcard 
+        #2</a></font></p>
+      <p><font face="Arial, Helvetica, sans-serif">(PP3 is long overdue, but I've 
+        not had time yet)</font></p>
+      <p><font face="Arial, Helvetica, sans-serif">(and PP4)</font></p>
+    </td>
+    <td><img src="images/moon.gif" width="150" height="120"></td>
+  </tr>
+  <tr> 
+    <td><a href="../caroline/randomba/index.htm">Randomba Inn</a></td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<p align="center">Good source of news is the <a href="http://www.lankapage.com">Lanka 
+  Page</a> - clippings from newspapers.</p>
+<p align="center">&nbsp;</p>
+<p align="center"><a href="http://www.isacat.co.uk">home</a></p>
+<p align="center"><a href="mailto:danny@panlanka.net">mail me</a></p>
+<p align="center"><a href="misc/dannyayers.htm">danny ayers</a> gratuitous page</p>
+<p align="center">&nbsp;</p>
+<p>&nbsp;</p>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<project name="IOU" default="deploy" basedir="."> 
+ 
+	<!-- global properties -->
+
+	<property name="sourceDir" value="src" /> 
+      <property name="buildDir" value="build" /> 
+      <property name="distDir" value="dist" /> 
+      <property name="docsDir" value="doc" /> 
+      <property name="backupDir" value="backup" /> 
+      <property name="build.compiler" value="modern" /> 
+
+	<property name="testSourceDir" value="src/tests" /> 
+      <property name="testBuildDir" value="build/tests" /> 
+
+    <property name="app.name"   value="IOU" />
+    <property name="build.dir"  value="build" />
+
+   <target name="clean" > 
+
+		<delete>
+			<fileset dir="${buildDir}" includes="**/*.class"/>
+		</delete> 
+<!--
+		<delete>
+			<fileset dir="${sourceDir}" excludes="**/*.java"/>
+		</delete> 
+--> 
+
+   </target> 
+
+	<target name="backup" depends="clean">
+		<tstamp/>
+		<copy	todir="${backupDir}/${TSTAMP}" >
+			<fileset dir="${sourceDir}"/>
+		</copy>
+	</target>
+
+   <target name="prepare" depends="backup"> 
+
+      <mkdir dir="${buildDir}" /> 
+   </target> 
+
+   <target name="compile" depends="prepare"> 
+     <javac srcdir="${sourceDir}" destdir="${buildDir}"  /> 
+<!-- classpath="%classpath%;.;tools.jar"  -->
+   </target> 
+
+  <target name="dist" depends="compile">
+    <!-- Create the ${distDir}/lib directory -->
+    <mkdir dir="${distDir}/lib" />
+    <!-- Put everything in ${buildDir} into the IOU-${DSTAMP}.jar file -->
+    <jar jarfile="${distDir}/lib/IOU.jar" basedir="${buildDir}" />
+<echo message="End dist" />
+
+  </target>
+
+	<target name="deploy" depends="dist">
+<echo message="End deploy" />
+	</target>
+
+</project> 

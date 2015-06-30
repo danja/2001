@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE foo SYSTEM "foo.dtd" [
+<!ENTITY bar "This is entity STUFF and some more
+STUFF.">
+]>
+<foo>
+<lit text="hello">
+<![CDATA[This is literal STUFF and some more STUFF.]]>
+</lit>
+<lit>
+&bar;
+</lit>
+</foo>

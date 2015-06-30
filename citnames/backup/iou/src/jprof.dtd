@@ -1,0 +1,158 @@
+<!-- XML JPROF DTD
+	DTD for the jProf JVMPI Profiling Agent
+	AUTHOR: G.Pennington (Gary.Pennington@uk.sun.com)
+	VERSION: 1.1 (8/6/99) -->
+<!-- Entity Definitions -->
+<!ENTITY % local.base.att  "">
+
+<!ENTITY % local.field.att "">
+
+<!ENTITY % base.att		"created	NMTOKEN #REQUIRED
+						ended		NMTOKEN #REQUIRED
+						environment	NMTOKEN #REQUIRED
+						%local.base.att;">
+
+<!ENTITY % field.att	"name		CDATA	#REQUIRED
+						signature	CDATA	#REQUIRED
+						%local.field.att;">
+
+
+<!-- Profile Model Group -->
+
+<!ELEMENT jProf (header, thread+, class+, gc*, method_use*, trailer)>
+
+<!-- Header Definition -->
+<!ELEMENT header EMPTY>
+
+<!-- Trailer Definition -->
+<!ELEMENT trailer EMPTY>
+
+<!-- Thread Definition -->
+<!ELEMENT thread (wait_list)>
+
+<!-- Class Definition -->
+<!ELEMENT class (method*, static_field*, instance_field*, call_trace*)>
+
+<!-- GC Definition -->
+<!ELEMENT gc (instance*)>
+
+<!-- Instance Definition -->
+<!ELEMENT instance (allocation_site+)>
+
+<!-- allocation_site Definition -->
+<!ELEMENT allocation_site (allocation_trace+)>
+
+<!-- allocation_frame Definition -->
+<!ELEMENT allocation_frame EMPTY>
+
+<!-- wait_list definition -->
+<!ELEMENT wait_list (monitor_wait*)>
+
+<!-- Monitor Wait Definition -->
+<!ELEMENT monitor_wait EMPTY>
+
+<!-- Method Use Definition -->
+<!ELEMENT method_use (method_call*)>
+
+<!-- Method Call Definition -->
+<!ELEMENT method_call (method_invoker*)>
+
+<!-- method invoker definition -->
+<!ELEMENT method_invoker EMPTY>
+
+<!-- method definition -->
+<!ELEMENT method EMPTY>
+
+<!-- static_field definition -->
+<!ELEMENT static_field EMPTY>
+
+<!-- instance_field definition -->
+<!ELEMENT instance_field EMPTY>
+
+<!-- call_trace definition -->
+<!ELEMENT call_trace (call_frame*)>
+
+<!-- call_frame definition -->
+<!ELEMENT call_frame EMPTY>
+
+<!-- Attribute Definitions -->
+
+<!ATTLIST header	agentVersion			NMTOKEN #REQUIRED
+					jvmVersion				NMTOKEN #REQUIRED
+					start					NMTOKEN #REQUIRED>
+
+<!ATTLIST trailer	end						NMTOKEN #REQUIRED
+					duration				NMTOKEN	#REQUIRED>
+
+<!ATTLIST thread	%base.att;
+					cpu_time				NMTOKEN #REQUIRED
+					group_name				CDATA	#REQUIRED
+					parent_name				CDATA	#REQUIRED
+					thread_name				CDATA	#REQUIRED
+					id						NMTOKEN #REQUIRED
+					monitor_wait_count		NMTOKEN #REQUIRED
+					method_call_count		NMTOKEN #REQUIRED
+					env						NMTOKEN #REQUIRED>
+
+<!ATTLIST class		%base.att;
+					id						NMTOKEN	#REQUIRED
+					name					CDATA	#REQUIRED
+					source_name				CDATA	#REQUIRED
+					interface_count			NMTOKEN	#REQUIRED
+					method_count			NMTOKEN	#REQUIRED
+					static_field_count		NMTOKEN	#REQUIRED
+					instance_field_count	NMTOKEN	#REQUIRED>
+
+<!ATTLIST instance	%base.att;
+					instance_count		NMTOKEN #REQUIRED
+					instance_high 		NMTOKEN #REQUIRED
+					memory_count  		NMTOKEN #REQUIRED
+					memory_high   		NMTOKEN #REQUIRED
+					total_allocations	NMTOKEN #REQUIRED
+					total_memory  		NMTOKEN #REQUIRED
+					class_name				CDATA	#REQUIRED
+					object_type				CDATA	#REQUIRED
+					site_count    		NMTOKEN #REQUIRED>
+
+<!ATTLIST gc		%base.att;
+					used_objects			NMTOKEN	#REQUIRED
+					used_object_space		NMTOKEN	#REQUIRED
+					total_object_space		NMTOKEN	#REQUIRED
+					objects_released		NMTOKEN	#REQUIRED
+>
+
+<!ATTLIST method %field.att;
+					method_id				NMTOKEN #REQUIRED>
+
+<!ATTLIST static_field	%field.att;>
+
+<!ATTLIST instance_field	%field.att;>
+
+<!ATTLIST call_frame	method			NMTOKEN	#REQUIRED
+					line_num				NMTOKEN	#REQUIRED>
+
+<!ATTLIST wait_list	name  NMTOKEN	#REQUIRED>
+
+<!ATTLIST monitor_wait	%base.att;
+					duration				NMTOKEN	#REQUIRED
+					target  				NMTOKEN #REQUIRED>
+
+<!ATTLIST method_call	rank        NMTOKEN #REQUIRED
+          self                    NMTOKEN #REQUIRED
+          total                    NMTOKEN #REQUIRED
+          count                    NMTOKEN #REQUIRED
+          CPUTime                    NMTOKEN #REQUIRED
+          MinCPUTime                    NMTOKEN #REQUIRED
+          MaxCPUTime                    NMTOKEN #REQUIRED
+          AvgCPUTime                    NMTOKEN #REQUIRED
+          ElapsedTime                    NMTOKEN #REQUIRED
+          name                    CDATA #REQUIRED
+          signature                    CDATA #REQUIRED>
+
+<!ATTLIST allocation_site	count				NMTOKEN #REQUIRED>
+
+<!ATTLIST allocation_frame	method	CDATA #REQUIRED
+					line_num				NMTOKEN	#REQUIRED>
+
+<!ATTLIST method_invoker  name    CDATA #REQUIRED
+                        	count				NMTOKEN #REQUIRED>

@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE domain SYSTEM "kex.dtd">
+    <domain name="Test Data">
+    
+    <!--  *** facts ***  -->
+        <fact goal="true">Stone</fact>
+        <fact goal="true">Helicopter</fact>
+        <fact goal="true">Bird</fact>
+        <fact goal="true">Mouse</fact>
+        <fact question="true">Is it alive</fact>
+        <fact question="true">Can it fly</fact>
+        <fact>alive</fact>
+
+    <!--  *** rules ***  --> 
+
+        <rule>
+            <fact>Helicopter</fact>
+ 
+            <condition negated="true">alive</condition>
+           <condition>Can it fly</condition>
+        </rule>    
+
+        <rule>
+            <fact>Stone</fact>
+	<condition negated="true">alive</condition>
+            <condition negated="true">Can it fly</condition>
+        </rule>
+
+        <rule>
+            <fact>Mouse</fact>
+            <condition negated="true">Can it fly</condition>
+            <condition>alive</condition>
+        </rule>
+
+        <rule>
+            <fact>alive</fact>
+            <condition>Is it alive</condition>
+        </rule>
+
+    </domain>

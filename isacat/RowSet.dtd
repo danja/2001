@@ -1,0 +1,72 @@
+<!ELEMENT RowSet (properties, metadata, data)>
+
+<!ELEMENT properties (command,concurrency,datasource,
+escape-processing,fetch-direction,fetch-size,isolation-level,key-columns,
+map,max-field-size,max-rows,query-timeout,read-only,rowset-type,
+show-deleted,table-name,url)>
+
+<!ELEMENT null ANY>
+
+<!ELEMENT command (#PCDATA)>
+<!ELEMENT concurrency (#PCDATA)>
+<!ELEMENT datasource (#PCDATA)>
+<!ELEMENT escape-processing (#PCDATA)>
+<!ELEMENT fetch-direction (#PCDATA)>
+<!ELEMENT fetch-size (#PCDATA)>
+<!ELEMENT isolation-level (#PCDATA)>
+
+<!ELEMENT key-columns (column)*>
+<!ELEMENT column (#PCDATA)>
+
+<!ELEMENT map (type, class)*>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT class (#PCDATA)>
+
+<!ELEMENT max-field-size (#PCDATA)>
+<!ELEMENT max-rows (#PCDATA)>
+<!ELEMENT query-timeout (#PCDATA)>
+<!ELEMENT read-only (#PCDATA)>
+<!ELEMENT rowset-type (#PCDATA)>
+<!ELEMENT show-deleted (#PCDATA)>
+<!ELEMENT table-name ANY>
+<!ELEMENT url ANY>
+
+<!ELEMENT metadata (column-count, (column-definition*))>
+
+<!ELEMENT column-definition
+(column-index, auto-increment,case-sensitive,currency,nullable,
+signed,searchable,column-display-size,column-label,column-name,
+schema-name,column-precision,column-scale,table-name,catalog-name,
+column-type,column-type-name)>
+
+<!ELEMENT column-count (#PCDATA)>
+
+<!ELEMENT column-index (#PCDATA)>
+<!ELEMENT auto-increment (#PCDATA)>
+<!ELEMENT case-sensitive (#PCDATA)>
+<!ELEMENT currency (#PCDATA)>
+<!ELEMENT nullable (#PCDATA)>
+<!ELEMENT signed (#PCDATA)>
+<!ELEMENT searchable (#PCDATA)>
+<!ELEMENT column-display-size (#PCDATA)>
+<!ELEMENT column-label (#PCDATA)>
+<!ELEMENT column-name (#PCDATA)>
+<!ELEMENT schema-name (#PCDATA)>
+<!ELEMENT column-precision (#PCDATA)>
+<!ELEMENT column-scale (#PCDATA)>
+<!ELEMENT catalog-name (#PCDATA)>
+<!ELEMENT column-type (#PCDATA)>
+<!ELEMENT column-type-name (#PCDATA)>
+
+<!ELEMENT data (row*,ins*,del*,insdel*)*>
+<!ELEMENT row (col|upd)*>
+<!ELEMENT ins (col|upd)*>
+<!ELEMENT del (col|upd)*>
+<!ELEMENT insdel ((col|upd)*)>
+
+<!ELEMENT col (#PCDATA)>
+<!ELEMENT upd (#PCDATA)>
+
+
+
+

@@ -1,0 +1,5 @@
+<attributes version="1.0">
+   <fileobject name="HTMLParserCallback.java">
+      <attr name="class_dependency_javax.swing.text.html.HTMLEditorKit.ParserCallback" stringvalue="HTMLParserCallback"/>
+   </fileobject>
+</attributes>

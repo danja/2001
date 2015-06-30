@@ -1,0 +1,42 @@
+USE MYSQL;
+CREATE DATABASE IF NOT EXISTS isacat
+
+GRANT ALL PRIVILEGES ON isacat.* TO danny@localhost IDENTIFIED BY "nemesis" WITH GRANT OPTION;
+
+   
+USE isacat;
+DROP table semcat0;
+CREATE TABLE semcat (id int(8), url text, title text, description text, condensed text);
+
+GRANT SELECT ON isacat.semcat0 TO mouse@localhost IDENTIFIED BY "organ";
+
+INSERT INTO semcat (id, url, title, description, condensed) VALUES (1, "http://first.com", "The Page about Cats", "Descriptioni numero uno", "cats teddy rag lady nemesis")
+INSERT INTO semcat (id, url, title, description, condensed) VALUES (2, "http://second.com", "The Page about Dogs", "Descriptioni numero duo", "dogs eeyore auntie")
+
+//////INSERT INTO user VALUES('localhost','monty',PASSWORD('some_pass'),
+                'Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y')
+
+//// 'Select', 'Insert', 'Update', 'Delete', 'Create', 'Drop', 'Grant', 'References', 'Index', 'Alter'  
+
+////(Column_priv  'Select', 'Insert', 'Update', 'References'  )
+
+///INSERT INTO user VALUES('localhost','mouse',PASSWORD('organ'),
+////                'Y','N','N','N','N','N','N','N','N','N','N','N','N','N')
+
+
+
+UPDATE user SET Select_priv=Y WHERE User='mouse'
+
+flush privileges
+
+
+Search :
+[      ]	
+
+Results :
+
+show DC
+side box if word is in glossary!!!
+
+   
+

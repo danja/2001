@@ -1,0 +1,357 @@
+
+02/03/01 16:02 Parsing...
+
+02/03/01 16:02 Parsing...
+java.net.UnknownHostException: www.xprogramming.com
+
+02/03/01 16:02 Parsing...
+java.net.UnknownHostException: c2.com
+java.net.UnknownHostException: c2.com
+
+02/03/01 16:02 Parsing...
+java.net.UnknownHostException: carverscompanion.com
+java.net.UnknownHostException: users.erols.com
+java.net.UnknownHostException: www.benthic.com
+java.net.UnknownHostException: student.ulb.ac.be
+java.net.UnknownHostException: www.boran.com
+java.net.UnknownHostException: lumahai.soest.hawaii.edu
+java.net.UnknownHostException: www.microsoft.com
+
+02/03/01 16:02 Parsing...
+java.net.UnknownHostException: oradoc.photo.net
+java.net.UnknownHostException: www.w3schools.com
+java.net.UnknownHostException: www.benthic.com
+java.net.UnknownHostException: pub16.bravenet.com
+java.net.UnknownHostException: www.oasis-open.org
+java.net.UnknownHostException: www.google.com
+
+02/03/01 16:02 Parsing...
+java.net.UnknownHostException: www.lookupuk.com
+java.net.UnknownHostException: www.oreilly.com
+java.net.UnknownHostException: www.searchtools.com
+java.net.UnknownHostException: hoganbooks.com
+java.net.UnknownHostException: oradoc.photo.net
+java.io.FileNotFoundException: http://localhost/examples/jsp/RowSetExample2.jsp
+java.net.UnknownHostException: www.redhat.com
+java.net.UnknownHostException: support.euro.dell.com
+java.net.UnknownHostException: www.ou.ac.lk
+java.net.UnknownHostException: java.sun.com
+java.net.UnknownHostException: www.portalscripts.com
+java.net.UnknownHostException: www.oasis-open.org
+java.net.UnknownHostException: www.cloudscape.com
+java.net.UnknownHostException: www.microsoft.com
+java.net.UnknownHostException: www.nyx.net
+java.net.UnknownHostException: www.itknowledge.com
+
+02/03/01 16:02 Parsing...
+java.net.UnknownHostException: www.mersenne.org
+java.net.UnknownHostException: www.sciam.com
+java.net.UnknownHostException: www.mindspring.com
+
+02/03/01 16:02 Parsing...
+java.net.UnknownHostException: www.digitalairways.com
+java.net.UnknownHostException: www.mobilemexe.com
+java.net.UnknownHostException: www.embedded.oti.com
+java.net.UnknownHostException: www.timesofindia.com
+java.net.UnknownHostException: officeupdate.microsoft.com
+java.net.UnknownHostException: pubwww.srce.hr
+java.net.UnknownHostException: www.ccom.lk
+java.net.UnknownHostException: www.users.skynet.be
+java.net.UnknownHostException: www.memoware.com
+
+02/03/01 16:02 Parsing...
+java.net.UnknownHostException: www.qnx.com
+java.net.UnknownHostException: www.wirelessdevnet.com
+java.net.UnknownHostException: www.langmaker.com
+java.net.UnknownHostException: www.mirwoj.opus.chelm.pl
+java.net.UnknownHostException: www.ai.mit.edu
+java.net.UnknownHostException: muskoka.vianet.on.ca
+java.net.UnknownHostException: l3ux02.univ-lille3.fr
+java.net.UnknownHostException: www.lacnet.org
+java.net.UnknownHostException: login.europe.yahoo.com
+java.net.UnknownHostException: www.sirius.com
+java.net.UnknownHostException: www.cs.cmu.edu
+
+02/03/01 16:02 Parsing...
+java.net.UnknownHostException: www.lh.com
+java.net.UnknownHostException: www.elwoodcorp.com
+java.net.UnknownHostException: mitpress.mit.edu
+java.net.UnknownHostException: tigereye.cs.brandeis.edu
+java.net.UnknownHostException: www.cs.umaine.edu
+java.net.UnknownHostException: www.cs.usm.maine.edu
+java.net.UnknownHostException: www.eecs.tulane.edu
+java.net.UnknownHostException: www.apl.jhu.edu
+java.net.UnknownHostException: www.cs.auckland.ac.nz
+java.net.UnknownHostException: eksl-www.cs.umass.edu
+java.net.UnknownHostException: nanoxml.sourceforge.net
+java.net.UnknownHostException: www.gnu.org
+java.net.UnknownHostException: www.javaworld.com
+java.net.UnknownHostException: www.npmoc.navy.mil
+java.net.UnknownHostException: www.fmnh.org
+java.net.UnknownHostException: archives.java.sun.com
+
+02/03/01 16:02 Parsing...
+java.net.UnknownHostException: www.esperanto.org.nz
+java.net.UnknownHostException: www.sun.com
+java.net.UnknownHostException: users.erols.com
+
+02/03/01 16:02 Parsing...
+java.net.UnknownHostException: www.sil.org
+
+02/03/01 16:02 Parsing...
+java.net.UnknownHostException: www.vhg.org.uk
+java.net.UnknownHostException: www.log4j.org
+java.net.UnknownHostException: www.zvon.org
+java.net.UnknownHostException: theserverside.com
+java.net.UnknownHostException: www.sun.com
+java.net.UnknownHostException: www.elixirtech.com
+java.net.UnknownHostException: www.xmldb.org
+java.net.UnknownHostException: www.artima.com
+java.net.UnknownHostException: www.artima.com
+java.net.UnknownHostException: www.javacoffeebreak.com
+java.net.UnknownHostException: developer.java.sun.com
+java.net.NoRouteToHostException: Host unreachable: no further information
+java.net.UnknownHostException: lcs.www.media.mit.edu
+java.net.UnknownHostException: developer.java.sun.com
+java.net.UnknownHostException: www.artima.com
+java.net.UnknownHostException: members.nbci.com
+
+02/03/01 16:02 Parsing...
+
+02/03/01 16:02 Parsing...
+java.net.UnknownHostException: www.extensibility.com
+java.net.UnknownHostException: www.rpbourret.com
+java.net.UnknownHostException: www.natwest.com
+java.net.UnknownHostException: www.bjnet.edu.cn
+java.net.UnknownHostException: online-books.ora.com
+java.net.UnknownHostException: www.elwood.com
+java.net.UnknownHostException: easyweb.easynet.co.uk
+java.net.UnknownHostException: www-robotics.cs.umass.edu
+java.net.UnknownHostException: www.archimuse.com
+
+02/03/01 16:02 Parsing...
+java.net.UnknownHostException: www.indigogroup.co.uk
+java.net.UnknownHostException: sourceforge.net
+java.net.UnknownHostException: axkit.org
+java.net.UnknownHostException: www.someone.force9.co.uk
+java.net.UnknownHostException: www.w3.org
+java.net.UnknownHostException: www.mgm-edv.de
+java.net.UnknownHostException: www.dtd.com
+java.net.UnknownHostException: eap.netbeans.com
+java.net.UnknownHostException: www.gibaradunn.srac.org
+java.net.UnknownHostException: poolman.sourceforge.net
+java.net.UnknownHostException: www.zlurp.com
+java.net.UnknownHostException: relativity.yi.org
+java.net.UnknownHostException: forum.java.sun.com
+java.net.UnknownHostException: forum.java.sun.com
+java.net.UnknownHostException: forum.java.sun.com
+java.net.UnknownHostException: forum.java.sun.com
+java.net.UnknownHostException: forum.java.sun.com
+java.net.UnknownHostException: www.mactech.com
+
+02/03/01 16:02 Parsing...
+
+02/03/01 16:02 Parsing...
+
+02/03/01 16:02 Parsing...
+java.net.UnknownHostException: users.snip.net
+java.net.UnknownHostException: citeseer.nj.nec.com
+java.net.UnknownHostException: sunayurveda.hypermart.net
+java.net.UnknownHostException: www.yorku.ca
+java.net.UnknownHostException: www.cs.cmu.edu
+java.net.UnknownHostException: www.javadvertising.com
+java.net.UnknownHostException: www.engr.uconn.edu
+java.net.UnknownHostException: www.cs.auckland.ac.nz
+java.net.UnknownHostException: developer.java.sun.com
+java.net.UnknownHostException: www.ashland.edu
+java.net.UnknownHostException: www.mp3-world.net
+
+02/03/01 16:02 Parsing...
+
+02/03/01 16:02 Error executing link check statement : 
+java.lang.NullPointerException
+
+02/03/01 16:02 Error in link update statement : 
+java.lang.NullPointerException
+java.io.FileNotFoundException: http://localhost/caroline/mailto:caroline@panlanka.net
+java.net.UnknownHostException: www.dilbert.com
+java.net.UnknownHostException: www.faqs.org
+java.net.UnknownHostException: www.devx.com
+java.net.UnknownHostException: oasis.palm.com
+java.net.UnknownHostException: www.ceylon.net
+java.net.UnknownHostException: www.orchy.com
+
+02/03/01 16:02 Parsing...
+java.net.UnknownHostException: members.tripod.com
+
+02/03/01 16:02 Parsing...
+java.net.UnknownHostException: www.umiacs.umd.edu
+java.net.UnknownHostException: www.ifs.org.uk
+java.net.UnknownHostException: odur.let.rug.nl
+java.net.UnknownHostException: info.webcrawler.com
+java.net.UnknownHostException: www.ifs.org.uk
+java.net.UnknownHostException: el.www.media.mit.edu
+java.net.UnknownHostException: msnhomepages.talkcity.com
+java.net.UnknownHostException: www.patol.com
+java.net.UnknownHostException: aaaprod.gsfc.nasa.gov
+java.net.UnknownHostException: rfhs8012.fh-regensburg.de
+java.net.UnknownHostException: crl.ucsd.edu
+java.net.UnknownHostException: ourworld.compuserve.com
+java.net.UnknownHostException: www.davidrawlinson.org.uk
+java.net.UnknownHostException: www.cs.utexas.edu
+java.net.UnknownHostException: www.cs.utexas.edu
+java.net.UnknownHostException: www.lklug.pdn.ac.lk
+java.net.UnknownHostException: gepasi.dbs.aber.ac.uk
+java.net.UnknownHostException: www.java.sun.com
+java.net.UnknownHostException: ioc.unesco.org
+java.net.UnknownHostException: virtualpuzzlemuseum.com
+java.net.UnknownHostException: citeseer.nj.nec.com
+java.net.UnknownHostException: www.cs.cmu.edu
+java.net.UnknownHostException: www.mawgawr.co.uk
+java.net.UnknownHostException: www.hankandslim.com
+java.net.UnknownHostException: www.mumjava.com
+java.net.UnknownHostException: www.wrox.com
+java.net.UnknownHostException: www.junit.org
+java.net.UnknownHostException: technet.oracle.com
+java.net.UnknownHostException: www.interati.org
+java.net.UnknownHostException: www.syncml.org
+java.net.UnknownHostException: www.ebxml.org
+java.net.UnknownHostException: www.developerlife.com
+java.net.UnknownHostException: www.seeburger.de
+java.net.UnknownHostException: www.xmlhack.com
+java.net.UnknownHostException: www.ibiblio.org
+java.net.UnknownHostException: www.simonstl.com
+java.net.UnknownHostException: developer.netscape.com
+java.net.UnknownHostException: xmlhack.com
+java.net.UnknownHostException: skew.org
+java.net.UnknownHostException: www.xmlsoftware.com
+java.net.UnknownHostException: www.mulberrytech.com
+java.net.UnknownHostException: www.xmlpatterns.com
+java.net.UnknownHostException: www.schema.net
+java.net.UnknownHostException: www.mulberrytech.com
+java.net.UnknownHostException: swartzfam.com
+java.net.UnknownHostException: www.ccpp.org
+java.net.UnknownHostException: robustai.net
+java.net.UnknownHostException: www.geocities.com
+java.net.UnknownHostException: www.indiamonitor.com
+java.net.UnknownHostException: www.google.com
+java.net.UnknownHostException: www.isacat.net
+java.net.UnknownHostException: www.semanticweb.org
+java.net.UnknownHostException: www.lankapage.com
+java.net.UnknownHostException: www.lacnet.org
+java.net.UnknownHostException: www.angelfire.com
+java.net.UnknownHostException: www.landfield.com
+java.net.UnknownHostException: www.burnett.co.uk
+java.net.UnknownHostException: ourworld.compuserve.com
+java.net.UnknownHostException: www.sinhalajukebox.org
+java.net.UnknownHostException: www.heffers.co.uk
+java.net.UnknownHostException: www.swi.psy.uva.nl
+java.net.UnknownHostException: java.sun.com
+java.net.UnknownHostException: sourceforge.net
+java.net.UnknownHostException: developer.java.sun.com
+java.net.UnknownHostException: www.fan.net.au
+java.net.UnknownHostException: www.ilrt.bris.ac.uk
+java.net.UnknownHostException: members.tripod.com
+java.net.UnknownHostException: business.dencity.com
+java.net.UnknownHostException: www.traveldocs.com
+java.net.UnknownHostException: www.netnames.com
+java.net.UnknownHostException: qianxie.topcool.net
+java.net.UnknownHostException: crl.ucsd.edu
+java.net.UnknownHostException: www.herp-edia.com
+java.net.UnknownHostException: www.sys-con.com
+java.net.UnknownHostException: java.apache.org
+java.net.UnknownHostException: escher.cs.ucdavis.edu
+java.net.UnknownHostException: www.tuxedo.org
+java.net.UnknownHostException: www.schemers.org
+java.net.UnknownHostException: www.catseye.mb.ca
+java.net.UnknownHostException: www.tuxedo.org
+java.net.UnknownHostException: www.lispme.de
+java.net.UnknownHostException: www.gnu.org
+java.net.UnknownHostException: www.mactech.com
+java.net.UnknownHostException: c2.com
+java.net.UnknownHostException: name-space.com
+java.net.UnknownHostException: www.webcrawler.com
+java.net.UnknownHostException: www.ussc.alltheweb.com
+java.net.UnknownHostException: multimedia.lycos.com
+java.net.UnknownHostException: www.yahoo.com
+java.net.UnknownHostException: www.techcrawler.com
+
+02/03/01 16:02 Parsing...
+java.net.UnknownHostException: www.kvmworld.com
+java.net.UnknownHostException: fujisawa.org
+java.net.UnknownHostException: www-ai.cs.uni-dortmund.de
+java.net.UnknownHostException: www.tsunamidi.com
+java.net.UnknownHostException: ragingsearch.altavista.com
+java.net.UnknownHostException: www.palmos.com
+java.net.UnknownHostException: www.4thpass.com
+java.net.UnknownHostException: www.cs.brandeis.edu
+java.net.UnknownHostException: arxiv.org
+java.net.UnknownHostException: developer.java.sun.com
+java.net.UnknownHostException: developer.novell.com
+java.net.UnknownHostException: www.java.sun.com
+java.net.UnknownHostException: www.javalobby.org
+java.net.UnknownHostException: webdevelopersjournal.com
+java.net.UnknownHostException: www.kcmultimedia.com
+java.net.UnknownHostException: www.metamata.com
+java.net.UnknownHostException: www.eng.auburn.edu
+
+02/03/01 16:02 Parsing...
+java.io.FileNotFoundException: http://localhost/2001/code/mailto:danny@panlanka.net
+
+02/03/01 16:02 Parsing...
+
+02/03/01 16:02 Parsing...
+
+02/03/01 16:02 Parsing...
+
+02/03/01 16:02 Parsing...
+
+02/03/01 16:02 Parsing...
+
+02/03/01 16:02 Parsing...
+java.io.FileNotFoundException: http://localhost/2001/code/danny@panlanka.net
+
+02/03/01 16:02 Parsing...
+
+02/03/01 16:02 Parsing...
+java.net.UnknownHostException: www.mlnet.org
+java.net.UnknownHostException: www.ai.mit.edu
+java.net.UnknownHostException: www.amsta.leeds.ac.uk
+java.net.UnknownHostException: arieldolan.com
+java.net.UnknownHostException: kogs-www.informatik.uni-hamburg.de
+java.net.UnknownHostException: bigfoot.eecs.umich.edu
+java.net.UnknownHostException: www-ra.informatik.uni-tuebingen.de
+java.net.UnknownHostException: www.fan.net.au
+java.net.UnknownHostException: www.ddj.com
+java.net.UnknownHostException: www.dfki.uni-kl.de
+java.net.UnknownHostException: www.cs.auckland.ac.nz
+java.net.UnknownHostException: www-nlp.stanford.edu
+java.net.UnknownHostException: hypatia.dcs.qmw.ac.uk
+java.net.UnknownHostException: www.cobase.cs.ucla.edu
+java.net.UnknownHostException: www.robots.ox.ac.uk
+java.net.UnknownHostException: www.swi.psy.uva.nl
+java.net.UnknownHostException: www.apache.org
+java.io.FileNotFoundException: http://localhost//mailto:danny@panlanka.net
+
+02/03/01 16:02 Parsing...
+
+02/03/01 16:02 Parsing...
+
+02/03/01 16:02 Parsing...
+java.net.UnknownHostException: archives.java.sun.com
+java.net.UnknownHostException: www.xml.com
+java.net.UnknownHostException: www.w3.org
+java.net.UnknownHostException: www.lcs.mit.edu
+java.net.UnknownHostException: www.inria.fr
+java.net.UnknownHostException: www.keio.ac.jp
+java.net.UnknownHostException: iridia.ulb.ac.be
+java.net.UnknownHostException: www.lankamasks.org
+java.net.UnknownHostException: www.bbc.co.uk
+
+02/03/01 16:02 Parsing...
+java.net.UnknownHostException: www.w3.org
+
+02/03/01 16:02 Parsing...
+java.io.FileNotFoundException: http://localhost/misc/mailto:danny@panlanka.net
+
+02/03/01 16:02 Shutting down connection pool...

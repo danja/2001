@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<HTML><!-- #BeginTemplate "/Templates/Isacat.dwt" --><HEAD>
+<!-- #BeginEditable "doctitle" --> 
+<TITLE>Untitled Document</TITLE>
+<!-- #EndEditable -->
+<meta content="text/html; charset=ISO-8859-1" http-equiv=Content-Type>
+<!-- #BeginEditable "metatags" --> 
+<meta http-equiv="Content-Type" content="text/html; charset=">
+<link rel="stylesheet" href="../../css/style.css">
+<meta name="Author" content="Danny Ayers">
+<meta name="keywords" content="Danny Ayers, Isacat, Java, XML, Sri Lanka, Artificial Intelligence">
+<meta name="description" content="Danny Ayers provides a selection of resources, largely related to Java programming though bits are about Sri Lanka.">
+<!-- #EndEditable -->
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+<p align="center"><a href="../../index.htm" title="Danny Ayers's Stuff Home Page">Home</a> | <a href="../../links/links.htm" title="Links to related resources">Links</a></p>
+<!-- #BeginEditable "Body" --> 
+<h1 align="center">Information Overload Unit Search Engine </h1>
+<p>I'm afraid I haven't got around to doing any write-up for this yet, appart 
+  from in the form of <a href="../bombay/mumjava.htm">presentation material</a>s. 
+  It really is a work in progress. But here is the <a href="download/iou.zip">zip 
+  file containing the code</a></p>
+<p>&nbsp;</p>
+<p>One of the classes in the IOU is called XMLProperties, that might find a lot 
+  of use elsewhere, most probably for providing config files.</p>
+<p>Here's the source : <a href="download/XMLProperties.java">XMLProperties.java</a> 
+  and the DTD it uses : <a href="download/jproperties.dtd">jproperties.dtd</a></p>
+<p>The Java Properties class is perfect for config information, I just wasn't 
+  happy with the text file format, so I came up with this. </p>
+<p>Given the location of an XML file containing sets of property information it 
+  will return either a HashMap of all the property sets in the XML or a single 
+  named one. </p>
+<p>The XML will look something like this : </p>
+<pre>&lt;?xml version="1.0"?&gt;
+ &lt;!DOCTYPE properties SYSTEM "properties.dtd"&gt;
+   
+   &lt;properties&gt; 
+       &lt;propertylist name="danny"&gt; 
+           &lt;property name="website"&gt;www.isacat.net&lt;/property&gt; 
+           &lt;property name="email"&gt;danny@panlanke.net&lt;/property&gt; 
+       &lt;/propertylist&gt;
+   ... 
+   &lt;/properties&gt; </pre>
+<p>You can have many propertylists, I did this so I could have a separate set 
+  of Properties for different bits of my app, all specified in the one XML file. 
+</p>
+<p>To get the properties you need to do something like this : </p>
+<p><code>XMLProperties props = new XMLProperties(); <br>
+  props.load(addresses.xml); <br>
+  Properties danprop = props.getProperties("danny"); </code></p>
+<p>then you can get individual values like : </p>
+<p><code>System.out.println(danprop.getProperty("email")); </code></p>
+<p>(should) output : </p>
+<p><tt>danny@panlanka.net </tt></p>
+<!-- #EndEditable --> 
+<p align="right">&copy; 2001 <a href="../../misc/biog.htm">Danny Ayers</a> All rights 
+  reserved.</p>
+
+<div align="center"><a href="http://www.isacat.net/isacat_site.rdf" title="RDF Metadata"><img src="../../citnames/rdf.png" alt="RDF" width="36" height="14" border="0"/></a> 
+</div>
+<p align="center"><a href="http://www.citnames.com">citnames</a></p>
+</BODY>
+<!-- #EndTemplate --></HTML>

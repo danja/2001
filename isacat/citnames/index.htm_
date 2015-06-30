@@ -1,0 +1,71 @@
+ 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><!-- #BeginTemplate "/Templates/Citnames.dwt" --><HEAD>
+<!-- #BeginEditable "doctitle" --> 
+<TITLE>S E M A N T I C I T N A M E S</TITLE>
+<!-- #EndEditable -->
+<meta content="text/html; charset=ISO-8859-1" http-equiv=Content-Type>
+<!-- #BeginEditable "metatags" --> 
+<link rel="stylesheet" href="../css/semstyle.css">
+<meta name="Author" content="Danny Ayers">
+<meta name="keywords" content="Semantic Web, semantic, web, RDF, XML, logic, ontologies, Java, artificial intelligence">
+<meta name="description" content="A selection of resources relating to the Semantic Web.">
+<!-- #EndEditable -->
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+<p align="center"><a href="http://www.isacat.net" title="Semantic citnameS"><font face="Courier New, Courier, mono">S 
+  E M A N T I C I T N A M E S</font></a></p>
+<!-- #BeginEditable "Body" -->
+<div align="center"> 
+  <p>Semantic Web related material will be appearing here in the near future. 
+  </p>
+  <table width="99%" border="0">
+    <tr>
+      <td class="focus" valign="top">
+        <h2 align="left">Local</h2>
+        <p align="center"><a href="2001/04/rpp.htm">rpp</a></p>
+        <p align="center"><a href="../2001/05/rdbe/rdbe.htm">rdbe</a></p>
+  </td>
+    </tr>
+  </table>
+  <table width="99%" border="0">
+    <tr> 
+      <td class="focus" width="40%" valign="top">
+        <h2 align="left">Authorities</h2>
+      </td>
+      <td class="center" width="19%" valign="top"> 
+        <div align="left"></div>
+        <div align="center" >
+<h2>News</h2>
+          </div>
+      </td>
+      <td class="focus" width="40%" valign="top"> 
+        <h2 align="left">Hubs</h2>
+        <a href="http://www.ilrt.bris.ac.uk/discovery/rdf/resources/">Dave Beckett's 
+        Resource Description Framework (RDF) Resource Guide</a></td>
+    </tr>
+  </table>
+  
+  <table width="99%" border="0">
+    <tr> 
+      <td class="focus" valign="top"> 
+        <h2 align="left">Active</h2>
+        <p align="center"><a href="2001/04/rpp.htm">rpp</a></p>
+        <p align="center"><a href="../2001/05/rdbe/rdbe.htm">rdbe</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<!-- #EndEditable --> 
+<p align="right">&copy; 2001 <a href="http://www.isacat.net/misc/biog.htm">Danny Ayers</a> All rights 
+  reserved.</p>
+  
+<div align="center">
+  <p><a href="http://www.citnames.com/site.rdf" title="RDF Metadata"><img src="http://www.citnames.com/icons/rdf.png" alt="RDF" width="36" height="14" border="0"/><br>
+    </a></p>
+  <p><a href="http://www.isacat.net">stuff</a></p>
+</div>
+</BODY>
+<!-- #EndTemplate --></HTML>
+

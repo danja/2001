@@ -1,0 +1,450 @@
+http://robustai.net/sem/doc/DataStructure.html
+synch
+pogo
+http://www.rpbourret.com/xml/XMLAndDatabases.htm
+http://www.rpbourret.com/xml/XMLDatabaseProds.htm
+http://starship.python.net/crew/garyp/jProf_Features.html
+update netbeans
+database schema
+(VRP and GINF
+RAX
+xmlconf
+http://www.jdom.org 
+http://www.w3.org/XML/9711theory/ELF.lsl
+exporting annotations from word
+www.ontoprise.de
+chopin
+mozart
+sonata
+http://www.inpreparation.com/six/
+jgrasp
+Software Engineering: a Practitioner's Approach 
+http://www.xmlrpc.com/aBusyDevelopersGuideToSoap11
+http://davenet.userland.com/2001/03/29/unstallingSoap#theGorillasGame
+http://www.amazon.co.uk/exec/obidos/ASIN/0201876868/ref=pd_uk_1c_2/026-6924497-8178800
+http://www.amazon.co.uk/exec/obidos/ASIN/0201310082/ref=pd_uk_1c_5/026-6924497-8178800
+http://www.amazon.co.uk/exec/obidos/ASIN/0077096770/ref=pd_uk_1c_6/026-6924497-8178800
+
+http://www.xml.com/axml/target.html#Notations
+Jason Diamond's REPAT parser.
+http://www.doctypes.org/cyc/cyc-xtm-20010227.html
+telagent
+
+http://mmmysql.sourceforge.net/
+
+http://www.cs.ucla.edu/~mani/xml/papers/conferences/WebDB2001/td-main2.ps
+http://xml.ascc.net/xml/resource/rdf.dtd? 
+http://www.cs.man.ac.uk/~franconi/dl/course/ 
+http://dl.kr.org/ 
+http://robustai.net/mentography/conceptualDependency.gif
+http://www.w3.org/2001/03/webdata/xsu
+http://davenet.userland.com/1998/07/14/xmlRpcForNewbies
+http://www.openhealth.org/talks/RDFIntro.ppt
+WorldCat
+http://www.java.utoronto.ca/~igraham/xml-depend.gif
+[4] http://groups.yahoo.com/group/sem-dev 
+http://www.bmcb.btinternet.co.uk/2001/rdf/exec-grammar/spec.xsl
+http://www.topicmaps.net,
+
+Richard Tobin's dump format PSVI
+http://www.alaric-snell.com/  http://RFC.net/  
+http://www.warhead.org.uk/
+
+[1] http://www.w3.org/TR/xhtml-modularization
+[2] http://xhtml.waptechinfo.com/modules/rdf/rdf.mod
+http://www.w3.org/TR/xml-c14n
+
+http://www.xmlhack.com/) 
+http://www.oakland.edu/~grossman/readme.html>
+
+The UBOT project has been examining the consistency of the
+DAML+OIL axiomatic semantics.  Using an automated theorem
+prover, Richard Waldinger
+Northeastern University 
+
+http://www.w3.org/TR/html401
+
+http://www.megginson.com/SAX/Java/index.html
+
+
+http://www.openhealth.org/RDF/RDFmediatype.html
+
+ SQL statements to CRUD this simple mapping. 
+
+ www.duckware.com
+www.excelsior-usa.com
+
+http://www.schin.ncl.ac.uk/protege2001/index.asp
+
+http://www.w3.org/WAI/GL/2000/12/unified-glossary
+http://www.w3.org/2000/03/rdf-tracking/#rdf-terminologicus
+#tunes
+
+http://www.w3.org/Addressing/ 
+news://news.software.ibm.com/ibm.software.developerworks.xml.devcon2001  
+news://news.software.ibm.com/ibm.software.developerworks.xml.devcon2001
+
+
+http://www.w3.org/TR/REC-xml-names/
+URI reference [RFC2396]
+
+http://tribble.ilrt.bris.ac.uk/~cmjg/rdf/java/RDF.tar.gz 
+
+http://www.dfki.uni-kl.de/frodo/RDFSViz/
+http://www.ietf.org/rfc/rfc2396.txt
+ODMG
+
+http://ecs.itu.ch/cgi-bin/ebookshop
+
+http://www.objs.com/OSA/wom.htm
+http://nurey.net/dmoz/dmoz-tools.tar.gz
+irc: monkeyfist.com:6667
+[1] http://uwimp.com/
+[2] http://infomesh.net/swnotes/rdfinxhtml.html
+http://logicerror.com/signYourPage
+
+http://sesame.aidministrator.nl/
+http://www.aportis.com/
+http://www.onetap.com/
+new netbeans
+Amazon - GoF
+http://www.w3.org/TR/xmlschema-formal/
+http://xsb.sourceforge.net/
+http://www.chami.com
+http://www.PerfectXML.com/articles/xml/binary.asp
+http://www.w3.org/2000/07/DAML-0-5#Building
+OTTER
+http://www.srilogic.com:8000
+http://www.xml.com/pub/a/2001/01/10/schemasincontext.html
+usb drive linux
+palm daml (desktop)
+The Mona Lisa Problem
+java.sql.clob
+protege
+javahelp bug
+http://www.isacat.net/2001/code/kex.htm
+XSV XSU
+http://www.w3.org/2000/03/rdf-tracking/#rdfms-quoting
+usenet
+http://ijcai.org/data/
+mj-tech 
+dell docking station
+http://www.clicknames.net/pay and providing your email danny@panlanka.net 
+and your invoice number 4523.
+
+dmoz dtd
+HTTPSauce.com
+HTTPSource.com
+
+borders - sem web
+Apache - SOAP
+netbeans
+
+J2SE
+J2EE
+
+adv java list
+
+http://www.blogspace.com/
+www.asindexing.org
+http://www.topicmaps.net
+http://protege.stanford.edu/doc/users_guide/projects/saving_a_database_project.html
+http://protege.stanford.edu/doc/design/jdbc_backend.html
+ttp://exist.sourceforge.net.
+http://skew.org/xml/misc/xml_vs_http/
+http://www.w3.org/TR/xtnd/
+http://www.w3.org/TR/xlink.
+http://listserv.heanet.ie/xml-l.html
+http://groups.yahoo.com/group/dev-xml
+http://www.lotontech.com
+http://www.w3.org/
+
+AIML is at http://pioneer.gsfc.nasa.gov/public/aiml/.
+
+
+advantages of DataSource
+topic maps XTM
+MSL
+XML Schema spec
+http://www.w3.org/2000/10/rdf-tests/
+
+ http://www.w3.org/TR/newline
+http://www.unicode.org/charts/
+http://www.w3.org/Submission/2001/06/Comment
+
+&#x2028;
+and &#x2029;...
+
+http://www.xfront.com/BestPracticesHomepage.html
+http://www.cs.berkeley.edu/~russell
+http://www.jNerd.com/xml2java.html
+XSL programming is harmful,  have been explained 
+by Mr. Leventhal
+
+http://www-uk.hpl.hp.com/people/bwm/papers/20001221-paper/ 
+http://robustai.net/swag/dictionary.html
+PSVI
+netbeans
+
+
+Jeremy's MS
+pi calculus,
+
+MIDP for Palm?
+
+animal wheels
+
+
+
+
+162.90, the visa £32.25.
+
+javacc & sax
+http://logicerror.com/rdf
+http://groups.yahoo.com/group/rss-dev/message/663
+
+J2ME Roadmap
+Slides : KVM, J2ME, kjava, CLDC
+makePalmapp
+JCC
+http://www.mexeforum.org/articles.htm
+
+http://www.meta.com.au/smm 
+http://www.digitalanywhere.com/projects/dany/index.html
+
+http://www.w3.org/TR/REC-rdf-syntax/
+http://lists.w3.org/Archives/Public/www-rdf-interest/ 
+
+MSL
+PSVI - Post-Schema-Validition
+Information Set 
+FOSI
+http://www.designerxml.com/UBT/Downloads.html
+http://www.simonstl.com/articles/cxmlspec.txt
+http://www.w3.org/TR/DOM-Level-3-CMLS/content-models.html
+http://purl.org/swag/rdfnsPractises
+http://xml.coverpages.org/conceptualModeling.html 
+ http://www.thaiopensource.com/trex/jtrex.html
+http://www.w3.org/2000/10/swap/
+
+
+[1] http://purl.org/swag/termsplayground
+[2] http://webns.net/roughterms/
+[3] http://webns.net/
+
+<http://infomesh.net/sbp/> .
+
+
+http://www.w3.org/TR/2001/CR-xml-fragment-20010212
+http://javaskyline.com/smartweb.html
+http://www.gjt.org/javadoc/org/gjt/jjt/pdbfile/
+http://www.w3.org/2001/sw/
+     http://www.xmlhack.com/read.php?item=1024
+
+www.xmlwriter.net
+http://www.netbeans.org/source/browse/~checkout~/nbbuild/antsrc/org/netbeans
+/nbbuild/JHIndexer.java
+
+Playlist (my baby?)
+Toshiba RAM
+
+excellent resources
+http://www.holub.com/goodies/goodies.html
+
+http://www.adobe.com/svg/viewer/install/main.html
+junit - wikiweb refs?
+
+http://www.antennahouse.com/xslformatter.html
+
+cloudscape?
+Rowset (sourceforge?)
+JTA/JDBC
+X/Open CAE Specification (Distributed
+Transaction Processing: The XA Specification).
+
+get rest of ZVON with HTTrack
+wwwoffle
+
+Dell - MAA
+
+JTA stuff
+
+$40 = £26.69
+
+$250 = £166.80
+$200 = £133.45
+
+ZISC RBF NN hardware 
+
+http://www.sun.com/developers/tools/jumpstart.html;$sessionid$YYDWAGQAABRHPAMTA1FU45Q
+data access design pattern 
+Church integers'' 
+http://www.tuxedo.org/~esr/intercal/
+Set up danny@isacat
+
+Robohelp
+
+topic maps xml
+http://www.xmlhack.com/read.php?item=936
+http://www.xmlhack.com/read.php?item=598
+DOM2 http://www.w3.org/TR/DOM-Level-2
+www.xmlwriter.net
+http://www.xmlhack.com/list.php?cat=28
+dell mem
+http://www.xml.com/pub/a/2000/11/07/semanticweb/index.html
+
+JDBC 3
+emacs win
+
+Prof Wallace supervising my masters thesis.  His is the
+> MML (Minimum Message Length
+
+http://developer.java.sun.com/developer/onlineTraining/Database/JDBC20Intro/JDBC20.html
+http://www.javaworld.com/javaworld/javatips/javatip71/DisplayMembers.java
+http://www.javaworld.com/javaworld/javatips/javatip71/DWIS.java
+link to hank & slim
+Sgt Pepper covr
+
+
+
+http://www-4.ibm.com/software/webservers/appserv/doc/v35/ae/infocenter/was/0402040201.html
+
+
+www.xmlpatterns.com
+www.geocities.com/SiliconValley/program/8066/
+, (http://www.in-silicon.com/) 
+d (http://www.retrologic.com/) 
+
+
+
+http://pointti.vip.fi)
+http://www.prosperosoftware.com/nls.html
+http://www.link.cs.cmu.edu)
+www.maxpages.com/middlebass
+http://www.davidmach.com
+
+http://www.praystation.com
+
+http://biz.yahoo.com/prnews/001212/ca_sun_mic.html
+
+G. J. Chaitin
+Shannon refs.
+http://arxiv.org
+http://www.mathsource.com
+http://mindprod.com/article.html
+
+
+http://www.cutter.com/ead/ead0002.html
+http://www1.fatbrain.com/asp/bookinfo/bookinfo.asp?theisbn=020161622X
+CRC cards. 
+
+
+http://www.log4j.org/
+http://cygwin.com/. - gnumake
+http://msdn.microsoft.com/workshop/server/toolbox/wcat.asp. 
+http://www.junit.org/ 
+http://www.magic4.com 
+
+NetBeans - Error reading services : default used
+Bill Joy's 6 webs
+
+scalability, availability, security, performance, distribution
+A.T. Kearney ranks these requirement
+
+X-server for WIN32 like MIX server or X-Win32.
+Start the X-Server. Run snns.cmd.
+
+Tell Mama Etta James 
+
+Sun in Lanka
+dec of indy
+clob sql type
+
+ * The formula used in this class is from Ari Pirkola's 
+ * <em>Linguistic Problems and Methods in Text Retrieval</em> (p.19).
+ * Pirkola credits Allan et al (1997) in his text, but I have not
+ * verified the source.
+ * <p>
+ * Basically, the formula implements a TF*IDF (term frequency * inverted 
+ * document frequency) method, prioritising shorter documents over
+ * longer ones.
+
+dmoz parsing
+
+http://members.nbci.com/_XMCM/ajbuttle/Images/My%20Created%20Imagery/grubby-
+mouth-oddity-gifpage.htm
+
+Mey.Wolfgang@t-online.de
+
+http://www.postgresql.org/docs/aw_pgsql_book/aw_pgsql_book.pdf
+
+(in web apps), get definitions of
+role & java.security.Principal
+https
+
+
+
+www.download.com and it'd name is Jcreator
+
+www.mobitellanka.com
+www.specme.com
+
+http://java.sun.com/xml/jspxml.html
+
+http://www.xmlsoftware.com/utilities/
+
+http://webdev.apl.jhu.edu/~rbe/kvm/
+
+ants js
+
+
+UTCS - HFM
+
+
+
+ www.helixcode.com
+a "SQLstate" string, which follows the XOPEN SQLstate conventions. The values of the SQLState string are described in
+the XOPEN SQL spec.
+java.sql.SQLException : General error
+S1000
+
+
+http://jsp.java.sun.com/javaone/javaone2000/pdfs/TS-1413.pdf
+page 54.
+
+ www.wearix.com
+
+rdf links
+Ian Blackham
+Exchange rate
+hotsync
+my Yahoo
+my bbc
+MSN
+Wrox fp
+Amazon
+wrox JSP code
+gac papers
+godot.com
+user profile entity bean
+http://xml.org/xml-dev/index.shtml
+conjoint analysis
+netbot.com
+["Programming With Sets - An Introduction to SETL", Jacob
+	T. Schwartz et al, Springer 1986].
+A Symbol SPT1740 is basically a Palm III with a 802.11 wireless LAN card and a barcode scanner. 
+Brazil
+http://lists.w3.org/Archives/Public/www-rdf-interest/2000Mar/0103.html
+mozzies
+netbeans.org
+
+http://www.alphaworks.ibm.com/tech/jdbcme
+http://www.mysql.com/downloads/api-myodbc.html
+
+moreover webfeed
+MIDP stuff for Foprte
+
+DELL mem
+
+http://www.smartnd.com/
+http://www.palmos.com/

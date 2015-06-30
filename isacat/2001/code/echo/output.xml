@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!DOCTYPE foo SYSTEM "foo.dtd">
+<foo><lit text="hello">
+This is literal STUFF and some more STUFF.
+</lit><lit text="STUFF">
+This is entity STUFF and some more
+STUFF.
+</lit></foo>

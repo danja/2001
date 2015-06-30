@@ -1,0 +1,116 @@
+phpChannel version 1.0.2
+
+This package is shipped with the following files.
+
+createrss.php.msql
+createrss.php.mysql
+parserss.php
+
+****************************************************************************
+*          Installation and usage of the createrss class                   *
+****************************************************************************
+
+Installation is very easy. Copy the createrss.php.* file of your
+choice to a directory where you want to use it. Rename the file to
+createrss.php. 
+
+To create a rss file you will have to provide a few parameters:
+
+require ("createrss.php");
+
+$genrss = new mysql_rss; // If you are using the msql version you should use
+			    $genrss = new msql_rss;
+			    
+
+Next you will have to provide some information on the host, databasename,
+username and password.
+
+$genrss->host     = "hostname";
+$genrss->db       = "databasename";
+$genrss->login    = "username";
+$genrss->password = "password";
+
+//The fieldnames for the data that you want to use:
+
+$genrss->title_field = "fieldname to be used for the newsheader";
+$genrss->descr_field = "fieldname to be used for the description field";
+$genrss->link_field  = "fieldname to be used for the url field";
+
+//The SQL query to be run. Make sure that the fields are included in this
+//query.
+
+$genrss->sql      = "SELECT * FROM tabel ORDER BY datum DESC limit 10";
+
+//Some base information for the channel file:
+
+$genrss->rss_title = "Title of the channel file";
+$genrss->rss_link  = "http://linux.gelrevision.nl";
+$genrss->rss_descr = "Description of the site";
+$genrss->rss_lang  = "Language field which identifies the country (nl/us)";
+$genrss->rss_encoding = "UTF-8";
+
+// And the filename.
+$genrss->connect("blabla.rss");
+
+Make sure that you can write to both the directory and the produced file.
+
+****************************************************************************
+*                     Using the parserss class                             *
+****************************************************************************
+
+To parse a Netscape Channel (rss file) you have to instance the new class
+
+<?php
+
+require ("parserss.php");
+$news = new readrss;
+
+//Next you will have to tell the instance which file to read and make it parse.
+
+$news->xml_file = "channelname.rss";
+$news->parse();
+
+?>
+
+The above code will give you a simple ticker which will parse all the headlines.
+
+Optional there are a few more functions that you can use:
+
+1.  $news->headingColors('white','blue');
+	Set a colors for the channelbackground and the headline background.
+	If it's not set it will have a default color.
+
+2.  $news->enableItemDescriptions(); 
+	Some channels have extra information in a description field, this
+	function will show them.
+	
+3.  $news->enableChannelDescription();
+	This will show the channeldescription just beneath the channel title.
+	
+4.   $news->enableChannelSearchbox();
+	This is an option which has only been seen in the 
+	Freshmeat channel. Might be cool if Patrick would 
+	submit a correct link to the search engine in the 
+	Freshmeat rss file.
+
+5.  $news->enableChannelPicture();
+	This will enable a picture that is linked within the rss file.
+
+6.  $news->setImageCache("images")             
+	Caching dir for the pictures.
+	
+	To use this option you will have to create a dir (a subdir of
+	the location where the classes are located would keep it together) 
+	and chmod that dir to 777. This allows you to cache the pictures.
+
+7.  $news->headingColors('white','blue');
+	Set a colors for the channelbackground and the headline background.	
+	
+8.  $news->browseMethod('new');
+	Default a click on one of the links will take the visitor
+	to the link within the browser window ('_top'). Setting this option
+	will allow you to spawn another window. 
+	
+9.  $news->maxlines = INT; 
+	This will set a max number of headlines in a channel.
+	

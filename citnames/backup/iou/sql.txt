@@ -1,0 +1,18 @@
+select * from links where scanned=1 order by docref desc
+
+drop table backup
+create table backup(ID INT(7), COREWORDS TEXT)
+insert into backup (ID, corewords) select * from corewords
+select * from backup
+
+SELECT ID FROM CORE WHERE (corewords LIKE '%bombay%')
+
+INSERT INTO results SELECT ID FROM CORE WHERE (corewords LIKE '%bombay%')
+
+alter table core change corewords corewords varchar(200)
+
+alter table core change id id int(7) PRIMARY KEY
+
+create table results (id INT(7), host VARCHAR(50), path VARCHAR(50), filename VARCHAR(50), inlinks INTEGER)
+
+SELECT links.* FROM core LEFT JOIN links ON core.ID = links.docref WHERE (core.corewords LIKE '%game%')

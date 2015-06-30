@@ -1,0 +1,10 @@
+<rdf:RDF 
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     	xmlns:dc="http://purl.org/DC/elements/1.1/" >
+<rdf:Description rdf:about="http://www.isacat.net"
+     dc:title="Danny Ayers Stuff"
+     dc:description="Mainly material related to Java/XML programming."
+     dc:author="Danny Ayers"
+     dc:creator="danny@panlanka.net"
+     dc:date="1st Jan 2001 00:00:00 PM" />
+</rdf:RDF>

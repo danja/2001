@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rss PUBLIC "-//Netscape Communications//DTD RSS 0.91//EN"
+ "http://my.netscape.com/publish/formats/rss-0.91.dtd">
+<rss version="0.91">
+
+<channel>
+<title>Gelre Linux Dagelijks nieuws</title>
+ <link>http://linux.gelrevision.nl/</link>
+<description>Dagelijks nieuws op de Gelre Linux Site</description>
+<language>nl</language>
+
+<item>
+<title>Desktop: Setting Up Font Anti-Aliasing in SuSE Linux 7.1 and 7.2</title>
+<link>http://linux.gelrevision.nl/index.php?newsitem=1007</link>
+<description>Artikel over het gebruik van True Type fonts onder Suse.</description>
+</item>
+
+<item>
+<title>Security: Trustix Apache</title>
+<link>http://linux.gelrevision.nl/index.php?newsitem=1006</link>
+<description>Trustix heeft nieuwe packages van Apache. Onder bepaalde omstandigheden was het mogelijk om een directory listing te verkrijgen terwijl er wel een default document aanwezig was.</description>
+</item>
+
+<item>
+<title>Security: fetchmail</title>
+<link>http://linux.gelrevision.nl/index.php?newsitem=1005</link>
+<description>Debian heeft nieuwe fetchmail packages i.v.m. het gevaar voor een bufferoverflow.</description>
+</item>
+
+<item>
+<title>Security: rxvt</title>
+<link>http://linux.gelrevision.nl/index.php?newsitem=1004</link>
+<description>In verband met het gevaar voor een bufferoverflow heeft Debian nieuwe packages voor rxvt uitgebracht.</description>
+</item>
+
+<item>
+<title>Nieuwe virtual host via nl.linux.org</title>
+<link>http://linux.gelrevision.nl/index.php?newsitem=1003</link>
+<description>nl.linux.org heeft een virtual host aangemaakt voor Bazaar.  </description>
+</item>
+
+<item>
+<title>Linux is obsolete</title>
+<link>http://linux.gelrevision.nl/index.php?newsitem=1002</link>
+<description>De laatste tijd verschijnen er vragen van mensen die de discussie tussen Linus Torvalds en Andy Tanenbaum eens willen nalezen. Hier is de link....</description>
+</item>
+
+<item>
+<title>Discussie over de omstreden Smart tags van Windows XP</title>
+<link>http://linux.gelrevision.nl/index.php?newsitem=1001</link>
+<description>Er is veel te doen over de omstreden smart tags die MS Windows in IE gaan gebruiken op XP. Over het algemeen zijn de tegenstanders ongerust over het feit dat Microsoft besluit welke links er zichtbaar zullen worden. Daarmee zullen ze de mensen (on)bewust in een bepaalde richting sturen. Op Advogato kan je een discussie volgen over dit fenomeen.</description>
+</item>
+
+<item>
+<title>Boekrecensies: Using Linux en Art of Computer Programming</title>
+<link>http://linux.gelrevision.nl/index.php?newsitem=1000</link>
+<description>Er zijn weer 2 nieuwe boekrecensies te vinden op nloboek.</description>
+</item>
+
+<item>
+<title>Sony Playstation2 als desktop computer.</title>
+<link>http://linux.gelrevision.nl/index.php?newsitem=999</link>
+<description>Binnenkort komt de beta release uit van kernel 2.4 voor de Playstation2. Er zijn serieuze plannen om er een heuse desktop computer van te maken met o.a. Office software.</description>
+</item>
+
+<item>
+<title>IP tables: inleiding</title>
+<link>http://linux.gelrevision.nl/index.php?newsitem=998</link>
+<description>Linux.com heeft een artikel waarin de schrijven uitleg geeft over het gebruik van Netfilter (iptables) om connecties te blocken en open te zetten.</description>
+</item>
+
+</channel>
+</rss>

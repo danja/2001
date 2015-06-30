@@ -1,0 +1,92 @@
+<rdf:RDF
+  xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'
+  xmlns:RDFNsId1='http://webns.net/mvcb#'
+  xmlns:RDFNsId2='http://www.isacat.net/ns/rdbe#'
+  xmlns:RDFNsId3='http://www.w3.org/2000/01/rdf-schema#' >
+  <rdf:Description rdf:about='http://goldilocks/visitors/table.bears'>
+    <rdf:type rdf:resource='http://www.isacat.net/ns/rdbe#Table'/>
+    <RDFNsId2:name>bears</RDFNsId2:name>
+    <RDFNsId2:tableType>TABLE</RDFNsId2:tableType>
+    <RDFNsId2:contains rdf:resource='http://goldilocks/visitors/column.bears.id'/>
+    <RDFNsId2:contains rdf:resource='http://goldilocks/visitors/column.bears.name'/>
+    <RDFNsId2:contains rdf:resource='http://goldilocks/visitors/column.bears.food'/>
+  </rdf:Description>
+  <rdf:Description rdf:about='mydatabase'>
+    <rdf:type rdf:resource='http://www.isacat.net/ns/rdbe#Database'/>
+    <RDFNsId2:name>Bear Diet</RDFNsId2:name>
+    <RDFNsId2:baseUri>http://goldilocks/visitors/</RDFNsId2:baseUri>
+    <RDFNsId2:xsdUrl>http://goldilocks/diet/diet.xsd</RDFNsId2:xsdUrl>
+    <RDFNsId2:queryUrl>http://goldilocks/diet/query</RDFNsId2:queryUrl>
+    <RDFNsId2:description>A database of bear&apos;s preferred eating</RDFNsId2:description>
+    <RDFNsId2:hasConnection rdf:resource='#myconnection'/>
+    <RDFNsId3:seeAlso rdf:resource='http://dmoz.org/Science/Biology/Zoology/'/>
+    <RDFNsId2:contains rdf:resource='http://goldilocks/visitors/schema.wrox'/>
+  </rdf:Description>
+  <rdf:Description rdf:about='http://goldilocks/visitors/column.food.foodtype'>
+    <rdf:type rdf:resource='http://www.isacat.net/ns/rdbe#Column'/>
+    <RDFNsId2:name>foodtype</RDFNsId2:name>
+    <RDFNsId2:columnType>VARCHAR</RDFNsId2:columnType>
+    <RDFNsId2:columnSize>10</RDFNsId2:columnSize>
+    <RDFNsId2:isKey>none</RDFNsId2:isKey>
+  </rdf:Description>
+  <rdf:Description rdf:about='http://goldilocks/visitors/column.bears.food'>
+    <rdf:type rdf:resource='http://www.isacat.net/ns/rdbe#Column'/>
+    <RDFNsId2:name>food</RDFNsId2:name>
+    <RDFNsId2:columnType>INTEGER</RDFNsId2:columnType>
+    <RDFNsId2:columnSize>10</RDFNsId2:columnSize>
+    <RDFNsId2:isKey>food.id</RDFNsId2:isKey>
+  </rdf:Description>
+  <rdf:Description rdf:about='#RDFAnonId16'>
+    <RDFNsId1:errorReportsTo>mailto:danny_ayers@yahoo.co.uk</RDFNsId1:errorReportsTo>
+    <RDFNsId1:generatorAgent>RDBE v0.2</RDFNsId1:generatorAgent>
+    <RDFNsId1:prefix>rdbe</RDFNsId1:prefix>
+  </rdf:Description>
+  <rdf:Description rdf:about='http://goldilocks/visitors/table.food'>
+    <rdf:type rdf:resource='http://www.isacat.net/ns/rdbe#Table'/>
+    <RDFNsId2:name>food</RDFNsId2:name>
+    <RDFNsId2:tableType>TABLE</RDFNsId2:tableType>
+    <RDFNsId2:contains rdf:resource='http://goldilocks/visitors/column.food.id'/>
+    <RDFNsId2:contains rdf:resource='http://goldilocks/visitors/column.food.foodtype'/>
+  </rdf:Description>
+  <rdf:Description rdf:about='http://goldilocks/visitors/column.bears.id'>
+    <rdf:type rdf:resource='http://www.isacat.net/ns/rdbe#Column'/>
+    <RDFNsId2:name>id</RDFNsId2:name>
+    <RDFNsId2:columnType>INTEGER</RDFNsId2:columnType>
+    <RDFNsId2:columnSize>10</RDFNsId2:columnSize>
+    <RDFNsId2:isKey>primary</RDFNsId2:isKey>
+  </rdf:Description>
+  <rdf:Description rdf:about='http://goldilocks/visitors/schema.wrox'>
+    <rdf:type rdf:resource='http://www.isacat.net/ns/rdbe#Schema'/>
+    <RDFNsId2:name>wrox</RDFNsId2:name>
+    <RDFNsId2:contains rdf:resource='http://goldilocks/visitors/catalog.simple'/>
+  </rdf:Description>
+  <rdf:Description rdf:about='http://goldilocks/visitors/column.food.id'>
+    <rdf:type rdf:resource='http://www.isacat.net/ns/rdbe#Column'/>
+    <RDFNsId2:name>id</RDFNsId2:name>
+    <RDFNsId2:columnType>INTEGER</RDFNsId2:columnType>
+    <RDFNsId2:columnSize>10</RDFNsId2:columnSize>
+    <RDFNsId2:isKey>primary</RDFNsId2:isKey>
+  </rdf:Description>
+  <rdf:Description rdf:about='http://goldilocks/visitors/column.bears.name'>
+    <rdf:type rdf:resource='http://www.isacat.net/ns/rdbe#Column'/>
+    <RDFNsId2:name>name</RDFNsId2:name>
+    <RDFNsId2:columnType>VARCHAR</RDFNsId2:columnType>
+    <RDFNsId2:columnSize>10</RDFNsId2:columnSize>
+    <RDFNsId2:isKey>none</RDFNsId2:isKey>
+  </rdf:Description>
+  <rdf:Description rdf:about='myconnection'>
+    <rdf:type rdf:resource='http://www.isacat.net/ns/rdbe#Connection'/>
+    <RDFNsId2:name>My connection</RDFNsId2:name>
+    <RDFNsId2:driver>com.inet.tds.TdsDriver</RDFNsId2:driver>
+    <RDFNsId2:dbcType>JDBC</RDFNsId2:dbcType>
+    <RDFNsId2:connUrl>jdbc:inetdae:localhost:1433</RDFNsId2:connUrl>
+    <RDFNsId2:login>wrox</RDFNsId2:login>
+    <RDFNsId2:password>xorw</RDFNsId2:password>
+  </rdf:Description>
+  <rdf:Description rdf:about='http://goldilocks/visitors/catalog.simple'>
+    <rdf:type rdf:resource='http://www.isacat.net/ns/rdbe#Catalog'/>
+    <RDFNsId2:name>simple</RDFNsId2:name>
+    <RDFNsId2:contains rdf:resource='http://goldilocks/visitors/table.bears'/>
+    <RDFNsId2:contains rdf:resource='http://goldilocks/visitors/table.food'/>
+  </rdf:Description>
+</rdf:RDF>

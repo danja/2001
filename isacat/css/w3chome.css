@@ -1,0 +1,172 @@
+
+
+/* ****************** Style for page body *************** */
+
+body {
+   background: #fff;
+   color: #000;
+}
+
+h3.navhead {
+   font-size: 100%;
+}
+
+.main p {
+   text-indent: 17px;
+}
+
+:link {
+   background: #fff;
+   color: #037;
+}
+
+:visited {
+   background: #fff;
+   color: #551a8b;
+}
+
+:active {
+   background: #ffc;
+   color: #900;
+   text-decoration: none;
+}
+
+.center, #logo, #slogan {
+   text-align: center;
+}
+
+#slogan {
+   margin-top: -5px;
+   font-family: Times, "Times New Roman", serif;
+}
+
+.headline {
+   background: #fff;
+   color: #900;
+}
+
+.hide {
+   display: none;
+}
+
+/* ****************** Style for banner ************** */
+
+div.banner {
+   border: none;
+   margin-left: 1px;
+   margin-right: 1px;
+   padding: 0.1em 0.3em;
+   text-align: center;
+   font-weight: bold;
+}
+
+div.banner a:link, div.banner a:visited, div.banner {
+   background: #037;
+   text-decoration: none;
+}
+
+div.banner, div.banner a:link, div.banner a:visited {
+   color: #fff;
+}
+
+div.banner a:active {
+   background: #ffc;
+   color: #900;
+   text-decoration: none;
+}
+
+/* ****************** Style for navigation bar ************** */
+
+/* td.navbar ul { margin-top: -10px; } removed for NS */
+
+td.navbar {
+   background: #fea;
+   color: #000;
+}
+
+input {
+   font-size: 83%;
+   font-family: Geneva, Arial, sans-serif;
+}
+
+/* next three rules for acronyms in Mac IE 4.01 and 4.5 */
+
+td.navbar :link {
+   background: #fea;
+   color: #037;
+}
+
+td.navbar :visited {
+   background: #fea;
+   color: #551a8b;
+}
+
+td.navbar :active {
+   background: #ffc;
+   color: #900;
+   text-decoration: none;
+}
+
+/* next three rules for most browsers */
+
+a.navlink:link {
+   background: #fea;
+   color: #037;
+}
+
+a.navlink:visited {
+   background: #fea;
+   color: #551a8b;
+}
+
+a.navlink:active {
+   background: #ffc;
+   color: #900;
+   text-decoration: none;
+}
+
+/* ****************** Style for footer  ************** */
+
+p.copyright {
+   margin: 0 0.5em;
+   font-size: small;
+}
+
+/* ****************** Style for printing  ************** */
+
+@media print {
+   H1, H2, H3,
+   H4, H5, H6    { page-break-after: avoid; page-break-inside: avoid }
+   BLOCKQUOTE,
+   PRE           { page-break-inside: avoid }
+   UL, OL, DL    { page-break-before: avoid }
+   .navbar       { background-color: #fff ; border-color: #000 ; 
+border-width: 1px }
+   A.navlink, A.bannerLink     { font-weight: normal }
+}
+
+/* ****************** Style for speech  ************** */
+
+@media aural {
+   H1, H2, H3,
+   H4, H5, H6    { voice-family: paul, male; stress: 20; richness: 90 }
+   H1            { pitch: x-low; pitch-range: 90 }
+   H2            { pitch: x-low; pitch-range: 80 }
+   H3            { pitch: low; pitch-range: 70 }
+   H4            { pitch: medium; pitch-range: 60 }
+   H5            { pitch: medium; pitch-range: 50 }
+   H6            { pitch: medium; pitch-range: 40 }
+   LI, DT, DD    { pitch: medium; richness: 60 }
+   DT            { stress: 80 }
+   PRE, CODE, TT { pitch: medium; pitch-range: 0; stress: 0; richness: 80 }
+   EM            { pitch: medium; pitch-range: 60; stress: 60; richness: 50 }
+   STRONG        { pitch: medium; pitch-range: 60; stress: 90; richness: 90 }
+   DFN           { pitch: high; pitch-range: 60; stress: 60 }
+   S, STRIKE     { richness: 0 }
+   I             { pitch: medium; pitch-range: 60; stress: 60; richness: 50 }
+   B             { pitch: medium; pitch-range: 60; stress: 90; richness: 90 }
+   U             { richness: 0 }
+   A:link        { voice-family: harry, male }
+   A:visited     { voice-family: betty, female }
+   A:active      { voice-family: betty, female; pitch-range: 80; pitch: x-high }
+}

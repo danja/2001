@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- #BeginTemplate "/Templates/Isacat.dwt" -->
+<head>
+  <!-- #BeginEditable "doctitle" -->
+  <title>Danny Ayers</title>
+  <!-- #EndEditable -->
+  <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
+  <!-- #BeginEditable "metatags" -->
+  <meta http-equiv="Content-Type" content="text/html; charset=" />
+  <link rel="stylesheet" href="css/style.css" />
+  <meta name="Author" content="Danny Ayers" />
+  <meta name="keywords" content="Danny Ayers, Isacat, Java, XML, Sri Lanka, Artificial Intelligence"
+  />
+  <meta name="description" content="Danny Ayers provides a selection of resources, largely related to Java programming though bits are about Sri Lanka."
+  />
+  <!-- #EndEditable -->
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<p align="center"><a href="index.htm"
+title="Danny Ayers's Stuff Home Page">Home</a> | <a href="links/links.htm"
+title="Links to related resources">Links</a></p>
+<!-- #BeginEditable "Body" -->
+
+<h1><a href="misc/biog.htm">Danny Ayers</a> :<i> Stuff</i></h1>
+
+<p>If you have a link that would fit well in one of the categories below
+(currently being sorted), send it with a short description and it'll go on the
+list. Likewise, backlinks to here are appreciated. I won't say the site is
+under construction - that would suggest that one day it would be finished.</p>
+
+<div align="center">
+<p><a href="misc/gurula.htm"><img src="images/rakshagurula2_th.jpg" width="98"
+height="100" alt="Demon Mask" border="0" /></a></p>
+</div>
+
+<table width="99%" border="0" cellspacing="0" cellpadding="5">
+  <tbody>
+    <tr>
+      <td valign="top" class="navbar" width="20%"><h2 align="center"
+        class="navbar">Things</h2>
+
+        <h5>Local Pages</h5>
+        <ul>
+          <li><a href="2001/code/autohelp.htm"
+            title="Uses Java/XML, including source code">Autohelp</a> - a free
+            document indexing and viewing system</li>
+        </ul>
+        <ul>
+          <li><a href="2001/xml/case.htm" title="Yes!">Is XML Case
+            Sensitive?</a> - trying to make sense of the Recommendation</li>
+        </ul>
+        <ul>
+          <li><a href="2001/code/index.htm"
+            title="Various small apps with source">Java-XML Applications /
+            Code</a> - various bits &amp; pieces</li>
+        </ul>
+        <ul>
+          <li><a href="2001/code/misc/misc.htm" title="sod all">Miscellaneous
+            Resources</a></li>
+        </ul>
+        <ul>
+          <li><a href="2001/bombay/mumjava.htm"
+            title="Slides etc. from two Java presentations">MumJava 2001
+            presentation materials</a></li>
+        </ul>
+
+        <h5></h5>
+        <ul>
+          <li><a href="citnames/2001/04/rpp.htm" title="A proposal...">RDF
+            Process Profile (RPP)</a></li>
+        </ul>
+
+        <h5>Unlikely Pages</h5>
+        <ul>
+          <li><a href="http://www.mawgawr.co.uk"
+            title="Wonderful Flash">Mawgawr</a></li>
+          <li><a href="http://www.hankandslim.com"
+            title="Avant Garde Country &amp; Western">Hank and Slim</a></li>
+          <li><a href="http://www.mawgawr.co.uk"></a><a
+            href="http://members.nbci.com/_XMCM/itsinthegenes/index.htm"
+            title="Lord only knows...">AJ's Stuff</a></li>
+          <li><a href="misc/bats.htm">Devin's Bats</a></li>
+        </ul>
+
+        <h5>(not very) <a href="links/links.htm"
+        title="I'll get these sorted soon...">Categorised Links</a></h5>
+        <ul>
+          <li><a href="links/ai.htm">Artificial Intelligence &amp; Machine
+            Learning</a></li>
+          <li><a href="links/xtreme.htm">Extreme Programming</a></li>
+          <li><a href="links/information.htm">Information Retrieval, Searching
+            &amp; Indexing</a></li>
+          <li><a href="links/java.htm">Java</a></li>
+          <li><a href="links/lisp.htm">Lisp &amp; Scheme</a></li>
+          <li><a href="links/music.htm">Music</a></li>
+          <li><a href="links/palm.htm">Palm (inc. J2ME, KVM etc)</a></li>
+          <li><a href="links/search.htm">Search Engines, Dictionaries &amp;
+            Books</a></li>
+          <li><a href="links/xml.htm">XML</a></li>
+        </ul>
+        <ul>
+          <li><a href="links/unfiled.htm">Unfiled</a></li>
+          <li><a href="midi/boomboom.mid">Boom Boom</a></li>
+        </ul>
+      </td>
+      <td valign="top" class="main" width="59%"><h2 align="center"
+        class="main">Stuff</h2>
+
+        <h6>May 2001</h6>
+        It's our last month in Sri Lanka...eek!
+        <hr />
+
+        <h6>April 2001</h6>
+
+        <p>Everyone interested in the near future should read<a
+        href="http://www.scientificamerican.com/2001/0501issue/0501berners-lee.html">
+        this article </a>by Tim Berners-Lee &amp; colleagues which is an
+        excellent introduction to the <a
+        href="http://www.scientificamerican.com/2001/0501issue/0501berners-lee.html">Semantic
+        Web</a>.</p>
+
+        <p>Put together <a href="citnames/2001/04/rpp.htm">RDF Process Profile
+        (RPP)</a> proposal (<a href="citnames/2001/04/mudman.htm">mudman</a>
+        status).  Also semantic web related.</p>
+
+        <p>Been busy refactoring - new (hopefully) bug free version of <a
+        href="2001/code/autohelp.htm">AutoHelp</a> now available.</p>
+
+        <p>Still not got around to cataloguing the links.</p>
+        <hr />
+
+        <h6>March 2001</h6>
+
+        <p>Started refactoring bits of the code - one day it'll be
+        bullet-proof...</p>
+
+        <p>Registered <a href="http://www.citnames.com">citnames.com</a>, plan
+        to put demo search engine there in first instance.</p>
+
+        <p>Added some more <a href="2001/code/index.htm">Java/XML code</a>.
+        Started <a href="2001/code/misc/misc.htm">Miscellaneous
+        Resources</a>.</p>
+
+        <p>Done the <a href="http://www.mumjava.com">conference</a>, got the
+        sweatshirt (smart red thing), put the presentation materials <a
+        href="2001/bombay/mumjava.htm">here</a>. Can't wait to get home and
+        see a fortnight's worth of mail...</p>
+        <hr />
+
+        <h6>Feb 2001</h6>
+
+        <p>Added <a href="2001/code/index.htm">Java-XML Applications /
+        Code</a> - a variety of downloadable goodies. <a
+        href="2001/code/CSVtoXML.htm">CSVToXML</a> improved, <a
+        href="2001/code/CSVtoXML.htm">XMLToCSV</a> added.</p>
+
+        <p>At the moment I'm seriously busy preparing for a Java conference -
+        <a href="http://www.mumjava.com">'MumJava'</a> in Mumbai (Bombay) at
+        the beginning of March. It's organised by <a
+        href="http://www.wrox.com">Wrox Press</a>.</p>
+
+        <p align="left">Next for this site I'm going to try and get my links
+        organised - every time I change machine I forget my bookmarks.</p>
+
+        <p align="left">Added <a href="2001/xml/case.htm">Is XML Case
+        Sensitive?.</a><br />
+        </p>
+        <hr />
+
+        <p> </p>
+      </td>
+      <td valign="top" class="rhs" width="20%"><h2 align="center"
+        class="rhs">Bits</h2>
+
+        <p><a href="mailto:danny@panlanka.net">Mail me</a></p>
+
+        <p><a href="2001/ideas/projideas.htm">Project Ideas</a></p>
+
+        <p><a href="misc/tolookat.htm">reminders</a></p>
+        <hr />
+
+        <p><a href="2001/web.txt">kind of blog</a> (sites I must remember to
+        visit, most recent first)</p>
+
+        <p>older <a href="2001/04/web04_2001.txt">4/2000</a></p>
+        <hr />
+
+        <h5>Nearby Pages</h5>
+
+        <p><a href="http://www.lankamasks.org">Ambalangoda Mask Museum</a> is
+        in Sri Lanka. The masks are used in folk drama/dances, as well as in
+        traditional healing rituals - the so-called 'devil dances'. My partner
+        <a href="caroline/carobiog.htm">Caroline</a> is developing the
+        site.</p>
+
+        <p><a href="caroline/randomba/index.htm">Randomba Inn</a> -
+        accomodation in Sri Lanka.</p>
+
+        <p><a href="lanka/index.htm">Sri Lanka Stuff</a> - a few bits about us
+        coming here, put together when I had some (rare) idle time.</p>
+
+        <p><a href="isacat.htm">Isacat</a> is my Intelligent Search and
+        Cataloguing project, which I've been working on for quite a while, but
+        I haven't yet got anything worth putting on the web.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!-- #EndEditable -->
+
+<p align="right">© 2001 <a href="misc/biog.htm">Danny Ayers</a> All rights
+reserved.</p>
+
+<div align="center">
+<a href="http://www.isacat.net/isacat_site.rdf" title="RDF Metadata"><img
+src="citnames/rdf.png" alt="RDF" width="36" height="14" border="0"
+/></a></div>
+
+<p align="center"><a href="http://www.citnames.com">citnames</a></p>
+</body>
+<!-- #EndTemplate -->
+</html>

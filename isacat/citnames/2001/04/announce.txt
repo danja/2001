@@ -1,0 +1,10 @@
+RDF Process Profile (RPP) is a lightweight extensible description format for processes. RPP is an XML application, conforms to the W3C's RDF Specification and is extensible via XML-namespace and/or RDF based modularization. 
+
+I've put a mudman [1] specification together at [2]. There's still an awful long way to go both in terms of getting the idea in shape and modelling/expressing it properly. But I've just got an enormous pile of work-work in and so it'll be a good few weeks before I get chance to do any more on this, so I though this would be a good time to canvas for initial feedback. I've not got the RDF(S) syntax sussed, though I think there might be enough in the text of the doc to serve as a tidbit for the lions. Crit (that doesn't thoroughly demoralise!) will be appreciated. Oh yes, and I gave up smoking just before putting this together, so not only is the syntax extremely dubious, the overall sanity of the document is in no way guaranteed ;-)
+
+Cheers,
+Danny.
+
+[1] Like a strawman only squidgier
+[2] http://www.citnames.com/2001/04/rad-schema.htm 
+

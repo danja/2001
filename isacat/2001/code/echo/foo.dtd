@@ -1,0 +1,3 @@
+<!ELEMENT foo (lit)*>
+<!ELEMENT lit (#PCDATA)>
+<!ATTLIST lit text CDATA "STUFF">

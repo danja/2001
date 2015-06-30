@@ -1,0 +1,121 @@
+LIAR1
+#(#JVDiagramSpec 
+	#name: 'iou' 
+	#creationDateSeconds: 3159437383 
+	#modificationDateSeconds: 3159438076 
+	#author: #(#AD2Identity 
+		#nickName: '' 
+		#name: '' 
+		#company: '' ) 
+	#state: #(#AD2DiagramState 
+		#bits: 133 
+		#zoom: '100%' 
+		#translation: #(#Point 0 0 ) ) 
+	#settings: #(#AD2DiagramSettings 
+		#colors: 
+		#(#AD2Paint 
+			#symbolicColorDictionary: #(#diagramBackground #(#ColorValue #white ) #freeLine #(#ColorValue #black ) #interfaceBackground #(#ColorValue #orchid ) #association #(#ColorValue #black ) #classForeground #(#ColorValue #black ) #finalClassBackground #(#ColorValue 6553 8191 4096 ) #implementation #(#ColorValue #red ) #textForeground #(#ColorValue #black ) #inheritance #(#ColorValue #black ) #classBackground #(#ColorValue 4096 8191 6152 ) #abstractClassBackground #(#ColorValue 8191 6553 4096 ) #textBackground #(#ColorValue 4096 6553 8191 ) ) 
+			#indexedColors: #(#(#ColorValue #white ) #(#ColorValue 6143 6143 6143 ) #(#ColorValue #gray ) #(#ColorValue #black ) #(#ColorValue 8191 4096 6151 ) #(#ColorValue #salmon ) #(#ColorValue 8191 6553 4096 ) #(#ColorValue #lightYellow ) #(#ColorValue 6553 8191 4096 ) #(#ColorValue #paleGreen ) #(#ColorValue 4096 8191 6152 ) #(#ColorValue #lightCyan ) #(#ColorValue 4096 6553 8191 ) #(#ColorValue #royalBlue ) #(#ColorValue 6553 4096 8191 ) #(#ColorValue #orchid ) #(#ColorValue 4096 2048 2106 ) #(#ColorValue 4096 4096 2048 ) #(#ColorValue 2048 4096 2562 ) #(#ColorValue 2048 2048 4096 ) ) 
+			#coloredPrinting: true ) 
+		#notation: 
+		#(#AD2NotationPreferences 
+			#notationType: #UML 
+			#useColorScheme: true 
+			#useStereotypes: true 
+			#displayInheritanceSymbol: true 
+			#displayVisibilitySymbols: true 
+			#displayNavigabilitySymbol: false 
+			#suppressMissingCompartments: true 
+			#displayFullyQualifiedName: false 
+			#displayDynamicRelations: true ) 
+		#layout: 
+		#(#AD2LayoutPreferences 
+			#relationLayoutType: #straight 
+			#inheritanceLayoutType: #straight 
+			#implementsLayoutType: #straight 
+			#inheritanceOrientation: #topToBottom 
+			#equalizeClassSize: false ) ) 
+	#filter: #(#JVMethodFilter 
+		#attributesFilter: 
+		#(#JVFilter 
+			#bits: 0 
+			#negativeBits: 0 
+			#individuals: #() ) 
+		#servicesFilter: 
+		#(#JVFilter 
+			#bits: 0 
+			#negativeBits: 0 
+			#individuals: #() ) 
+		#dynamicRelationsFilter: 
+		#(#JVFilter 
+			#bits: 0 
+			#negativeBits: 0 
+			#individuals: #() ) ) 
+	#classes: #(#(#'com.wrox.common.database.DBConnectionPool_inet' 'd:\bombay\iou\src\com\wrox\common\database\DBConnectionPool_inet.java' 958 1234 1 nil ) #(#'com.wrox.iou.filter.Stemmer' 'd:\bombay\iou\src\com\wrox\iou\filter\Stemmer.java' 958 1068 1 nil ) #(#'com.wrox.iou.page.RawDocument' 'd:\bombay\iou\src\com\wrox\iou\page\RawDocument.java' 512 413 1 nil ) 
+		#(#'com.wrox.iou.page.Document' 'd:\bombay\iou\src\com\wrox\iou\page\Document.java' 314 411 1 nil 
+			#layouts: #(
+				#(#JVLayoutSpec #'com.wrox.iou.page.FilteredDocument' 
+					#attribute: '#inheritance' 
+					#lineLayout: #(#(#Point 314 455 ) #(#Point 314 515 ) ) ) 
+				#(#JVLayoutSpec #'com.wrox.iou.page.RawDocument' 
+					#attribute: '#inheritance' 
+					#lineLayout: #(#(#Point 371 434 ) #(#Point 455 434 ) ) ) 
+				#(#JVLayoutSpec #'com.wrox.iou.page.HyperLink' 
+					#attribute: 'hyperlink' 
+					#lineLayout: #(#(#Point 257 440 ) #(#Point 191 440 ) ) 
+					#symbol: #plain ) 
+				#(#JVLayoutSpec #'com.wrox.iou.page.HyperLink' 
+					#attribute: '«uses, creates»' 
+					#lineLayout: #(#(#Point 257 425 ) #(#Point 191 425 ) ) 
+					#symbol: #littleStrokedArrow ) ) ) #(#'default.SetTestProperties' 'd:\bombay\iou\src\SetTestProperties.java' 777 1410 1 nil ) #(#'com.wrox.iou.database.RawDBAccess' 'd:\bombay\iou\src\com\wrox\iou\database\RawDBAccess.java' 578 282 1 nil ) #(#'com.wrox.common.util.XMLProperties' 'd:\bombay\iou\src\com\wrox\common\util\XMLProperties.java' 777 1208 1 nil ) #(#'com.wrox.common.util.StringUtils' 'd:\bombay\iou\src\com\wrox\common\util\StringUtils.java' 777 1114 1 nil ) #(#'com.wrox.iou.page.HyperLink' 'd:\bombay\iou\src\com\wrox\iou\page\HyperLink.java' 134 410 1 nil ) 
+		#(#'com.wrox.iou.page.HTMLParserCallback' 'd:\bombay\iou\src\com\wrox\iou\page\HTMLParserCallback.java' 134 512 1 nil 
+			#layouts: #(
+				#(#JVLayoutSpec #'com.wrox.iou.page.HyperLink' 
+					#attribute: 'hyperlink' 
+					#lineLayout: #(#(#Point 134 512 ) #(#Point 134 454 ) ) 
+					#symbol: #plain ) ) ) 
+		#(#'com.wrox.common.database.DBCPTest' 'd:\bombay\iou\src\com\wrox\common\database\DBCPTest.java' 369 1400 1 nil 
+			#layouts: #(
+				#(#JVLayoutSpec #'com.wrox.common.database.DBConnectionPool' 
+					#attribute: 'pool' 
+					#lineLayout: #(#(#Point 354 1400 ) #(#Point 149 1098 ) ) 
+					#symbol: #plain ) ) ) #(#'default.IOURunOnce' 'd:\bombay\iou\src\IOURunOnce.java' 369 1198 1 nil ) #(#'com.wrox.iou.database.LinkDBAccess' 'd:\bombay\iou\src\com\wrox\iou\database\LinkDBAccess.java' 464 121 1 nil ) 
+		#(#'com.wrox.iou.database.DBBuffer' 'd:\bombay\iou\src\com\wrox\iou\database\DBBuffer.java' 436 193 1 nil 
+			#layouts: #(
+				#(#JVLayoutSpec #'com.wrox.iou.database.LinkBuffer' 
+					#attribute: '#inheritance' 
+					#lineLayout: #(#(#Point 377 193 ) #(#Point 321 163 ) ) ) 
+				#(#JVLayoutSpec #'com.wrox.iou.database.DocumentBuffer' 
+					#attribute: '#inheritance' 
+					#lineLayout: #(#(#Point 376 255 ) #(#Point 322 283 ) ) ) 
+				#(#JVLayoutSpec #'com.wrox.iou.database.DBAccess' 
+					#attribute: 'dbaccess' 
+					#lineLayout: #(#(#Point 501 225 ) #(#Point 598 216 ) ) 
+					#symbol: #plain ) 
+				#(#JVLayoutSpec #'com.wrox.iou.database.DBAccess' 
+					#attribute: '«uses»' 
+					#lineLayout: #(#(#Point 501 210 ) #(#Point 598 201 ) ) 
+					#symbol: #littleStrokedArrow ) ) ) #(#'com.wrox.iou.database.FilteredDBAccess' 'd:\bombay\iou\src\com\wrox\iou\database\FilteredDBAccess.java' 727 282 1 nil ) #(#'com.wrox.iou.filter.Stopper' 'd:\bombay\iou\src\com\wrox\iou\filter\Stopper.java' 557 513 1 nil ) #(#'default.Index' 'd:\bombay\iou\src\Index.java' 369 660 1 nil ) #(#'com.wrox.iou.database.DocumentBuffer' 'd:\bombay\iou\src\com\wrox\iou\database\DocumentBuffer.java' 280 283 1 nil ) #(#'com.wrox.common.database.DBConnectionPool' 'd:\bombay\iou\src\com\wrox\common\database\DBConnectionPool.java' 134 1054 1 nil ) 
+		#(#'com.wrox.iou.database.DBAccess' 'd:\bombay\iou\src\com\wrox\iou\database\DBAccess.java' 663 180 1 nil 
+			#layouts: #(
+				#(#JVLayoutSpec #'com.wrox.iou.database.LinkDBAccess' 
+					#attribute: '#inheritance' 
+					#lineLayout: #(#(#Point 598 183 ) #(#Point 529 162 ) ) ) 
+				#(#JVLayoutSpec #'com.wrox.iou.database.FilteredDBAccess' 
+					#attribute: '#inheritance' 
+					#lineLayout: #(#(#Point 677 224 ) #(#Point 712 282 ) ) ) 
+				#(#JVLayoutSpec #'com.wrox.iou.database.RawDBAccess' 
+					#attribute: '#inheritance' 
+					#lineLayout: #(#(#Point 645 224 ) #(#Point 596 282 ) ) ) ) ) 
+		#(#'com.wrox.iou.database.LinkBuffer' 'd:\bombay\iou\src\com\wrox\iou\database\LinkBuffer.java' 279 119 1 nil 
+			#layouts: #(
+				#(#JVLayoutSpec #'com.wrox.iou.database.LinkDBAccess' 
+					#attribute: 'linkdb' 
+					#lineLayout: #(#(#Point 344 142 ) #(#Point 399 142 ) ) 
+					#symbol: #plain ) ) ) 
+		#(#'com.wrox.iou.filter.Filter' 'd:\bombay\iou\src\com\wrox\iou\filter\Filter.java' 436 515 1 nil 
+			#layouts: #(
+				#(#JVLayoutSpec #'com.wrox.iou.filter.Stopper' 
+					#attribute: 'stopper' 
+					#lineLayout: #(#(#Point 491 536 ) #(#Point 502 536 ) ) 
+					#symbol: #plain ) ) ) #(#'com.wrox.iou.page.FilteredDocument' 'd:\bombay\iou\src\com\wrox\iou\page\FilteredDocument.java' 315 515 1 nil ) ) )

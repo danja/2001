@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0041)http://useit.com/papers/responsetime.html -->
+<HTML><HEAD><TITLE>Response Time Overview</TITLE>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<META 
+content="response time, delay, download times, user attention, progress indicator, percent-done" 
+name=keywords><LINK href="Response Time Overview_files/useit_style.css" 
+rel=STYLESHEET title="Useit House Style" type=text/css>
+<META content="MSHTML 5.00.3103.1000" name=GENERATOR></HEAD>
+<BODY bgColor=#ffffff>
+<TABLE bgColor=#ffff66 class=navbar width="100%">
+  <TBODY>
+  <TR>
+    <TD><FONT 
+      face="Verdana, Lucida Sans, Arial, Helvetica, Geneva, sans-serif"><SMALL><A 
+      href="http://useit.com/" 
+      title="Home page for Jakob Nielsen's website"><STRONG><SPAN 
+      class=useem>use</SPAN>it.com</STRONG></A> <IMG align=bottom alt="->" 
+      height=9 src="Response Time Overview_files/arrow_yellow.gif" width=13> <A 
+      href="http://useit.com/papers/">Papers and Essays</A> <IMG align=bottom 
+      alt="->" height=9 src="Response Time Overview_files/arrow_yellow.gif" 
+      width=13> Response Times </SMALL></FONT></TR></TBODY></TABLE>
+<H1>Response Times: The Three Important Limits</H1><SMALL><EM>Excerpt from 
+Chapter 5 in my book <A href="http://useit.com/jakob/useengbook.html">Usability 
+Engineering</A></EM></SMALL> 
+<HR>
+The basic advice regarding response times has been about the same for almost 
+thirty years [Miller 1968; Card et al. 1991]: 
+<UL>
+  <LI><STRONG>0.1 second</STRONG> is about the limit for having the user feel 
+  that the system is reacting instantaneously, meaning that no special feedback 
+  is necessary except to display the result. 
+  <LI><STRONG>1.0 second</STRONG> is about the limit for the user's flow of 
+  thought to stay uninterrupted, even though the user will notice the delay. 
+  Normally, no special feedback is necessary during delays of more than 0.1 but 
+  less than 1.0 second, but the user does lose the feeling of operating directly 
+  on the data. 
+  <LI><STRONG>10 seconds</STRONG> is about the limit for keeping the user's 
+  attention focused on the dialogue. For longer delays, users will want to 
+  perform other tasks while waiting for the computer to finish, so they should 
+  be given feedback indicating when the computer expects to be done. Feedback 
+  during the delay is especially important if the response time is likely to be 
+  highly variable, since users will then not know what to expect. 
+</LI></UL>Normally, response times should be as fast as possible, but it is also 
+possible for the computer to react so fast that the user cannot keep up with the 
+feedback. For example, a scrolling list may move so fast that the user cannot 
+stop it in time for the desired element to remain within the available window. 
+The fact that computers can be too fast indicates the need for user-interface 
+changes, like animations, to be timed according to a real-time clock rather than 
+being timed as an indirect effect of the computer's execution speed: Even if a 
+faster model computer is substituted, the user interface should stay usable. 
+<P>In cases where the computer cannot provide fairly immediate response, 
+continuous feedback should be provided to the user in form of a percent-done 
+indicator [Myers 1985]. As a rule of thumb, percent-done progress indicators 
+should be used for operations taking more than about 10 seconds. Progress 
+indicators have three main advantages: They reassure the user that the system 
+has not crashed but is working on his or her problem; they indicate 
+approximately how long the user can be expected to wait, thus allowing the user 
+to do other activities during long waits; and they finally provide something for 
+the user to look at, thus making the wait less painful. This latter advantage 
+should not be underestimated and is one reason for recommending a graphic 
+progress bar instead of just stating the expected remaining time in numbers. 
+<P>For operations where it is unknown in advance how much work has to be done, 
+it may not be possible to use a percent-done indicator, but it is still possible 
+to provide running progress feedback in terms of the absolute amount of work 
+done. For example, a system searching an unknown number of remote databases 
+could print the name of each database as it is processed. If this is not 
+possible either, a last resort would be to use a less specific progress 
+indicator in the form of a spinning ball, a busy bee flying over the screen, 
+dots printed on a status line, or any such mechanism that at least indicates 
+that the system is working, even if it does not indicate what it is doing. <FONT 
+color=#666666>Note added for the Web version of this essay: Most Web browsers 
+fail in providing useful progress bars, since they don't communicate what 
+percentage of the <EM>entire download</EM> for a page has been completed.</FONT> 
+
+<P>For reasonably fast operations, taking between 2 and 10 seconds, a true 
+percent-done indicator may be overkill and, in fact, putting one up would 
+violate the principle of display inertia (flashing changes on the screen so 
+rapidly that the user cannot keep pace or feels stressed). One could still give 
+less conspicuous progress feedback. A common solution is to combine a "busy" 
+cursor with a rapidly changing number in small field in the bottom of the screen 
+to indicate how much has been done. 
+<P>
+<HR>
+<STRONG>See Also:</STRONG> <BR>Alertbox essay about <A 
+href="http://useit.com/alertbox/9703a.html">Web response times</A> and how to 
+improve them. 
+<H3>References</H3>Card, S. K., Robertson, G. G., and Mackinlay, J. D. (1991). 
+The information visualizer: An information workspace. <EM>Proc. ACM CHI'91 
+Conf.</EM> (New Orleans, LA, 28 April-2 May), 181-188. 
+<P>Miller, R. B. (1968). Response time in man-computer conversational 
+transactions. <EM>Proc. AFIPS Fall Joint Computer Conference</EM> <STRONG>Vol. 
+33</STRONG>, 267-277. 
+<P>Myers, B. A. (1985). The importance of percent-done progress indicators for 
+computer-human interfaces. <EM>Proc. ACM CHI'85 Conf.</EM> (San Francisco, CA, 
+14-18 April), 11-17. </P></BODY></HTML>

@@ -1,0 +1,90 @@
+ 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<!-- #BeginTemplate "/Templates/Isacat.dwt" --> 
+<HEAD>
+<!-- #BeginEditable "doctitle" --> 
+<TITLE>Autohelp Page 4</TITLE>
+<!-- #EndEditable --> 
+<meta content="text/html; charset=ISO-8859-1" http-equiv=Content-Type>
+<!-- #BeginEditable "metatags" --> 
+<link rel="stylesheet" href="../../../css/style.css">
+<meta name="Author" content="Danny Ayers">
+<meta name="keywords" content="Danny Ayers, Isacat, Java, XML, rdf, Sri Lanka, Artificial Intelligence, semantic web">
+<meta name="description" content="Danny Ayers provides a selection of resources, largely related to Java programming though bits are about Sri Lanka.">
+<!-- #EndEditable --> 
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<p align="center"><a href="../../../index.htm" title="Danny Ayers's Stuff Home Page">Home</a> 
+  | <a href="../../../links/links.htm" title="Links to related resources">Links</a></p>
+<!-- #BeginEditable "Body" --> 
+<h5 align="center">Autohelp Page <a href="../autohelp.htm">1</a> <a href="autohelp2.htm">2</a> 
+  <a href="autohelp3.htm">3</a> <font color="#FF0000">4</font> <a href="autohelp5.htm">5 
+  </a></h5>
+<p>&nbsp;</p>
+<p>For each of the two views above, the documents that are displayed in the right-hand 
+  panel are standard HTML files stored as files in the conventional fashion. The 
+  <b>Contents</b> and <b>Index</b> panels are shown according to a set of four 
+  XML files which the author must provide. </p>
+<p>These four files are as follows :</p>
+<p> ·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Map file – contains 
+  a list of one-to-one mappings between the location of each HTML document and 
+  a logical name that will be used by the rest of the system. Every page that 
+  will be in the catalogue will need a map file entry.</p>
+<p> ·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Index file – contains 
+  a series of associations between logical names (defined in the map file) and 
+  the human-readable entry that will be displayed in the 'Index' list panel. It 
+  is not necessary or often even desirable to provide an entry for every page, 
+  a list of the most important pages is usually preferable. </p>
+<p> ·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TOC (Table of Contents) 
+  file – contains a list of associations between logical names and the entries 
+  that will appear in the 'Contents' panel. The major difference between this 
+  and the index file is that to display the contents as a tree, this file has 
+  to describe the hierarchical structure of the document set – e.g. sections, 
+  chapters and pages.  </p>
+<p> ·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Helpset definition 
+  file – provides the JavaHelp system with the locations of the files above, and 
+  specifies what is to be done with them. This is in effect the metadata.</p>
+<p>To be able to generate these files we need to be able to model what they represent. 
+  We already have a good model for XML, the DOM. The contents of three of the 
+  files (Map, Index, Contents) will depend entirely on the particular set of HTML 
+  files, whereas the fourth (HelpSet) will be pretty much the same for any set 
+  of documents. For this reason, the HelpSet document is treated as a separate 
+  case in AutoHelp, whereas the other three files are all descended from a common 
+  superclass HelpDocument. As you would expect this class contains all the fields 
+  and methods common to all three file types. A HelpDocument object contains a 
+  DOM Document as a member variable, and the constructor of HelpDocument creates 
+  such a Document using the factory and builder methods we saw in DirToXML. There 
+  are substantial differences between the three HelpSet files, so to emphasize 
+  the difference between these, the most significant member variable in each case 
+  (all with private scope)  has been included on the class diagram below – existingMapRefs 
+  for MapDocument, indexArray for IndexDocument and stack for TOCDocument. These 
+  will be explained when we get to a description of the construction of each kind 
+  of document, but first a quick overview of how the system as a whole works.</p>
+<p>The method by which all three documents will be built is essentially the same 
+  as we saw in DirToXML earlier – a directory walker (an instance of DirWalker) 
+  will generate events which a handler (HelpHandler) will use to create the documents 
+  (MapDocument, IndexDocument &amp; TOCDocument).</p>
+<p> <img border=0 width=553 height=500
+src="images/image007.gif" v:shapes="_x0000_i1028"> </p>
+<p>The AutoHelp class contains the main() method and is the entry point into the 
+  program. It coordinates the operation of the other objects. As we already noted, 
+  Helpset definition files are likely to be virtually the same for all document 
+  sets, so the class to build these is isolated.  </p>
+<p>We have already seen the DirWalker and FileDirComparison classes in DirToXML, 
+  similarly the class Directory is reused here, to model a directory entry. The 
+  OutputDOM class is essentially a wrapper for the writeXML() method we saw in 
+  DirToXML, which writes DOM out to an XML file.</p>
+<p>We will now look at the contents of each of the XML files used to produce the 
+  JavaHelp views we saw earlier, and in each case have a look at how the corresponding 
+  DOM tree was built. </p>
+<h5 align="center"><a href="autohelp5.htm">Next</a></h5>
+<!-- #EndEditable --> 
+<p align="right">&copy; 2001 <a href="../../../misc/biog.htm">Danny Ayers</a> All 
+  rights reserved.</p>
+<div align="center"><a href="http://www.isacat.net/isacat_site.rdf" title="RDF Metadata"><img src="../../../citnames/rdf.png" alt="RDF" width="36" height="14" border="0"/></a> 
+</div>
+<p align="center"><a href="http://www.citnames.com">citnames</a></p>
+</BODY>
+<!-- #EndTemplate -->
+</HTML>

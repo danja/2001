@@ -1,0 +1,102 @@
+VisualWorks
+Mathematical Introduction to Logic
+http://www.alphaworks.ibm.com/tech/DataCraft
+www.w3.org/RDF/Metalog/). 
+http://swi.psy.uva.nl/projects/SWI-Prolog/packages/sgml/online.html
+http://www.ics.forth.gr/proj/isst/
+
+
+Squeak
+smalltalk
+Yahoo mail
+Principles of Neural Science", by Eric R. Kandel
+http://dev.w3.org/cvsweb/2000/10/swap/
+http://www.simpli.com/
+IEEE SUO mailing list
+http://www.bestweb.net/~sowa/peirce/ms514.htm
+
+homer quotes
+http://www.openldap.org/.
+http://argouml.tigris.org/
+http://users.tinyonline.co.uk/jh722415/
+http://www.cs.man.ac.uk/~franconi/icom/
+
+http://eor.dublincore.org/
+www.useit.com
+http://www.coworks.net/johan/fydra/
+jfig ?
+http://www.w3.org/TR/photo-rdf/
+http://uwimp.com/xmlgl.htm
+http://cs-www.cs.yale.edu/homes/dvm/daml/proposal.html
+Tarski, "The concept of truth in
+formal languages".
+http://www.rddl.org/SchemaAlgebra
+ ftp://ftp.dspace.org/pub/doso/dspace-rdf.htm
+
+http://www.w3.org/WAI/report/ (WART?)
+metadata coalition standard for XML
+http://www-106.ibm.com/developerworks/xml/library/x-matters9.html?open&l=136,t=grx,p=xmat9
+WordNet RDF
+http://www.w3.org/1999/11/conforms/ 
+http://rdfweb.org/2001/01/design/examples.rdf
+http://www.dis.uniroma1.it/~lenzerin/krdb01/home.html
+http://www.python.org/sigs/xml-sig/
+    - 4DOM 0.10.1 http://fourthought.com/4Suite/4DOM/
+
+
+Sqeak ST
+Jena source & version
+Python IRC shell
+
+LMP_1997_chan_chan.mp3
+http://k42.empolis.co.uk/
+XMLfr
+tmql-wg-subscribe@eGroups.com  ??
+http://developer.java.sun.com/developer/earlyAccess/j2ee
+JXTA
+http://www.xml.com/cs/user/view/cs_msg/110
+
+http://www.infotoday.com/searcher/jan00/feldman.htm
+http://www-106.ibm.com/developerworks/xml/library/x-think2.html?open&l=136,t=grx,p=think2
+http://www.python.org/doc/
+http://lists.w3.org/Archives/Public/www-rdf-logic/2001Mar/0033.html
+
+http://www.xml.com/pub/a/2001/05/02/semanticwebsite.html
+http://www.alpiri.com/flurry.html 
+SQL-92 owner
+http://www.rpbourret.com/xml/XMLDatabaseProds.htm
+http://www.computists.com/aibriefs
+http://sw.blogspace.com/ 
+http://logicerror.com/rdf-says
+KBS-Hyperbook
+http://lists.w3.org/Archives/Public/www-rdf-interest/2001Mar/0021.html
+http://www-uk.hpl.hp.com/people/bwm/rdf/issues/containersyntax/current.htm
+
+Metalogic, An Introduction to the Metatheory of Standard First Order Logic,
+Geoffrey Hunter,
+University of California Press, 1971 (6th printing 1996),
+ISBN 0-520-02356-0
+
+http://robustai.net/mentography/SemBrowser.gif
+
+http://groups.yahoo.com/group/XSDSchema 
+http://www.rddl.org/SchemaAlgebra.html
+
+linkmaster - palm - sourceforge
+
+http://www.w3.org/2000/10/swap/logic.n3
+
+Author Hacid, M.-S.,Petit, J.-M.,Tourmani, F. 
+Journal Knowledge and Information Systems 
+Volume vol.3, no.1 (ERL)
+
+http://www-sop.inria.fr/acacia/drdfs/index.html
+
+http://topicmaps.bond.edu.au/tutorials.mc
+
+Hugh Darwen source
+
+http://www.dlib.org/dlib/october00/baker/10baker.html
+http://www.xml.com/xml/pub/98/06/rdf.html
+http://dicomp.pair.com/pospap.htm
+

@@ -1,0 +1,21 @@
+<?xml encoding="UTF-8"?>
+<!-- DTD for KVM Expert System Knowledge Base Domains -->
+
+<!ELEMENT domain (fact+,rule+)>
+<!ATTLIST domain name CDATA #REQUIRED>
+<!ELEMENT fact (#PCDATA)>
+<!ATTLIST fact goal (true | false) "false">
+<!ATTLIST fact question (true | false) "false">
+<!ATTLIST fact negated (true | false) "false">
+<!ELEMENT rule (fact,condition+)>
+<!ELEMENT condition (#PCDATA)>
+<!ATTLIST condition negated (true | false) "false">
+
+
+
+
+
+
+
+
+

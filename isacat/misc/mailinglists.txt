@@ -1,0 +1,14 @@
+Mailing lists
+
+http://groups.yahoo.com/mygroups
+
+http://suo.ieee.org/
+
+
+http://dl.kr.org/ml.html
+
+
+http://groups.yahoo.com/group/Fountain_Society
+
+To unsubscribe, send mail to majordomo@cs.uah.edu with the command
+'unsubscribe cg' in the message body.

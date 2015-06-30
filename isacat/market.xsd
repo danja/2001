@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns:="http://www.w3.org/2000/10/XMLSchema">
+	<element name="tso_market">
+		<annotation>
+			<documentation>Container for TSO data</documentation>
+		</annotation>
+		<complexType>
+			<sequence>
+				<element ref="address" minOccurs="3" maxOccurs="3"/>
+				<element ref="detail_record" maxOccurs="10"/>
+				<element ref="date_time" minOccurs="2" maxOccurs="2"/>
+				<element ref="footage"/>
+				<element ref="discount"/>
+				<element ref="duration"/>
+				<element ref="comments" minOccurs="0"/>
+				<element ref="accessorial" minOccurs="0"/>
+			</sequence>
+		</complexType>
+	</element>
+	<element name="address">
+		<annotation>
+			<documentation>Container for shipment addresses</documentation>
+		</annotation>
+		<complexType>
+			<all>
+				<element ref="type"/>
+				<element name="handle" minOccurs="0">
+					<simpleType>
+						<restriction base="string">
+							<whiteSpace value="preserve"/>
+							<maxLength value="28"/>
+						</restriction>
+					</simpleType>
+				</element>
+				<element name="company_name">
+					<simpleType>
+						<restriction base="string">
+							<maxLength value="28"/>
+							<whiteSpace value="preserve"/>
+						</restriction>
+					</simpleType>
+				</element>
+				<element name="street1">
+					<simpleType>
+						<restriction base="string">
+							<maxLength value="50"/>
+							<whiteSpace value="preserve"/>
+						</restriction>
+					</simpleType>
+				</element>
+				<element name="street2" minOccurs="0">
+					<simpleType>
+						<restriction base="string">
+							<maxLength value="50"/>
+							<whiteSpace value="preserve"/>
+						</restriction>
+					</simpleType>
+				</element>
+				<element name="city">
+					<simpleType>
+						<restriction base="string">
+							<maxLength value="30"/>
+							<whiteSpace value="preserve"/>
+						</restriction>
+					</simpleType>
+				</element>
+				<element name="state">
+					<simpleType>
+						<restriction base="string">
+							<maxLength value="2"/>
+							<minLength value="2"/>
+							<length value="2"/>
+							<whiteSpace value="collapse"/>
+							<enumeration value="AL"/>
+							<enumeration value="AK"/>
+							<enumeration value="AS"/>
+							<enumeration value="AR"/>
+							<enumeration value="AZ"/>
+							<enumeration value="CA"/>
+							<enumeration value="CO"/>
+							<enumeration value="CT"/>
+							<enumeration value="DE"/>
+							<enumeration value="DC"/>
+							<enumeration value="FL"/>
+							<enumeration value="GA"/>
+							<enumeration value="HI"/>
+							<enumeration value="ID"/>
+							<enumeration value="IL"/>
+							<enumeration value="IN"/>
+							<enumeration value="IA"/>
+							<enumeration value="KS"/>
+							<enumeration value="KY"/>
+							<enumeration value="LA"/>
+							<enumeration value="ME"/>
+							<enumeration value="MD"/>
+							<enumeration value="MA"/>
+							<enumeration value="MI"/>
+							<enumeration value="MN"/>
+							<enumeration value="MS"/>
+							<enumeration value="MO"/>
+							<enumeration value="MT"/>
+							<enumeration value="NE"/>
+							<enumeration value="NV"/>
+							<enumeration value="NH"/>
+							<enumeration value="NJ"/>
+							<enumeration value="NM"/>
+							<enumeration value="NY"/>
+							<enumeration value="NC"/>
+							<enumeration value="ND"/>
+							<enumeration value="OH"/>
+							<enumeration value="OK"/>
+							<enumeration value="OR"/>
+							<enumeration value="PA"/>
+							<enumeration value="RI"/>
+							<enumeration value="SC"/>
+							<enumeration value="SD"/>
+							<enumeration value="TN"/>
+							<enumeration value="TX"/>
+							<enumeration value="UT"/>
+							<enumeration value="VT"/>
+							<enumeration value="VA"/>
+							<enumeration value="WA"/>
+							<enumeration value="WV"/>
+							<enumeration value="WI"/>
+							<enumeration value="WY"/>
+						</restriction>
+					</simpleType>
+				</element>
+				<element name="zip">
+					<simpleType>
+						<restriction base="string">
+							<maxLength value="5"/>
+							<minLength value="5"/>
+							<whiteSpace value="collapse"/>
+							<pattern value="\d{5,5}"/>
+						</restriction>
+					</simpleType>
+				</element>
+				<element ref="contact"/>
+				<element ref="dock_specs" minOccurs="0"/>
+			</all>
+		</complexType>
+	</element>
+	<element name="contact">
+		<annotation>
+			<documentation>Contact information for an address</documentation>
+		</annotation>
+		<complexType>
+			<all minOccurs="0">
+				<element name="name">
+					<simpleType>
+						<restriction base="string">
+							<whiteSpace value="preserve"/>
+							<maxLength value="28"/>
+						</restriction>
+					</simpleType>
+				</element>
+				<element name="title" minOccurs="0">
+					<simpleType>
+						<restriction base="string">
+							<whiteSpace value="preserve"/>
+							<maxLength value="28"/>
+						</restriction>
+					</simpleType>
+				</element>
+				<element name="phone">
+					<simpleType>
+						<restriction base="string">
+							<whiteSpace value="preserve"/>
+							<maxLength value="25"/>
+						</restriction>
+					</simpleType>
+				</element>
+				<element name="fax" minOccurs="0">
+					<simpleType>
+						<restriction base="string">
+							<whiteSpace value="preserve"/>
+							<maxLength value="25"/>
+						</restriction>
+					</simpleType>
+				</element>
+				<element name="tollfree" minOccurs="0">
+					<simpleType>
+						<restriction base="string">
+							<maxLength value="25"/>
+							<whiteSpace value="preserve"/>
+						</restriction>
+					</simpleType>
+				</element>
+				<element name="email" minOccurs="0">
+					<simpleType>
+						<restriction base="string">
+							<maxLength value="50"/>
+							<whiteSpace value="collapse"/>
+							<pattern value="\S+@\S+\.\S+"/>
+						</restriction>
+					</simpleType>
+				</element>
+			</all>
+		</complexType>
+	</element>
+	<element name="detail_record">
+		<annotation>
+			<documentation>Items in the shipment</documentation>
+		</annotation>
+		<complexType>
+			<all>
+				<element name="description">
+					<simpleType>
+						<restriction base="string">
+							<whiteSpace value="preserve"/>
+							<maxLength value="200"/>
+						</restriction>
+					</simpleType>
+				</element>
+				<element name="weight">
+					<simpleType>
+						<restriction base="int">
+							<whiteSpace value="collapse"/>
+						</restriction>
+					</simpleType>
+				</element>
+				<element name="unit_type">
+					<simpleType>
+						<restriction base="string">
+							<whiteSpace value="preserve"/>
+							<enumeration value="bags"/>
+							<enumeration value="bails"/>
+							<enumeration value="bundles"/>
+							<enumeration value="cartons"/>
+							<enumeration value="coils"/>
+							<enumeration value="crates"/>
+							<enumeration value="drums"/>
+							<enumeration value="gaylords"/>
+							<enumeration value="pails"/>
+							<enumeration value="reels"/>
+							<enumeration value="rolls"/>
+							<enumeration value="rugs"/>
+						</restriction>
+					</simpleType>
+				</element>
+				<element name="num_units">
+					<simpleType>
+						<restriction base="int">
+							<whiteSpace value="collapse"/>
+						</restriction>
+					</simpleType>
+				</element>
+				<element ref="pallets" minOccurs="0"/>
+				<element ref="hazmat" minOccurs="0"/>
+				<element ref="type_specific_attrs"/>
+			</all>
+		</complexType>
+	</element>
+	<element name="pallets">
+		<annotation>
+			<documentation>Pallet info for a detail_record</documentation>
+		</annotation>
+		<complexType>
+			<all>
+				<element name="number">
+					<simpleType>
+						<restriction base="int">
+							<minInclusive value="1"/>
+							<whiteSpace value="collapse"/>
+						</restriction>
+					</simpleType>
+				</element>
+				<element name="stackable">
+					<simpleType>
+						<restriction base="boolean">
+							<whiteSpace value="collapse"/>
+						</restriction>
+					</simpleType>
+				</element>
+			</all>
+		</complexType>
+	</element>
+	<element name="hazmat">
+		<annotation>
+			<documentation>Hazardous info for a detail_record</documentation>
+		</annotation>
+		<complexType>
+			<all>
+				<element name="type">
+					<simpleType>
+						<restriction base="string">
+							<whiteSpace value="preserve"/>
+							<maxLength value="40"/>
+						</restriction>
+					</simpleType>
+				</element>
+				<element name="un_number">
+					<simpleType>
+						<restriction base="string">
+							<whiteSpace value="preserve"/>
+							<maxLength value="15"/>
+						</restriction>
+					</simpleType>
+				</element>
+			</all>
+		</complexType>
+	</element>
+	<element name="type_specific_attrs">
+		<annotation>
+			<documentation>Attributes for detail_record specific to TL/LTL</documentation>
+		</annotation>
+		<complexType>
+			<choice>
+				<element name="trailer_type">
+					<simpleType>
+						<restriction base="string">
+							<whiteSpace value="collapse"/>
+							<enumeration value="van"/>
+							<enumeration value="flatbed"/>
+							<enumeration value="reefer"/>
+						</restriction>
+					</simpleType>
+				</element>
+				<element name="nmfc_info">
+					<complexType>
+						<all>
+							<element name="subclass" minOccurs="0">
+								<simpleType>
+									<restriction base="int">
+										<minInclusive value="0"/>
+										<maxInclusive value="9"/>
+										<whiteSpace value="collapse"/>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="class">
+								<simpleType>
+									<restriction base="float">
+										<whiteSpace value="collapse"/>
+										<enumeration value="50"/>
+										<enumeration value="55"/>
+										<enumeration value="60"/>
+										<enumeration value="65"/>
+										<enumeration value="70"/>
+										<enumeration value="77.5"/>
+										<enumeration value="85"/>
+										<enumeration value="92.5"/>
+										<enumeration value="100"/>
+										<enumeration value="110"/>
+										<enumeration value="125"/>
+										<enumeration value="150"/>
+										<enumeration value="175"/>
+										<enumeration value="200"/>
+										<enumeration value="250"/>
+										<enumeration value="300"/>
+										<enumeration value="400"/>
+										<enumeration value="500"/>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="nmfc" minOccurs="0">
+								<simpleType>
+									<restriction base="int">
+										<maxInclusive value="999999"/>
+										<whiteSpace value="collapse"/>
+									</restriction>
+								</simpleType>
+							</element>
+						</all>
+					</complexType>
+				</element>
+			</choice>
+		</complexType>
+	</element>
+	<element name="dock_specs">
+		<annotation>
+			<documentation>Dock Specifications for an address</documentation>
+		</annotation>
+		<complexType>
+			<all minOccurs="0">
+				<element name="dock_description" minOccurs="0">
+					<simpleType>
+						<restriction base="string">
+							<whiteSpace value="preserve"/>
+							<maxLength value="200"/>
+						</restriction>
+					</simpleType>
+				</element>
+				<element name="dock_height" minOccurs="0">
+					<simpleType>
+						<restriction base="string">
+							<whiteSpace value="preserve"/>
+							<maxLength value="10"/>
+							<pattern value="\d{0,2}-\d{0,2}"/>
+						</restriction>
+					</simpleType>
+				</element>
+				<element name="max_trailer_length" minOccurs="0">
+					<simpleType>
+						<restriction base="string">
+							<maxLength value="10"/>
+							<whiteSpace value="preserve"/>
+							<pattern value="\d{0,2}-\d{0,2}"/>
+						</restriction>
+					</simpleType>
+				</element>
+				<element name="max_trailer_height" minOccurs="0">
+					<simpleType>
+						<restriction base="string">
+							<maxLength value="10"/>
+							<whiteSpace value="preserve"/>
+							<pattern value="\d{0,2}-\d{0,2}"/>
+						</restriction>
+					</simpleType>
+				</element>
+			</all>
+		</complexType>
+	</element>
+	<element name="date_time">
+		<annotation>
+			<documentation>Date and optional time for pickup/delivery</documentation>
+		</annotation>
+		<complexType>
+			<all>
+				<element name="date">
+					<simpleType>
+						<restriction base="date">
+							<whiteSpace value="collapse"/>
+						</restriction>
+					</simpleType>
+				</element>
+				<element name="time">
+					<simpleType>
+						<restriction base="time">
+							<whiteSpace value="preserve"/>
+						</restriction>
+					</simpleType>
+				</element>
+				<element ref="type"/>
+			</all>
+		</complexType>
+	</element>
+	<element name="footage">
+		<annotation>
+			<documentation>Contains linear/cubic ft for detail_record</documentation>
+		</annotation>
+		<complexType>
+			<choice>
+				<element name="lin_ft">
+					<simpleType>
+						<restriction base="int">
+							<whiteSpace value="collapse"/>
+						</restriction>
+					</simpleType>
+				</element>
+				<element name="cu_ft">
+					<simpleType>
+						<restriction base="int">
+							<whiteSpace value="collapse"/>
+						</restriction>
+					</simpleType>
+				</element>
+			</choice>
+		</complexType>
+	</element>
+	<element name="discount">
+		<annotation>
+			<documentation>Contains discount type and amount</documentation>
+		</annotation>
+		<complexType>
+			<all>
+				<element name="discount_type">
+					<simpleType>
+						<restriction base="byte">
+							<whiteSpace value="collapse"/>
+							<enumeration value="$"/>
+							<enumeration value="%"/>
+						</restriction>
+					</simpleType>
+				</element>
+				<element name="discount_amount">
+					<simpleType>
+						<restriction base="decimal">
+							<whiteSpace value="collapse"/>
+							<precision value="2"/>
+							<minInclusive value="0"/>
+						</restriction>
+					</simpleType>
+				</element>
+			</all>
+		</complexType>
+	</element>
+	<element name="accessorial">
+		<annotation>
+			<documentation>Contains accessorials and costs for tso</documentation>
+		</annotation>
+		<complexType>
+			<all maxOccurs="unbounded">
+				<element name="accessorial_description">
+					<simpleType>
+						<restriction base="string">
+							<whiteSpace value="preserve"/>
+							<maxLength value="200"/>
+						</restriction>
+					</simpleType>
+				</element>
+				<element name="accessorial_cost">
+					<simpleType>
+						<restriction base="decimal">
+							<precision value="2"/>
+							<whiteSpace value="collapse"/>
+						</restriction>
+					</simpleType>
+				</element>
+			</all>
+		</complexType>
+	</element>
+	<element name="type">
+		<annotation>
+			<documentation>Type indicator for addresses/dates</documentation>
+		</annotation>
+		<simpleType>
+			<restriction base="string">
+				<whiteSpace value="collapse"/>
+				<enumeration value="orig"/>
+				<enumeration value="dest"/>
+				<enumeration value="billto"/>
+			</restriction>
+		</simpleType>
+	</element>
+	<element name="duration">
+		<simpleType>
+			<restriction base="timeDuration">
+				<whiteSpace value="collapse"/>
+			</restriction>
+		</simpleType>
+	</element>
+	<element name="comments">
+		<simpleType>
+			<restriction base="string">
+				<whiteSpace value="preserve"/>
+				<maxLength value="200"/>
+			</restriction>
+		</simpleType>
+	</element>
+</schema>

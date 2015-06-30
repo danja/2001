@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<attributes version="1.0">
+   <fileobject name="EditDialog.java">
+      <attr name="class_dependency_javax.swing.JDialog" stringvalue="EditDialog;NodeEditDialog"/>
+      <attr name="class_dependency_java.awt.event.ActionListener" stringvalue="EditDialog;NodeEditDialog"/>
+   </fileobject>
+   <fileobject name="TermChooser.java">
+      <attr name="class_dependency_javax.swing.JPanel" stringvalue="TermChooser"/>
+      <attr name="class_dependency_java.awt.event.ActionListener" stringvalue="TermChooser"/>
+   </fileobject>
+   <fileobject name="FontChooser.java">
+      <attr name="class_dependency_javax.swing.JApplet" stringvalue="FontSelection"/>
+      <attr name="class_dependency_javax.swing.JPanel" stringvalue="FontChooser.FontPanel;FontChooser"/>
+      <attr name="class_dependency_java.awt.event.ItemListener" stringvalue="FontChooser;FontSelection"/>
+      <attr name="class_dependency_javax.swing.JDialog" stringvalue="FontChooser"/>
+      <attr name="class_dependency_javax.swing.JFrame" stringvalue="FontChooser"/>
+      <attr name="class_dependency_java.awt.event.ActionListener" stringvalue="FontChooser"/>
+   </fileobject>
+</attributes>

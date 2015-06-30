@@ -1,0 +1,231 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<HTML><!-- #BeginTemplate "/Templates/Isacat.dwt" --><HEAD>
+<!-- #BeginEditable "doctitle" --> 
+<TITLE>KVM Expert System</TITLE>
+<!-- #EndEditable -->
+<meta content="text/html; charset=ISO-8859-1" http-equiv=Content-Type>
+<!-- #BeginEditable "metatags" --> 
+<meta http-equiv="Content-Type" content="text/html; charset=">
+<link rel="stylesheet" href="../../css/style.css">
+<meta name="Author" content="Danny Ayers">
+<meta name="keywords" content="Expert, System, Java, XML, KVM, Artificial Intelligence, J2ME, application, kjava, rule-based">
+<meta name="description" content="An Expert System written in Java for the Palm. Source code provided.">
+<!-- #EndEditable -->
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+<p align="center"><a href="../../index.htm" title="Danny Ayers's Stuff Home Page">Home</a> | <a href="../../links/links.htm" title="Links to related resources">Links</a></p>
+<!-- #BeginEditable "Body" --> 
+<h1 align="center">Kex</h1>
+<h4 align="center">KVM Expert System, Version 1.1</h4>
+<h4 align="center"><img src="images/load2.gif" width="160" height="160"></h4>
+<p>This application is a simple expert system for the Palm, developed using the 
+  J2ME Palm release (CLDC and kjava). It will ask questions based on a knowledge 
+  base specified in a Palm Memo (in XML). From the user's responses to the questions 
+  (<code>Yes/Know/Don't Know</code>) it will resolve rules in the knowledge base 
+  to reach a goal. </p>
+<p>Interesting bits include a (kjava) Memo reader, mini-XML parser, representation 
+  of facts and rules in Java and a simple inference engine. There isn't any documentation 
+  with the source, this will hopefully be appearing in a forthcoming book. I described 
+  in a presentation at the <a href="http://www.mumjava.com">MumJava</a> conference, 
+  and here are the<a href="../bombay/mumjava.htm"> presentation materials</a>. 
+  (these materials refer to v 1.0)</p>
+<h5>Prerequisites : </h5>
+<ul>
+  <li> A Palm or compatible device with the KVM from Sun Microsystems loaded (KVM.prc 
+    and KVMutil.prc)</li>
+  <li> Memo application (as supplied with Palm device)</li>
+  <li> A knowledge base is also required, see below.</li>
+</ul>
+<h5>Files :</h5>
+<p><a href="download/kex/kex_code.zip">kex_code.zip</a> - v1.1 everything </p>
+<p>same functionality, tighter code</p>
+<h5>// these have been superceded by the version above</h5>
+<p><a href="download/kex/release/Kex.prc">Kex.prc</a> - the built KVM Expert System 
+  Palm application<br>
+  <br>
+  <a href="download/kex/release/example.xml">example.xml </a>- the sample knowledge 
+  base (* see note)<br>
+  <br>
+  <a href="download/kex/release/kex.dtd">kex.dtd</a> - the Document Type Definition 
+  for Kex knowledge bases </p>
+<p><a href="download/kex/kex_source.zip">kex_source.zip</a> - application source 
+  code (Java)</p>
+<p><a href="download/kex/kexjavadoc.zip">kexjavadoc.zip</a> - JavaDoc of source 
+  classes</p>
+<p><a href="download/kex/kex.zip">kex.zip</a> - all of the above </p>
+<h5>------------------------------------------------------------------------</h5>
+<p>* note in use in a Palm Memo for this app, the XML must be preceded with a 
+  line in the following format :</p>
+<p><code>Kex &quot;<i>knowledgebasename</i>&quot;</code></p>
+<p>in the example, knowledgebasename = Example</p>
+<p>The app uses this line to recognise the Memo. This line has been commented 
+  out in the file <a href="download/kex/release/example.xml">example.xml</a> to 
+  allow viewing of the XML.</p>
+<p><br>
+  <b>Installation : </b></p>
+<p>1. Open the file example.xml with a text editor (e.g. Windows notepad) and 
+  run the desktop application you normally use for Palm Memos (i.e. Palm Desktop 
+  or MS Outlook). Select the whole text of example.xml and copy and paste exactly 
+  as it reads into your application (as a new 'Memo' in Palm Desktop or a new 
+  'Note' in MS Outlook). </p>
+<p>2. Use the Palm install tool to load the application file (double-clicking 
+  on Kex.prc should do this). </p>
+<p>3. Use Hotsync to transfer the application and sample data to your Palm. </p>
+<h5>Use (with example knowledge base) : </h5>
+<ol>
+  <li>If you wish to use the logging facility, run KVMutil on the Palm and tick 
+    the 'Save Output' checkbox.</li>
+  <li> Ensure that 'Screen Output' is set to 0 lines. </li>
+  <li>Tap the 'Kex' application icon (initially in 'Unfiled') to run the application.</li>
+  <li>Enter the name of the knowledge base you wish to load - the test data provided 
+    is called 'example', enter this without punctuation or spaces.</li>
+  <li>Tick the 'Log' checkbox if you wish to use the logging facility (note that 
+    this slows the application considerably). </li>
+  <li>Tap the 'Load' button, and the application will take a short while to locate 
+    and load the knowledge base. If the application cannot find the example knowledge 
+    base, check in Memo that there is an entry called Kex "Example". </li>
+  <li>Think of one of the following things : 'mouse', 'bird', 'helicopter' or 
+    'stone'.</li>
+</ol>
+<p>You will be asked a question about the thing you have thought of, tap the 'Yes', 
+  'No' or 'Don't Know' as appropriate.</p>
+<p align="center"><img src="images/question.gif" width="160" height="160"></p>
+<p>Further questions will be presented until the system can reach a conclusion. 
+  Tapping 'Quit' will return you to the start screen, from where you may begin 
+  another run or exit the application. The application log can be viewed by running 
+  KVMutil and tapping 'View Output'.</p>
+<p>The log is verbose, and shows how the inference engine reaches it's conclusion. 
+  The log of a run using the example data can be viewed <a href="download/kex/log.htm">here</a>.</p>
+<h5>Sample Knowledge Base</h5>
+<p>The knowledge base supplied in example.xml contains the following 'expert' 
+  information : </p>
+<p><font face="Times New Roman, Times, serif"><cite>There are four different kinds 
+  of things in the world : mouse, bird, helicopter and a stone. </cite></font></p>
+<p><cite><font face="Times New Roman, Times, serif">You can tell them apart because 
+  : </font></cite></p>
+<p><cite><font face="Times New Roman, Times, serif">1. A mouse is alive but can't 
+  fly.<br>
+  2. A helicopter can fly but isn't alive. <br>
+  3. A stone isn't alive and can't fly. </font></cite></p>
+<p>Note that the bird is defined implicitly - if the thing is not one of the other 
+  three, then (no matter how improbable!) it must be a bird. </p>
+<p>This information is expressed in terms of facts (which may also be questions 
+  or goals) : </p>
+<table border="0" cellspacing="0" cellpadding="0" width="236" align="center">
+  <tr> 
+    <td><code>Mouse (goal)<br>
+      Bird (goal) <br>
+      Helicopter (goal) <br>
+      Stone (goal) <br>
+      Can it fly (question) <br>
+      Is it alive (question) alive </code></td>
+  </tr>
+</table>
+<div align="center"></div>
+<div align="center"></div>
+<p>&nbsp;</p>
+<p>The relationship between the facts is expressed in terms of rules : </p>
+<table width="31%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td><code>1. IF alive AND NOT Can it fly THEN Mouse <br>
+      2. IF Can it fly AND NOT alive THEN Helicopter <br>
+      3. IF NOT alive AND NOT Can it fly THEN Stone <br>
+      4. IF Is it alive THEN alive </code></td>
+  </tr>
+</table>
+<p>These facts and rules above are coded in the XML document <a href="download/kex/release/example.xml">example.xml</a> 
+</p>
+<h5>Building Knowledge Bases</h5>
+<p> The expert information should first be expressed in terms of facts and rules 
+  as above. </p>
+<p><br>
+  All the facts that will be used should be listed first. </p>
+<p><br>
+  The left-hand side of the IF...THEN... statements should contain one or more 
+  facts, separated by logical AND operators (interpretation of OR isn't implemented), 
+  and preceded by the logical NOT operator if required. <br>
+</p>
+<p> The logical operators are strictly applied, and as the reminder the AND operation 
+  is as follows : </p>
+<table width="12%" border="2" cellspacing="0" cellpadding="3" align="center">
+  <tr> 
+    <td width="23%"> 
+      <div align="center"><b>a</b></div>
+    </td>
+    <td width="23%"> 
+      <div align="center"><b>b</b></div>
+    </td>
+    <td width="47%"> 
+      <div align="center"><b>a AND b</b></div>
+    </td>
+  </tr>
+  <tr> 
+    <td width="23%"> 
+      <div align="center">false</div>
+    </td>
+    <td width="23%"> 
+      <div align="center">false</div>
+    </td>
+    <td width="47%"> 
+      <div align="center">false</div>
+    </td>
+  </tr>
+  <tr> 
+    <td width="23%"> 
+      <div align="center">false</div>
+    </td>
+    <td width="23%"> 
+      <div align="center">true</div>
+    </td>
+    <td width="47%"> 
+      <div align="center">false</div>
+    </td>
+  </tr>
+  <tr> 
+    <td width="23%"> 
+      <div align="center">true</div>
+    </td>
+    <td width="23%"> 
+      <div align="center">false</div>
+    </td>
+    <td width="47%"> 
+      <div align="center">false</div>
+    </td>
+  </tr>
+  <tr> 
+    <td width="23%"> 
+      <div align="center">true</div>
+    </td>
+    <td width="23%"> 
+      <div align="center">true</div>
+    </td>
+    <td width="47%"> 
+      <div align="center">true</div>
+    </td>
+  </tr>
+</table>
+<p>The right-hand side of the IF...THEN... statements should contain a single 
+  fact, preceded by the NOT operator if required. </p>
+<p>This information can then be entered as an XML document, either using a text 
+  editor or preferably using an XML editor with the DTD file <a href="download/kex/release/kex.dtd">kex.dtd</a> 
+  loaded. </p>
+<p>The list of all facts must come before the rules. </p>
+<p>The way in which the information is formatted as XML can be seen by comparing 
+  the facts and rules above with contents of the <a href="download/kex/release/example.xml">example.xml 
+  </a>file. </p>
+<p>The size limit of a knowledge base has not yet been determined, but larger 
+  knowledge bases will take substantially more time to process than small ones. 
+  The XML file should then have an extra header line added to identify the Memo 
+  : <code>Kex "kbname"</code> where kbname is the name of the knowledge base (the 
+  quotes <b>are </b>required). The resulting text file can then be loaded into 
+  the Palm Memo database as above, and the application run.</p>
+<!-- #EndEditable --> 
+<p align="right">&copy; 2001 <a href="../../misc/biog.htm">Danny Ayers</a> All rights 
+  reserved.</p>
+
+<div align="center"><a href="http://www.isacat.net/isacat_site.rdf" title="RDF Metadata"><img src="../../citnames/rdf.png" alt="RDF" width="36" height="14" border="0"/></a> 
+</div>
+<p align="center"><a href="http://www.citnames.com">citnames</a></p>
+</BODY>
+<!-- #EndTemplate --></HTML>

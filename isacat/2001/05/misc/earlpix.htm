@@ -1,0 +1,245 @@
+ 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><!-- #BeginTemplate "/Templates/Citnames.dwt" --><HEAD>
+<!-- #BeginEditable "doctitle" --> 
+<TITLE>Earl Diagrams</TITLE>
+<!-- #EndEditable -->
+<meta content="text/html; charset=ISO-8859-1" http-equiv=Content-Type>
+<!-- #BeginEditable "metatags" --> 
+<link rel="stylesheet" href="../../../css/semstyle.css">
+<meta name="Author" content="Danny Ayers">
+<meta name="keywords" content="Semantic Web, Earl, diagrams, wai, RDF, rdfs, schema, XML, semantic, web, ">
+<meta name="description" content="A selection of resources relating to the Semantic Web.">
+<!-- #EndEditable -->
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+<p align="center"><a href="http://www.isacat.net" title="Semantic citnameS"><font face="Courier New, Courier, mono">S 
+  E M A N T I C I T N A M E S</font></a></p>
+<!-- #BeginEditable "Body" --> 
+<h3>Some diagrams of Earl </h3>
+<p>Generated from the <a href="earl0.9.rdfs"> Earl 0.9 RDF schema</a> (also listed 
+  <a href="#schema">below</a>) using <a href="http://protege.stanford.edu"> Protege-2000</a> 
+  with the Ontoviz (Graphvis) plug-in.</p>
+<table width="49%" border="0" align="center">
+  <tr> 
+    <td> 
+      <p><a href="earl09.gif"><b>pic 1</b></a> (with Clangers)</p>
+      <p><a href="earl09_2.gif"><b>pic 2</b></a><b> </b>(simpler, without Clangers)</p>
+    </td>
+  </tr>
+  <tr> 
+    <td> 
+      <div align="center"> 
+        <p><br>
+          <b><font color="#008000">isa</font></b><font color="#008000"> </font>stands 
+          for<b><i> <font color="#008000">is a subclass of</font><font color="#000000"><br>
+          </font></i><font color="#800000">io</font> </b>stands for<font color="#800000"> 
+          <b> <i>instance of</i></b></font><b><i><font color="#000000"><br>
+          </font></i><font color="#0000FF"><b><font color="#000000">black </font></b></font></b><font color="#0000FF"><font color="#000000">boxes 
+          are classes</font></font><b><font color="#0000FF"><b><font color="#000000"><br>
+          <font color="#FF0000">red</font> </font></b></font></b><font color="#0000FF"><font color="#000000">boxes</font></font><b><font color="#0000FF"><b><font color="#000000"> 
+          </font></b></font></b><font color="#0000FF"><font color="#000000">are 
+          instances<br>
+          (the contents of RDF containers are treated as instances)</font></font><b><font color="#0000FF"><b><font color="#000000"><br>
+          black</font></b></font></b> arrows represent class structure<b><i><font color="#000000"> 
+          </font></i></b><br>
+          <b><font color="#0000FF">blue</font></b> arrows represent properties</p>
+        </div>
+    </td>
+  </tr>
+</table>
+<h5><i>1,000 points will be awarded to whoever first correctly names the Clanger.</i></h5>
+<p>When loading the schema the following error appears (one for Sean, I reckon):</p>
+<p><b>http://www.w3.org/2001/03/earl/0.9#date does not have own slot http://www.daml.org/2000/10/daml-ont#equivalentTo 
+  </b></p>
+<p><code><br>
+  &lt;!-- This is the normative EARL 0.9 RDF Schema --&gt;<a name="shema"></a></code></p>
+<p><code>&lt;rdf:RDF xmlns=&quot;http://www.w3.org/2001/03/earl/0.9#&quot;<br>
+  xmlns:rdf=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;<br>
+  xmlns:rdfs=&quot;http://www.w3.org/2000/01/rdf-schema#&quot;<br>
+  xmlns:log=&quot;http://www.w3.org/2000/10/swap/log.n3#&quot;<br>
+  xmlns:dc=&quot;http://purl.org/dc/elements/1.1/&quot; xml:lang=&quot;en&quot; 
+  &gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;&quot;&gt;<br>
+  &lt;dc:title&gt;EARL 0.9 RDF Schema&lt;/dc:title&gt;<br>
+  &lt;dc:version&gt;$Id: 0.9.rdf,v 1.1 2001/04/23 19:37:28 spalmer Exp $&lt;/dc:version&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#Assertion&quot;&gt;<br>
+  &lt;rdf:type rdf:resource=&quot;http://www.w3.org/2000/01/rdf-schema#Class&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#Assertor&quot;&gt;<br>
+  &lt;rdf:type rdf:resource=&quot;http://www.w3.org/2000/01/rdf-schema#Class&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#Auto&quot;&gt;<br>
+  &lt;rdf:type rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#TestMode&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#CannotTell&quot;&gt;<br>
+  &lt;rdf:type rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#ValidityState&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#Date&quot;&gt;<br>
+  &lt;rdf:type rdf:resource=&quot;http://www.w3.org/2000/01/rdf-schema#Class&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#Evaluation&quot;&gt;<br>
+  &lt;rdf:type rdf:resource=&quot;http://www.w3.org/2000/01/rdf-schema#Class&quot;/&gt;<br>
+  &lt;rdfs:subClassOf rdf:resource=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#Fail&quot;&gt;<br>
+  &lt;rdf:type rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#ValidityState&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#Heuristic&quot;&gt;<br>
+  &lt;rdf:type rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#TestMode&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#High&quot;&gt;<br>
+  &lt;rdf:type rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#ConfidenceLevel&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#Low&quot;&gt;<br>
+  &lt;rdf:type rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#ConfidenceLevel&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#Manual&quot;&gt;<br>
+  &lt;rdf:type rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#TestMode&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#Medium&quot;&gt;<br>
+  &lt;rdf:type rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#ConfidenceLevel&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#NotApplicable&quot;&gt;<br>
+  &lt;rdf:type rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#ValidityState&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#NotTested&quot;&gt;<br>
+  &lt;rdf:type rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#ValidityState&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#Pass&quot;&gt;<br>
+  &lt;rdf:type rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#ValidityState&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#Person&quot;&gt;<br>
+  &lt;rdf:type rdf:resource=&quot;http://www.w3.org/2000/01/rdf-schema#Class&quot;/&gt;<br>
+  &lt;rdfs:subClassOf rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#Assertor&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#TestCase&quot;&gt;<br>
+  &lt;rdf:type rdf:resource=&quot;http://www.w3.org/2000/01/rdf-schema#Class&quot;/&gt;<br>
+  &lt;rdfs:subClassOf rdf:resource=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#Property&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#TestResult&quot;&gt;<br>
+  &lt;rdf:type rdf:resource=&quot;http://www.w3.org/2000/01/rdf-schema#Class&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#TestSubject&quot;&gt;<br>
+  &lt;rdf:type rdf:resource=&quot;http://www.w3.org/2000/01/rdf-schema#Class&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#Tool&quot;&gt;<br>
+  &lt;rdfs:subClassOf rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#TestSubject&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#ValidityState&quot;&gt;<br>
+  &lt;rdf:type rdf:resource=&quot;http://www.w3.org/2000/01/rdf-schema#Class&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#WebContent&quot;&gt;<br>
+  &lt;rdfs:subClassOf rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#TestSubject&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#asserts&quot;&gt;<br>
+  &lt;rdf:type rdf:resource=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#Property&quot;/&gt;<br>
+  &lt;rdfs:comment&gt;For earl:asserts(x,y), the assertor (x) asserts the assertion 
+  (y)&lt;/rdfs:comment&gt;<br>
+  &lt;rdfs:domain rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#Assertor&quot;/&gt;<br>
+  &lt;rdfs:range rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#Assertion&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#comment&quot;&gt;<br>
+  &lt;equivalentTo xmlns=&quot;http://www.daml.org/2000/10/daml-ont#&quot;<br>
+  rdf:resource=&quot;http://www.w3.org/2000/01/rdf-schema#comment&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#confidence&quot;&gt;<br>
+  &lt;rdfs:domain rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#TestResult&quot;/&gt;<br>
+  &lt;rdfs:range rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#ConfidenceLevel&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#date&quot;&gt;<br>
+  &lt;equivalentTo xmlns=&quot;http://www.daml.org/2000/10/daml-ont#&quot;<br>
+  rdf:resource=&quot;http://purl.org/dc/elements/1.1/date&quot;/&gt;<br>
+  &lt;rdfs:domain rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#TestResult&quot;/&gt;<br>
+  &lt;rdfs:range rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#Date&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#expectedResult&quot;&gt;<br>
+  &lt;rdfs:domain rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#TestCase&quot;/&gt;<br>
+  &lt;rdfs:range rdf:resource=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#Literal&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#hasAddress&quot;&gt;<br>
+  &lt;rdf:type rdf:resource=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#Property&quot;/&gt;<br>
+  &lt;rdfs:domain rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#Assertor&quot;/&gt;<br>
+  &lt;rdfs:range rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#Address&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#hasEmail&quot;&gt;<br>
+  &lt;rdf:type rdf:resource=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#Property&quot;/&gt;<br>
+  &lt;rdfs:domain rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#Person&quot;/&gt;<br>
+  &lt;rdfs:range rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#Email&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#hasName&quot;&gt;<br>
+  &lt;rdf:type rdf:resource=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#Property&quot;/&gt;<br>
+  &lt;rdfs:domain rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#Assertor&quot;/&gt;<br>
+  &lt;rdfs:range rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#Name&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#hasPlatform&quot;&gt;<br>
+  &lt;rdf:type rdf:resource=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#Property&quot;/&gt;<br>
+  &lt;rdfs:domain rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#Assertor&quot;/&gt;<br>
+  &lt;rdfs:range rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#Platform&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#hasSnapshot&quot;&gt;<br>
+  &lt;rdfs:domain rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#TestSubject&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#id&quot;&gt;<br>
+  &lt;rdf:type rdf:resource=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#Property&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#lastModified&quot;&gt;<br>
+  &lt;rdfs:domain rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#TestSubject&quot;/&gt;<br>
+  &lt;rdfs:range rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#Date&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#nature&quot;&gt;<br>
+  &lt;equivalentTo xmlns=&quot;http://www.daml.org/2000/10/daml-ont#&quot;<br>
+  rdf:resource=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#operatorInstructions&quot;&gt;<br>
+  &lt;rdfs:domain rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#TestCase&quot;/&gt;<br>
+  &lt;rdfs:range rdf:resource=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#Literal&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#purpose&quot;&gt;<br>
+  &lt;rdfs:domain rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#TestCase&quot;/&gt;<br>
+  &lt;rdfs:range rdf:resource=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#Literal&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#released&quot;&gt;<br>
+  &lt;rdfs:domain rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#TestSubject&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#reproducableStep&quot;&gt;<br>
+  &lt;rdfs:domain rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#TestCase&quot;/&gt;<br>
+  &lt;rdfs:range rdf:resource=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#Literal&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#suite&quot;&gt;<br>
+  &lt;rdfs:domain rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#TestCase&quot;/&gt;<br>
+  &lt;rdfs:range rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#Suite&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#testMode&quot;&gt;<br>
+  &lt;rdfs:domain rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#TestCase&quot;/&gt;<br>
+  &lt;rdfs:range rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#TestMode&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#testResult&quot;&gt;<br>
+  &lt;rdfs:domain rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#TestSubject&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#testSubject&quot;&gt;<br>
+  &lt;rdf:type rdf:resource=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#Property&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#validity&quot;&gt;<br>
+  &lt;rdfs:domain rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#TestResult&quot;/&gt;<br>
+  &lt;rdfs:range rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#ValidityState&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;</code></p>
+<p> <code>&lt;rdf:Description rdf:about=&quot;http://www.w3.org/2001/03/earl/0.9#version&quot;&gt;<br>
+  &lt;rdfs:domain rdf:resource=&quot;http://www.w3.org/2001/03/earl/0.9#TestSubject&quot;/&gt;<br>
+  &lt;/rdf:Description&gt;<br>
+  &lt;/rdf:RDF&gt;</code></p>
+<p>&nbsp; </p>
+<!-- #EndEditable --> 
+<p align="right">&copy; 2001 <a href="http://www.isacat.net/misc/biog.htm">Danny Ayers</a> All rights 
+  reserved.</p>
+  
+<div align="center">
+  <p><a href="http://www.citnames.com/site.rdf" title="RDF Metadata"><img src="http://www.citnames.com/icons/rdf.png" alt="RDF" width="36" height="14" border="0"/><br>
+    </a></p>
+  <p><a href="http://www.isacat.net">stuff</a></p>
+</div>
+</BODY>
+<!-- #EndTemplate --></HTML>
+

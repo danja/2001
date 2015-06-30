@@ -1,0 +1,93 @@
+<project name="IOU" default="runtests" basedir="."> 
+ 
+	<!-- global properties -->
+
+	<property name="sourceDir" value="src" /> 
+      <property name="buildDir" value="build" /> 
+      <property name="distDir" value="dist" /> 
+      <property name="docsDir" value="doc" /> 
+      <property name="backupDir" value="backup" /> 
+      <property name="build.compiler" value="modern" /> 
+
+	<property name="testSourceDir" value="src/tests" /> 
+      <property name="testBuildDir" value="build/tests" /> 
+
+    <property name="app.name"   value="IOU" />
+    <property name="build.dir"  value="build" />
+
+    <target name="JUNIT">
+        <available 	property="junit.present" 
+				classname="junit.framework.TestCase" />
+    </target>
+
+
+
+
+
+
+
+
+   <target name="clean" > 
+
+		<delete dir="${buildDir}"/> 
+      	<delete dir="${distDir}" /> 
+		<delete>
+			<fileset dir="${sourceDir}" excludes="**/*.java"/>
+		</delete> 
+
+   </target> 
+
+	<target name="backup" depends="clean">
+		<tstamp/>
+		<copy	todir="${backupDir}/${TSTAMP}" >
+			<fileset dir="${sourceDir}"/>
+		</copy>
+	</target>
+
+   <target name="prepare" depends="backup"> 
+
+      <mkdir dir="${buildDir}" /> 
+   </target> 
+
+   <target name="compile" depends="prepare"> 
+     <javac srcdir="${sourceDir}" destdir="${buildDir}"  /> 
+<!-- classpath="%classpath%;.;tools.jar"  -->
+   </target> 
+
+  <target name="dist" depends="compile">
+    <!-- Create the ${distDir}/lib directory -->
+    <mkdir dir="${distDir}/lib" />
+    <!-- Put everything in ${buildDir} into the IOU-${DSTAMP}.jar file -->
+    <jar jarfile="${distDir}/lib/IOU.jar" basedir="${buildDir}" />
+<echo message="End dist" />
+  </target>
+
+<!--          Unit Tests                   --> 
+
+    <target name="compiletests" depends="dist">
+        <mkdir dir="${testBuildDir}"/>
+        <javac srcdir="${testSourceDir}" destdir="${testBuildDir}">
+            <classpath>
+                <pathelement location="build/lib/${app.name}.jar" />
+                <pathelement path="" />
+            </classpath>
+            <include name="**/*.java"/>
+        </javac>
+    </target>
+
+    <!-- target name="runtests" depends="compiletests" if="junit.present"-->
+    <target name="runtests" depends="compiletests">
+        <java fork="yes" classname="junit.textui.TestRunner" 
+            taskname="junit" failonerror="true">
+            <arg value="test.AllJUnitTests"/>
+            <classpath>
+                <pathelement location="build/lib/${app.name}.jar" />
+                <pathelement location="build/tests" />
+                <pathelement path="" />
+                <pathelement path="${java.class.path}" />
+            </classpath>
+        </java>
+    </target>
+
+
+</project> 

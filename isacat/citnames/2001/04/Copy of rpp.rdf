@@ -1,0 +1,96 @@
+<?xml version='1.0'?>
+
+<rdf:RDF
+  xmlns:rdf  = 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'
+  xmlns:rdfs = 'http://www.w3.org/2000/01/rdf-schema#'
+  xmlns:rap = 'http://www.citnames.com/2001/04/rap-schema#'>
+
+ 
+
+  <rdfs:Class rdf:ID='Resource'>
+    <rdfs:label>RAD Resource</rdfs:label>
+    <rdfs:subClassOf rdf:resource='http://www.w3.org/2000/01/rdf-schema#Resource'/>
+    <rdfs:comment>
+      This is a common base class for all resources whose properties
+      may be asserted in a RDF Algorithm Profile. 
+    </rdfs:comment>
+  </rdfs:Class>
+
+
+  <rdfs:Class rdf:ID='Profile'>
+    <rdfs:label>RAP Profile</rdfs:label>
+    <rdfs:subClassOf rdf:resource='http://www.w3.org/2000/07/04-ccpp#Resource'/>
+    <rdfs:comment>
+      This class is any profile that may describe partially or fully a given algorithm.
+    </rdfs:comment>
+  </rdfs:Class>
+
+
+ <rdfs:Class rdf:ID="Algorithm" rdfs:comment="Abstract algorithm">
+ </rdfs:Class>
+
+ <rdfs:Class rdf:ID="DataFormat" rdfs:comment="Data format">
+ </rdfs:Class>
+
+ <rdfs:Class rdf:ID="Interface" rdfs:comment="I/O of processor">
+ </rdfs:Class>
+
+ <rdfs:Class rdf:ID="Encoding" rdfs:comment="low-level data encoding">
+ </rdfs:Class>
+
+ <rdf:Property rdf:ID="location" rdfs:comment="location of the algorithm resource">
+  <rdfs:domain>
+  </rdfs:domain>
+  <rdfs:range>
+  </rdfs:range>
+ </rdf:Property>
+
+ <rdf:Property rdf:ID="availability" rdfs:comment="how machine readable is the algorithm">
+  <rdfs:domain>
+  </rdfs:domain>
+  <rdfs:range>
+  </rdfs:range>
+ </rdf:Property>
+
+ <rdf:Property rdf:ID="input" rdfs:comment="details of data input format">
+  <rdfs:domain>
+  </rdfs:domain>
+  <rdfs:range>
+  </rdfs:range>
+ </rdf:Property>
+
+ <rdf:Property rdf:ID="output" rdfs:comment="details of data output format">
+  <rdfs:domain>
+  </rdfs:domain>
+  <rdfs:range>
+  </rdfs:range>
+ </rdf:Property>
+
+ <rdf:Property rdf:ID="alang" rdfs:comment="(programming) language">
+  <rdfs:domain>
+  </rdfs:domain>
+  <rdfs:range>
+  </rdfs:range>
+ </rdf:Property>
+
+ <rdf:Property rdf:ID="environment" rdfs:comment="OS or VM">
+  <rdfs:domain>
+  </rdfs:domain>
+  <rdfs:range>
+  </rdfs:range>
+ </rdf:Property>
+
+ <rdf:Property rdf:ID="dependencies" rdfs:comment="anything else that's needed">
+  <rdfs:domain>
+  </rdfs:domain>
+  <rdfs:range>
+  </rdfs:range>
+ </rdf:Property>
+
+ <rdf:Property rdf:ID="equivalentTo" rdfs:comment="another algorithm that does the same">
+  <rdfs:domain>
+  </rdfs:domain>
+  <rdfs:range>
+  </rdfs:range>
+ </rdf:Property>
+

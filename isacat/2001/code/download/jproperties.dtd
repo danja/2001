@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!--
+    DTD of XML wrapper for Properties
+    Typical usage:
+
+    <?xml version="1.0"?>
+
+    <!DOCTYPE properties SYSTEM "properties.dtd">
+
+    <properties>
+        <propertylist name="danny">
+            <property name="website">www.isacat.net</property>
+            <property name="email">danny@panlanke.net</property>      
+        </propertylist>
+            ...
+    </properties>
+-->
+
+  <!ELEMENT properties (#PCDATA|propertylist)*>
+
+  <!ELEMENT property (#PCDATA)>
+  <!ATTLIST property name CDATA #IMPLIED>
+
+  <!ELEMENT propertylist (#PCDATA|property)*>
+  <!ATTLIST propertylist name CDATA #IMPLIED>

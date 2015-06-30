@@ -1,0 +1,106 @@
+<?xml ?>
+<rdf:RDF xmlns:rdf = 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'  xmlns:rdfs = 'http://www.w3.org/2000/01/rdf-schema#'  xmlns:rap = 'http://www.citnames.com/2001/04/rpp#'>
+ <rdfs:Class rdf:ID='Resource'>
+  <rdfs:label>
+   RAD Resource
+  </rdfs:label>
+  <rdfs:subClassOf rdf:resource='http://www.w3.org/2000/01/rdf-schema#Resource' />
+  <rdfs:comment>
+   This is a common base class for all resources whose properties    may be asserted in a RDF Algorithm Profile.
+  </rdfs:comment>
+ </rdfs:Class>
+ <rdfs:Class rdf:ID='Implementation'>
+  <rdfs:label>
+   RAP Implementation
+  </rdfs:label>
+  <rdfs:subClassOf rdf:resource='http://www.citnames.com/2001/04/rpp#Resource' />
+  <rdfs:comment>
+   instances?
+  </rdfs:comment>
+ </rdfs:Class>
+ <rdfs:Class rdf:ID='Component'>
+  <rdfs:label>
+   RPP profile component
+  </rdfs:label>
+  <rdfs:subClassOf rdf:resource='http://www.citnames.com/2001/04/rpp#Resource' />
+  <rdfs:comment>
+   Base class for groups of profile attribute values.
+  </rdfs:comment>
+ </rdfs:Class>
+ <rdfs:Class rdf:ID="Algorithm" rdfs:comment="Abstract algorithm">
+ </rdfs:Class>
+ <rdfs:Class rdf:ID="DataFormat" rdfs:comment="Data format">
+ </rdfs:Class>
+ <rdfs:Class rdf:ID="Interface" rdfs:comment="I/O of processor">
+ </rdfs:Class>
+ <rdfs:Class rdf:ID="Encoding" rdfs:comment="low-level data encoding">
+ </rdfs:Class>
+ <rdfs:Property rdf:ID='component'>
+  <rdfs:label>
+   CC/PP component property
+  </rdfs:label>
+  <rdfs:domain rdf:resource='http://www.citnames.com/2001/04/rpp#Profile' />
+  <rdfs:range rdf:resource='http://www.citnames.com/2001/04/rpp#Component' />
+  <rdfs:comment>
+   Indicates a component of a top-level client profile.
+  </rdfs:comment>
+ </rdfs:Property>
+ <rdf:Property rdf:ID="location" rdfs:comment="location of the algorithm resource">
+  <rdfs:domain>
+  </rdfs:domain>
+  <rdfs:range>
+  </rdfs:range>
+ </rdf:Property>
+ <rdf:Property rdf:ID="availability" rdfs:comment="how machine readable is the algorithm">
+  <rdfs:domain>
+  </rdfs:domain>
+  <rdfs:range>
+  </rdfs:range>
+ </rdf:Property>
+ <rdf:Property rdf:ID="input" rdfs:comment="details of data input format">
+  <rdfs:domain>
+  </rdfs:domain>
+  <rdfs:range>
+  </rdfs:range>
+ </rdf:Property>
+ <rdf:Property rdf:ID="output" rdfs:comment="details of data output format">
+  <rdfs:domain>
+  </rdfs:domain>
+  <rdfs:range>
+  </rdfs:range>
+ </rdf:Property>
+ <rdf:Property rdf:ID="alang" rdfs:comment="(programming) language">
+  <rdfs:domain>
+  </rdfs:domain>
+  <rdfs:range>
+  </rdfs:range>
+ </rdf:Property>
+ <rdf:Property rdf:ID="environment" rdfs:comment="OS or VM">
+  <rdfs:domain>
+  </rdfs:domain>
+  <rdfs:range>
+  </rdfs:range>
+ </rdf:Property>
+ <rdf:Property rdf:ID="dependencies" rdfs:comment="anything else that's needed">
+  <rdfs:domain>
+  </rdfs:domain>
+  <rdfs:range>
+  </rdfs:range>
+ </rdf:Property>
+ <rdf:Property rdf:ID="implementationOf" rdfs:comment="another algorithm that does the same">
+  <rdfs:domain>
+  </rdfs:domain>
+  <rdfs:range>
+  </rdfs:range>
+ </rdf:Property>
+ <rdf:Property rdf:ID="equivalentTo" rdfs:comment="another algorithm that does the same">
+  <rdfs:domain>
+  </rdfs:domain>
+  <rdfs:range>
+  </rdfs:range>
+ </rdf:Property>
+ <rdfs:Class rdf:ID="Dependency" rdfs:comment="needed to run">
+ </rdfs:Class>
+ <rdfs:Class>
+ </rdfs:Class>
+</rdf:RDF>

@@ -1,0 +1,583 @@
+ 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<!-- #BeginTemplate "/Templates/Isacat.dwt" --> 
+<HEAD>
+<!-- #BeginEditable "doctitle" --> 
+<TITLE>Untitled Document</TITLE>
+<!-- #EndEditable --> 
+<meta content="text/html; charset=ISO-8859-1" http-equiv=Content-Type>
+<!-- #BeginEditable "metatags" --> 
+<link rel="stylesheet" href="../../../css/style.css">
+<meta name="Author" content="Danny Ayers">
+<meta name="keywords" content="Danny Ayers, Isacat, Java, XML, rdf, Sri Lanka, Artificial Intelligence, semantic web">
+<meta name="description" content="Danny Ayers provides a selection of resources, largely related to Java programming though bits are about Sri Lanka.">
+<!-- #EndEditable --> 
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<p align="center"><a href="../../../index.htm" title="Danny Ayers's Stuff Home Page">Home</a> 
+  | <a href="../../../links/links.htm" title="Links to related resources">Links</a></p>
+<!-- #BeginEditable "Body" -->
+<h5 align="center">Autohelp Page <a href="../autohelp.htm">1</a> <a href="autohelp2.htm">2</a> 
+  <a href="autohelp3.htm">3</a> <a href="autohelp4.htm">4</a> <font color="#FF0000">5 
+  </font></h5>
+<h2>Helpset Definition</h2>
+<p>The purpose of this file is essentially to tell the JavaHelp system where to 
+  find the other XML files, and what to do with them. To be able to refer to each 
+  of the HTML documents the JavaHelp system begins with a series of mappings between 
+  the location of each file and a logical name. This series of mappings is stored 
+  in XML format in one or more files named in the &lt;maps&gt; section below. 
+  The next block refers to a standard JavaHelp view, the table of contents, which 
+  is defined by the class javax.help.TOCView. The file defined in &lt;data&gt; 
+  in this block (snakesTOC.xml) will contain the hierachical structure of our 
+  document set, in the case of a book this would be the chapters and subsections. 
+  Another view is referred to in the next block, the index view, and the data 
+  for this will be contained in a further XML file (snakesIndex.xml). The final 
+  block here refers to the search view, which uses (non-XML) indexes generated 
+  by a utility provided with JavaHelp.</p>
+<p><b>snakes.hs</b></p>
+<div style='border:solid white 1.5pt;padding:1.0pt 2.0pt 1.0pt 15.0pt'> 
+  <p >&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</p>
+  <p >&lt;helpset version=&quot;1.0&quot;&gt;</p>
+  <p >  &lt;title&gt;snakes&lt;/title&gt;</p>
+  <p >  &lt;maps&gt;</p>
+  <p >    &lt;homeID&gt;top&lt;/homeID&gt;</p>
+  <p >    &lt;mapref location=&quot;snakesMap.xml&quot; /&gt;</p>
+  <p >  &lt;/maps&gt;</p>
+  <p >  &lt;view&gt;</p>
+  <p >    &lt;name&gt;toc&lt;/name&gt;</p>
+  <p >    &lt;label&gt;Table of Contents&lt;/label&gt;</p>
+  <p >    &lt;type&gt;javax.help.TOCView&lt;/type&gt;</p>
+  <p >    &lt;data&gt;snakesTOC.xml&lt;/data&gt;</p>
+  <p >  &lt;/view&gt;</p>
+  <p >  &lt;view&gt;</p>
+  <p >    &lt;name&gt;index&lt;/name&gt;</p>
+  <p >    &lt;label&gt;Index&lt;/label&gt;</p>
+  <p >    &lt;type&gt;javax.help.IndexView&lt;/type&gt;</p>
+  <p >    &lt;data&gt;snakesIndex.xml&lt;/data&gt;</p>
+  <p >  &lt;/view&gt;</p>
+  <p >  &lt;view&gt;</p>
+  <p >    &lt;name&gt;Search&lt;/name&gt;</p>
+  <p >    &lt;label&gt;Search&lt;/label&gt;</p>
+  <p >    &lt;type&gt;javax.help.SearchView&lt;/type&gt;</p>
+  <p >    &lt;data engine=&quot;com.sun.java.help.search.DefaultSearchEngine&quot;&gt;JavaHelpSearch&lt;/data&gt;</p>
+  <p >  &lt;/view&gt;</p>
+  <p >&lt;/helpset&gt;</p>
+</div>
+<p>Within a particular system such as the ‘book’ viewer described here, the contents 
+  of this file are unlikely to change. For this reason the construction of DOM 
+  model is nearly all hard-coded for this file. The HelpSet class calls upon the 
+  HelpDocument class to create a Document for it, and then procedes to fill the 
+  document is the following manner :</p>
+<div style='border:solid white 1.5pt;padding:1.0pt 2.0pt 1.0pt 15.0pt;
+background:#F2F2F2;'> 
+  <p >// from HelpSet.java</p>
+  <p >...</p>
+  <p >    Element root = doc.createElement(&quot;helpset&quot;);</p>
+  <p >    root.setAttribute(&quot;version&quot;, &quot;1.0&quot;);</p>
+  <p >    Element title = doc.createElement(&quot;title&quot;);</p>
+  <p >    Text text = doc.createTextNode(filename);</p>
+  <p >    title.appendChild(text);</p>
+  <p >    root.appendChild(title);</p>
+  <p >    Element maps = doc.createElement(&quot;maps&quot;);</p>
+  <p >    Element homeID = doc.createElement(&quot;homeID&quot;);</p>
+  <p >    text = doc.createTextNode(&quot;top&quot;);</p>
+  <p >    homeID.appendChild(text);</p>
+  <p >    maps.appendChild(homeID);</p>
+  <p >...</p>
+</div>
+<p>If you compare this with the XML above you can see where each node is created. 
+  The rest of the document contain the definitions of views is built in exactly 
+  the same crude fashion. The only variable in HelpSet.java is filename, which 
+  will be used to name the XML file generated and to provide the contents of the 
+  &lt;title&gt; element. </p>
+<h4>Creating a Map Document</h4>
+<p>Here is the file structure used in this example, a set of folders each containing 
+  the HTML documents we wish to index :</p>
+<p align=center style='text-align:center'> <img border=0 width=319 height=171
+src="images/image009.jpg" v:shapes="_x0000_i1029"> </p>
+<p>The XML for the map is very straightforward. The standard header is followed 
+  by the tag which defines the root of the map. For every file that will be available 
+  to the JavaHelp viewer there is a &lt;mapID/&gt; element. The data that defines 
+  each mapping is contained in attributes, where the <b>target</b> attribute is 
+  an arbitrary logical name, and the <b>url</b> gives the location of the file. 
+  In the listing below the entries corresponding to the individual files shown 
+  above are highlighted.</p>
+<p><b>snakesMap.xml</b></p>
+<div style='border:solid white 1.5pt;padding:1.0pt 2.0pt 1.0pt 15.0pt'> 
+  <p >&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</p>
+  <p >&lt;map version=&quot;1.0&quot;&gt;</p>
+  <p >  &lt;mapID target=&quot;Mongoose Issues&quot; url=&quot;ASP/Mongoose Issues.html&quot; 
+    /&gt;</p>
+  <p >  &lt;mapID target=&quot;Template Shedding&quot; url=&quot;ASP/Template 
+    Shedding.html&quot; /&gt;</p>
+  <p >  &lt;mapID target=&quot;Business Incubators&quot; url=&quot;Appendices/Appendix1/Business 
+    Incubators.html&quot; /&gt;</p>
+  <p >  &lt;mapID target=&quot;Snake 2&quot; url=&quot;Appendices/Appendix2/Snake 
+    2.html&quot; /&gt;</p>
+  <p >  &lt;mapID target=&quot;dotNET&quot; url=&quot;Appendices/Appendix2/dotNET.html&quot; 
+    /&gt;</p>
+  <p >  &lt;mapID target=&quot;Reptile Description Framework&quot; url=&quot;RDF/Reptile 
+    Description Framework.html&quot; /&gt;</p>
+  <p ><b>  &lt;mapID target=&quot;Python&quot; url=&quot;Scripting/Python.html&quot; 
+    /&gt;</b></p>
+  <p ><b>  &lt;mapID target=&quot;VPScript&quot; url=&quot;Scripting/VPScript.html&quot; 
+    /&gt;</b></p>
+  <p >  &lt;mapID target=&quot;Contents&quot; url=&quot;Contents.html&quot; /&gt;</p>
+  <p >&lt;/map&gt;</p>
+</div>
+<p>Here we have used a naming scheme that will allow us to tell which page we 
+  are refering to. Note that the logical naming is not visible to the end user, 
+  so instead of &quot;Contents&quot; above, we could just as easily have used 
+  &quot;Albertross&quot;, though with all due respect to seabirds, it is always 
+  preferable to use meaningful names. Whenever the JavaHelp system is asked to 
+  display Python for instance, it will look up the address of the required file 
+  in the map, i.e. Scripting/Python.html. It is common practice to use relative 
+  URLs in the map file, so the map file can be enclosed in a package along with 
+  the HTML documents to which it refers, thus making the system portable. It is 
+  worth noting here that the map file can contain the addresses of non-existent 
+  files, the omission only being noticeable when the end user tries to view them. 
+  The behaviour of the current version of JavaHelp is for the viewer to display 
+  a blank page, and continue showing this even if a valid page is afterwards selected. 
+  As is generally the case, dead links are not welcome. </p>
+<p>The class that models the Map document is predictably called MapDocument. Its 
+  function is to model a document that contains the mapping of logical names to 
+  file locations. The directory walker will be providing the file locations in 
+  its calls to handleFile(), and the Directory class is used to convert these 
+  into a form that is easy to use. Getting a logical name is a little more involved, 
+  because each of these must be unique. It is also advantageous to make these 
+  reasonable human-readable, in case we wish to modify the Map file manually later. 
+  The approach taken in AutoHelp is to start by removing the filename extension 
+  ( i.e. Contents.html =&gt; Contents). The logical name (map reference) is carried 
+  in the variable ref :</p>
+<div style='border:solid white 1.5pt;padding:1.0pt 2.0pt 1.0pt 15.0pt;
+background:#F2F2F2;'> 
+  <p >  public String makeMapRef(String filename, Directory currentDir) {</p>
+  <p >    String ref = Directory.trimFileExt(filename);</p>
+</div>
+<p>If the result is ‘index’ then this isn’t very helpful for a human editor, so 
+  we replace this with the name of the directory in which the index file is found. 
+  We may need the names of the directories again, so we retrieve the full list 
+  :</p>
+<div style='border:solid white 1.5pt;padding:1.0pt 2.0pt 1.0pt 15.0pt;
+background:#F2F2F2;'> 
+  <p >    ArrayList dirs = currentDir.getDirArray();</p>
+  <p >    int dirSize = dirs.size();</p>
+  <p >    int endDir = dirSize;</p>
+</div>
+<p>Now we can make the substitution <i>directory</i> for index, as long as we 
+  aren’t looking at the root directory of our document set, in which case we’ll 
+  stay with ‘index’ :</p>
+<div style='border:solid white 1.5pt;padding:1.0pt 2.0pt 1.0pt 15.0pt;
+background:#F2F2F2;'> 
+  <p >    if (&quot;index&quot;.equals(filename) &amp;&amp; (dirSize &gt; 0)) 
+    {</p>
+  <p >      ref = (String) dirs.get(dirSize - 1);</p>
+  <p >    }</p>
+</div>
+<p> The uniqueness requirement is dealt with next. Every time a new logical name 
+  is created, this is added to a variable HashSet called existingMapRefs. If we 
+  find that the name we have created at this point has already been used, we try 
+  to create a unique name by prepending the name of the directory in which the 
+  file was found. If this name has been used before, we prepend the name of the 
+  next directory up the tree, and so on until the combined name is not found in 
+  the HashSet and is therefore unique :</p>
+<div style='border:solid white 1.5pt;padding:1.0pt 2.0pt 1.0pt 15.0pt;
+background:#F2F2F2;'> 
+  <p >    String dir;</p>
+  <p >    while (existingMapRefs.contains(ref)) {</p>
+  <p >      endDir--;</p>
+  <p >      if (endDir == -1) {</p>
+  <p >        ref = &quot;Root&quot; + ref;</p>
+  <p >        break;</p>
+  <p >      }</p>
+  <p >      dir = (String) dirs.get(endDir);</p>
+  <p >      ref = dir + ref;</p>
+  <p >    }</p>
+  <p >    // add to 'already used' list</p>
+  <p >    existingMapRefs.add(ref);</p>
+  <p >    return ref;</p>
+  <p >  } </p>
+</div>
+<p>If we had two files called Contents.html in our filesystem tree, we would get 
+  a result like this :</p>
+<div style='border:solid white 1.5pt;padding:1.0pt 2.0pt 1.0pt 15.0pt'> 
+  <p >&lt;mapID target=&quot;Contents&quot; url=&quot;onedir\anotherdir\Contents.html&quot; 
+    /&gt;</p>
+  <p >&lt;mapID target=&quot;someotherdirContents&quot; url=&quot;someotherdir\Contents.html&quot; 
+    /&gt;</p>
+</div>
+<p>The unique map references here are ‘Contents’ and ‘someotherdirContents’.</p>
+<p>Now we have a unique name we can use it to create an element in the DOM tree 
+  for the Map document. The structure of the Map document is essentially flat, 
+  with all the elements being children of the root element. Also the element and 
+  attribute names are constant throughout the document, so we can make life easier 
+  by using a helper method to create this type of element for us :</p>
+<p> </p>
+<div style='border:solid white 1.5pt;padding:1.0pt 2.0pt 1.0pt 15.0pt;
+background:#F2F2F2;'> 
+  <p >  public void addMapIDItem(String mapRef, String urlString) {</p>
+  <p >    Element mapID = createElement(&quot;mapID&quot;);</p>
+  <p >    mapID.setAttribute(&quot;target&quot;, mapRef);</p>
+  <p >    mapID.setAttribute(&quot;url&quot;, urlString);</p>
+  <p >    appendToRoot(mapID);</p>
+  <p >  }</p>
+</div>
+<p class=MsoBlockText>The code snippets above were taken from the file MapDocument.java 
+  in the AutoHelp distribution.</p>
+<h4>Index</h4>
+<p>If we take another look at the listing in the index view, we can see the entries, 
+  which are included as attributes in the XML :</p>
+<p align=center style='text-align:center'> <img border=0 width=275 height=128
+src="images/image011.jpg" v:shapes="_x0000_i1030"> </p>
+<div style='border:solid white 1.5pt;padding:1.0pt 2.0pt 1.0pt 15.0pt'> 
+  <p ><b>snakesIndex.xml</b></p>
+</div>
+<div style='border:solid white 1.5pt;padding:1.0pt 2.0pt 1.0pt 15.0pt'> 
+  <p >&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</p>
+  <p >&lt;index version=&quot;1.0&quot;&gt;</p>
+  <p >  &lt;indexitem target=&quot;Business Incubators&quot; text=&quot;Business 
+    Incubators&quot; /&gt;</p>
+  <p > <b> &lt;indexitem target=&quot;Contents&quot; text=&quot;Contents&quot; 
+    /&gt;</b></p>
+  <p >  &lt;indexitem target=&quot;Mongoose Issues&quot; text=&quot;Mongoose Issues&quot; 
+    /&gt;</p>
+  <p >  &lt;indexitem target=&quot;Python&quot; text=&quot;Python&quot; /&gt;</p>
+  <p >  &lt;indexitem target=&quot;Reptile Description Framework&quot; text=&quot;Reptile 
+    Description Framework&quot; /&gt;</p>
+  <p >  &lt;indexitem target=&quot;Snake 2&quot; text=&quot;Snake 2&quot; /&gt;</p>
+  <p >  &lt;indexitem target=&quot;Template Shedding&quot; text=&quot;Template 
+    Shedding&quot; /&gt;</p>
+  <p >  &lt;indexitem target=&quot;VPScript&quot; text=&quot;VPScript&quot; /&gt;</p>
+  <p >  &lt;indexitem target=&quot;dotNET&quot; text=&quot;dotNET&quot; /&gt;</p>
+  <p >&lt;/index&gt;</p>
+</div>
+<p>Here the <b>target</b> attribute refers to a logical name (mapped above), and 
+  the <b>text</b> attribute contains the human-friendly index listing entry, which 
+  is simple the filename without its extension. When a user highlights for example 
+  ‘Business Incubators’ in the listing, the page view panel will show the page 
+  to which the name ‘Business Incubators’ is mapped, i.e. Appendices/Appendix1/Business 
+  Incubators.html</p>
+<p>Like the unique names requirement in the Map file, there are a couple of Index 
+  document specific issues we need to take into account. The obvious one is that 
+  we want the Index view to have a list of all the documents in alphabetical order, 
+  but the directory walker encounters the document files in directory order. This 
+  is easy enough to work around by postponing the creation of the Index document 
+  elements until the whole directory tree has been read. To do this we have a 
+  TreeMap collection into which we put the name of each document that will appear 
+  in the Index view together with its corresponding map reference.The TreeMap 
+  collection is a kind of hashtable of key-value pairs. It has a feature that 
+  is particularly useful for us here, which is that the pairs are automatically 
+  sorted in the natural order of their keys – in this case the Index entry names, 
+  ordered alphabetically.</p>
+<p>A more subtle problem is that we are quite likely to encounter more than one 
+  entry with the same index name, for example we might have a “Contents” in part 
+  1 and a “Contents” in part 2 of a book. As far as the XML goes, this isn’t a 
+  problem – it is of no consequence if the index entries are the same, we will 
+  just see two identical entries listed, but each will map to different files. 
+  The problem arises at the point in which we are putting the entries into the 
+  TreeMap. The entry name is the key field as this will be the one we need to 
+  sort by, but if we tried to put(“Contents”, xxx) followed by put(“Contents”, 
+  yyy) the second entry would overwrite the first and we’d lose the page mapped 
+  to xxx. It isn’t difficult to work around this – to the end user presented with 
+  a list of index entries, the name “Contents” will be indistinguishable from 
+  the name “Contents ”, though the additional space character makes the string 
+  a different key in the eyes of the TreeMap. If we have more than one duplicate 
+  entry name, we just add another space until we get a name (key) that hasn’t 
+  already been used :</p>
+<div style='border:solid white 1.5pt;padding:1.0pt 2.0pt 1.0pt 15.0pt;
+background:#F2F2F2;'> 
+  <p >  public void putNewItem(String mapRef, String name) {</p>
+  <p >    while (indexArray.containsKey(name)) {</p>
+  <p >      name += &quot; &quot;;</p>
+  <p >    }</p>
+  <p >    indexArray.put(name, mapRef);</p>
+  <p >  }</p>
+</div>
+<p> Once we have added all the entries  we can create the elements in a batch.  
+  The following method reads the sorted entries in turn out of the TreeMap, carries 
+  out the necessary Object =&gt; String casting and then creates an appropriate 
+  element which is added to the root of the DOM tree :</p>
+<div style='border:solid white 1.5pt;padding:1.0pt 2.0pt 1.0pt 15.0pt;
+background:#F2F2F2;'> 
+  <p >  public void buildIndex() {</p>
+  <p >    Element indexElement;</p>
+  <p >    String mapRef;</p>
+  <p >    String name;</p>
+  <p >    for (Iterator i = indexArray.keySet().iterator(); i.hasNext(); ) {</p>
+  <p >      name = (String) i.next();</p>
+  <p >      mapRef = (String) indexArray.get(name);</p>
+  <p >      indexElement = createElement(&quot;indexitem&quot;);</p>
+  <p >      indexElement.setAttribute(&quot;target&quot;, mapRef);</p>
+  <p >      indexElement.setAttribute(&quot;text&quot;, name);</p>
+  <p >      // put the entry &lt;indexitem target=&quot;[ref]&quot; text=&quot;[index]&quot;&gt; 
+    into index</p>
+  <p >      appendToRoot(indexElement);</p>
+  <p >    }</p>
+  <p >  }</p>
+</div>
+<p> </p>
+<h4>Contents</h4>
+<p>The data in both the above listings was flat, containing little more than a 
+  series of one-to-one relations. The table of contents on the other hand can 
+  have a tree structure, and AutoHelp obtains this from the file system structure 
+  in the same manner as in the DirToXML application. The actual format of the 
+  table of contents XML file is rather different, but you can see the same structure 
+  through nesting as we saw with the output of DirToXML.</p>
+<p>snakesTOC.xml</p>
+<div style='border:solid white 1.5pt;padding:1.0pt 2.0pt 1.0pt 15.0pt'> 
+  <p >&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</p>
+  <p >&lt;toc version=&quot;1.0&quot;&gt;</p>
+  <p >  &lt;tocitem text=&quot;ASP&quot;&gt;</p>
+  <p >    &lt;tocitem text=&quot;Mongoose Issues&quot; target=&quot;Mongoose Issues&quot; 
+    /&gt;</p>
+  <p >    &lt;tocitem text=&quot;Template Shedding&quot; target=&quot;Template 
+    Shedding&quot; /&gt;</p>
+  <p >  &lt;/tocitem&gt;</p>
+  <p >  &lt;tocitem text=&quot;Appendices&quot;&gt;</p>
+  <p >    &lt;tocitem text=&quot;Appendix1&quot;&gt;</p>
+  <p >      &lt;tocitem text=&quot;Business Incubators&quot; target=&quot;Business 
+    Incubators&quot; /&gt;</p>
+  <p >    &lt;/tocitem&gt;</p>
+  <p >    &lt;tocitem text=&quot;Appendix2&quot;&gt;</p>
+  <p >      &lt;tocitem text=&quot;Snake 2&quot; target=&quot;Snake 2&quot; /&gt;</p>
+  <p >      &lt;tocitem text=&quot;dotNET&quot; target=&quot;dotNET&quot; /&gt;</p>
+  <p >    &lt;/tocitem&gt;</p>
+  <p >  &lt;/tocitem&gt;</p>
+  <p >  &lt;tocitem text=&quot;RDF&quot;&gt;</p>
+  <p >    &lt;tocitem text=&quot;Reptile Description Framework&quot; target=&quot;Reptile 
+    Description Framework&quot; /&gt;</p>
+  <p >  &lt;/tocitem&gt;</p>
+  <p >  &lt;tocitem text=&quot;Scripting&quot;&gt;</p>
+  <p >    &lt;tocitem text=&quot;Python&quot; target=&quot;Python&quot; /&gt;</p>
+  <p >    &lt;tocitem text=&quot;VPScript&quot; target=&quot;VPScript&quot; /&gt;</p>
+  <p >  &lt;/tocitem&gt;</p>
+  <p > <b> &lt;tocitem text=&quot;Contents&quot; target=&quot;Contents&quot; /&gt;</b></p>
+  <p >&lt;/toc&gt;</p>
+</div>
+<p>The file begins much the same as the previous two listings, and this file also 
+  describes relationships between human-readable names (text) and the mapped logical 
+  names (target). But when we get to the tocitem element with the attribute text=&quot;Scripting&quot;,  
+  you will notice that this tag doesn't close the element. Instead, the following 
+  two tocitem elements are children of this element, which is closed on the following 
+  line with the tag &lt;/tocitem&gt;. If we look at the way the contents view  
+  is displayed, we will see the effect of this nesting :</p>
+<p align=center style='text-align:center'> <img border=0 width=236 height=252
+src="images/image013.jpg" v:shapes="_x0000_i1031"> </p>
+<p class=layoutnotes-PRODUCTION>snake3.bmp</p>
+<p>As the element with the text attribute Scripting has children, this is displayed 
+  as a folder, whereas the element after it (with the text attribute Contents) 
+  is shown with a page icon. The two children, labelled ‘Mongoose Issues’ and 
+  ‘Template Shedding’ elements are also shown as page icons but below and indented 
+  from the folder icon, thus declaring their parentage. Further down we see the 
+  icon labelled ‘Appendices’ has two direct descendents, ‘Appendix1’ and ‘Appendix2’. 
+  As these in turn have children of there own, they too are displayed as folder 
+  icons. The only descendent of ‘Appendix1’, ‘Business Incubators’ is a leaf of 
+  the tree and so get displayed with a page icon. If you refer back to the XML 
+  listing, it can be seen that this corresponds directly with the nesting of elements. 
+  Remember though that the indentation of the XML is only to improve readability, 
+  the logical structure is defined by the tags.</p>
+<p>We’ve already seen how it is possible to generate structured XML from a directory 
+  structure in the XMLToDir application. Within AutoHelp exactly the same technique 
+  of using a stack to keep track of the current position in the file system is 
+  used. All we have to do here is rework the code slightly to give us the right 
+  syntax. If you refer back to the DirToXML application, you will see the generated 
+  XML looked like this :</p>
+<div style='border:solid white 1.5pt;padding:1.0pt 2.0pt 1.0pt 15.0pt'> 
+  <p >...  </p>
+  <p >&lt;directory name=&quot;source&quot;&gt;</p>
+  <p >    &lt;file name=&quot;HelloWorld.java&quot; /&gt;</p>
+  <p >...</p>
+</div>
+<p>The syntax we’re after looks like this :</p>
+<div style='border:solid white 1.5pt;padding:1.0pt 2.0pt 1.0pt 15.0pt'> 
+  <p >...</p>
+  <p >&lt;tocitem text=&quot;Scripting&quot;&gt;</p>
+  <p >    &lt;tocitem text=&quot;Python&quot; target=&quot;Python&quot; /&gt;</p>
+  <p >...</p>
+</div>
+<p>In the DirToXML application the element creation was carried out directly in 
+  the handler methods. In AutoHelp the necessary steps have been factored out 
+  into two methods. The first of which will create an element corresponding to 
+  a new directory :</p>
+<p> </p>
+<div style='border:solid white 1.5pt;padding:1.0pt 2.0pt 1.0pt 15.0pt;
+background:#F2F2F2;'> 
+  <p >public Element createTOCElement(String name) {</p>
+  <p >    Element newElement = createElement(&quot;tocitem&quot;);</p>
+  <p >    newElement.setAttribute(&quot;text&quot;, name);</p>
+  <p >    return newElement;</p>
+  <p >  }</p>
+</div>
+<p>The element name and the name of the attributes are always the same, so these 
+  are hard coded. The other method first calls the method above to create an element, 
+  then adds the ‘target’ attribute, which is the logical name of a particular 
+  document :</p>
+<div style='border:solid white 1.5pt;padding:1.0pt 2.0pt 1.0pt 15.0pt;
+background:#F2F2F2;'> 
+  <p >  public Element createTOCElement(String target, String name) {</p>
+  <p >    Element newElement = createTOCElement(name);</p>
+  <p >    newElement.setAttribute(&quot;target&quot;, target);</p>
+  <p >    return newElement;</p>
+  <p >  }</p>
+</div>
+<p>All is not over when the DOM tree for the Table of Contents has been populated. 
+  For the convenience of the end user, a method has been included in the TOCDocument 
+  class to remove entries for any empty directories. These may not be empty in 
+  the source file system, but may contain file types that are not required in 
+  the index and so the desired behaviour is for an effectively empty directory 
+  to be removed from the tree. The code below might look familiar – it is very 
+  similar to that shown earlier to demonstrate that DOM documents can be filtered. 
+  The set of all nodes in the tree is scanned through to see if any of the tocitem 
+  elements are without targets (i.e. are directories) and are without children. 
+  If a node corresponding to an empty directory is found, the node is removed 
+  and the clean flag set to false. The set of nodes is then scanned again, and 
+  the whole process repeated until a cycle passes without any empty directories 
+  being discovered. Every time an empty directory is discovered, a ‘.’ is printed 
+  to screen.</p>
+<div style='border:solid white 1.5pt;padding:1.0pt 2.0pt 1.0pt 15.0pt;
+background:#F2F2F2;'> 
+  <p >  public void removeEmptyFolders() {</p>
+  <p >    NodeList nodes;</p>
+  <p >    boolean clean = false;</p>
+  <p >    do {</p>
+  <p >      nodes = getDocument().getElementsByTagName(&quot;tocitem&quot;);</p>
+  <p >      clean = true;</p>
+  <p >      int i;</p>
+  <p >      for (i = 0; i &lt; nodes.getLength(); i++) {</p>
+  <p >        Element element = (Element) nodes.item(i);</p>
+  <p >        if (element == null) {</p>
+  <p >          continue;</p>
+  <p >        }</p>
+  <p >        if (element.hasAttribute(&quot;target&quot;)) {</p>
+  <p >          continue;</p>
+  <p >        }</p>
+  <p >        if (element.hasChildNodes()) {</p>
+  <p >          continue;</p>
+  <p >        }</p>
+  <p >// progress indicator</p>
+  <p >        System.out.print(&quot;.&quot;);</p>
+  <p >        clean = false;</p>
+  <p >        Element parent = (Element) element.getParentNode();</p>
+  <p >        debug(&quot;removing : &quot; + element.getAttribute(&quot;text&quot;));</p>
+  <p >        parent.removeChild(element);</p>
+  <p >      }</p>
+  <p >    } while (!clean);</p>
+  <p >  }</p>
+</div>
+<p>There are many differences in detail between the AutoHelp application and DirToXML, 
+  such as a facility to filter the source document filenames so that only files 
+  with extensions we are interested in get indexed (e.g. *.htm, *.html, *.java). 
+  The principle behind the data manipulation is however identical, and examination 
+  of the source code will show how the same basic model has been customised for 
+  a specific purpose.</p>
+<h4>Running AutoHelp</h4>
+<p>Once you have downloaded a copy of the AutoHelp application and source code 
+  from <a
+href="http://www.wrox.com/">http://www.wrox.com</a> or <a
+href="http://www.isacat.net/">http://www.isacat.net</a> you can try out indexing 
+  some of the folders on your hard drive.</p>
+<p>To create a JavaHelp index using AutoHelp, simply run the application at the 
+  command line, e.g. :</p>
+<p class=MsoBodyText2>java -classpath .;%classpath%;jaxp.jar;crimson.jar;autohelp.jar 
+  com.isacat.autohelp.AutoHelp &quot;JDK API&quot; &quot;D: \jdk1.3\docs\api&quot; 
+</p>
+<p>Here the application is run from the jar package, with the classes needed for 
+  DOM locally added to the class path – generally it is easier to place these 
+  in the jre/lib/ext directory of the Java distribution, but remember that you’ve 
+  put things in there. Puzzling errors can occasionally appear – if for instance 
+  an application tries to use a parser that contains <i>slightly</i> different 
+  methods.</p>
+<p>The command line arguments start with the name required for the help set – 
+  this will be used in the XML files names as well in the title bar of the helpset 
+  viewer. The next argument is the directory which is the root of the document 
+  set to index. Note that this will also be the location of the generated XML 
+  files. The default for the application is to index files as specified in the 
+  following statement (in AutoHelp.java) :</p>
+<div style='border:solid white 1.5pt;padding:1.0pt 2.0pt 1.0pt 15.0pt'> 
+  <p >DEFAULT_FILE_EXTNS = {&quot;htm&quot;, &quot;html&quot;, &quot;txt&quot;, 
+    &quot;java&quot;, &quot;xml&quot;, &quot;xsd&quot;, &quot;rdf&quot;};</p>
+</div>
+<p>This list may be overridden, either by listing the required extensions on the 
+  command line, e.g. </p>
+<p>java … com.isacat.autohelp.AutoHelp &quot;JDK API&quot; &quot;D: \jdk1.3\docs\api&quot; 
+  html htm</p>
+<p>or by entering the word ‘all’ instead of any extensions, the application will 
+  index every file it finds in the directory tree supplied.</p>
+<p>Note that the current JavaHelp viewer will not display .jpg and .gif image 
+  files as one might expect – they must be in a HTML document (as an &lt;img src=’...’&gt; 
+  tag) to be visible.</p>
+<p>Here is the command-line view of an application run, where  the current directory 
+  is specified for indexing :</p>
+<p>java -classpath jaxp.jar;crimson.jar;autohelp.jar com.isacat.autohelp.AutoHelp 
+  &quot;Test&quot; .</p>
+<p>Starting from : .</p>
+<p>Initializing trees...</p>
+<p>Scanning directories...........................</p>
+<p>Removing references to empty folders......</p>
+<p>Finalizing trees...</p>
+<p>Writing Map file :     ./TestMap.xml</p>
+<p>Writing Index file : ./TestIndex.xml</p>
+<p>Writing TOC file :     ./TestTOC.xml</p>
+<p>Writing HelpSet file :    ./Test.hs</p>
+<p>53 pages indexed.</p>
+<p>Scanning the directories and removing reference to empty folders can be time 
+  consuming if there are a large number of files in the document set, so for these 
+  two operations a simple activity indication is given in the form of an extra 
+  ‘.’ being output to the console for every directory encountered/removed. This 
+  indication wasn’t really necessary in the case above – scanning 53 pages takes 
+  about a second.</p>
+<h4>JavaHelp Search</h4>
+<p>Once we have built the HelpSets, we can take advantage of a free bonus in the 
+  JavaHelp package. If we move into the root directory of our documents and run 
+  the following :</p>
+<p>jhindexer -verbose -logfile help.log .</p>
+<p>an index will be created for the JavaHelp system to make the documents searchable. 
+  If there are any problems, check the generated log file, help.log.</p>
+<p>A directory will be created called JavaHelpSearch which contains the binary 
+  format index files. The last section of the Test.hs file looks like this :</p>
+<div style='border:solid white 1.5pt;padding:1.0pt 2.0pt 1.0pt 15.0pt'> 
+  <p >  &lt;view&gt;</p>
+  <p >    &lt;name&gt;Search&lt;/name&gt;</p>
+  <p >    &lt;label&gt;Search&lt;/label&gt;</p>
+  <p >    &lt;type&gt;javax.help.SearchView&lt;/type&gt;</p>
+</div>
+<div style='border:solid white 1.5pt;padding:1.0pt 2.0pt 1.0pt 15.0pt'> 
+  <p >&lt;data engine=&quot;com.sun.java.help.search.DefaultSearchEngine&quot;&gt;JavaHelpSearch&lt;/data&gt;</p>
+</div>
+<div style='border:solid white 1.5pt;padding:1.0pt 2.0pt 1.0pt 15.0pt'> 
+  <p >  &lt;/view&gt; </p>
+</div>
+<p>Which specifies the view type and the implementation to use, as well as where 
+  to find the search index files -  the JavaHelpSearch directory.</p>
+<p>There is a bug in JavaHelp 1.1 that prevents the search facility from working 
+  with JDK 1.3. This has been fixed in JavaHelp 1.1.1</p>
+<p>After running the indexer we can restart the HelpSet viewer application and 
+  make use of the search facility by clicking on the third tab. Here I have typed 
+  in the word ‘example’ and pressed &lt;return&gt;. The pages in which this word 
+  occurs are listed in the left hand pane (only one match in this case), and these 
+  may be viewed in the other pane. </p>
+<p align=center style='text-align:center'> <img border=0 width=460 height=295
+src="images/image015.jpg" v:shapes="_x0000_i1032"> </p>
+<p class=layoutnotes-PRODUCTION>search.bmp</p>
+<p>Finally, to make the point that automated data acquisition can be a time saver, 
+  the AutoHelp tool was run on a local copy of the JDK API Javadoc documentation, 
+  which in this particular version ran to 4,555 individual indexable pages. Using 
+  AutoHelp it took a couple of minutes to index (the JavaHelp search indexer took 
+  a little longer), it’s probably best not to think how long this would take to 
+  do manually. </p>
+<p align=center style='text-align:center'> <img border=0 width=438 height=358
+src="images/image017.jpg" v:shapes="_x0000_i1033"> </p>
+<p class=layoutnotes-PRODUCTION>jdk1.bmp</p>
+<h3>Summary</h3>
+<p>Reprise of the benefits of XML (including the possibility of automating data 
+  acquisition) etc etc.</p>
+<!-- #EndEditable --> 
+<p align="right">&copy; 2001 <a href="../../../misc/biog.htm">Danny Ayers</a> All 
+  rights reserved.</p>
+<div align="center"><a href="http://www.isacat.net/isacat_site.rdf" title="RDF Metadata"><img src="../../../citnames/rdf.png" alt="RDF" width="36" height="14" border="0"/></a> 
+</div>
+<p align="center"><a href="http://www.citnames.com">citnames</a></p>
+</BODY>
+<!-- #EndTemplate -->
+</HTML>

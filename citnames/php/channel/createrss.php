@@ -1,0 +1,137 @@
+<?php
+
+/*
+
+Name      : createrss.php
+Author    : Hans Wolters, hans@linux.gelrevision.nl 
+	    mSQL version submitted by D. Emilio Grimaldo Tunon
+	    
+Licence   : GPL
+Version   : 0.0.3
+Purpose   : Generating an rss file from a news database (MSQL).
+Usage     : See the INSTALL file included in the package            
+
+*/
+
+class mysql_rss {
+
+    /*
+    Attr. for the connection to a mysql db
+    */
+    var $host     = "";
+    var $db       = "";
+    var $login    = "";
+    var $password = "";
+    
+    /*
+    Attr. for the sql query.
+    */
+    
+    var $sql      = "";
+    
+    /*
+    Attr. fieldnames within the query which shall be used to create the news items.
+    */
+    
+    var $title_field = "";
+    var $news_field = "";
+    var $link_field  = "";
+    
+
+    /*
+    Attr. for the rss_title, rss_link, rss_descr, rss_encoding and the rss_lang.
+    */
+
+    var $rss_title    = "";
+    var $rss_link     = "";
+    var $rss_descr    = "";
+    var $rss_lang     = "";
+    var $rss_encoding = "";
+    
+    function connect($outputfile){
+    
+        /*
+        Get attributes.
+        */
+        $host     = $this->host;
+        $db       = $this->db;
+        $login    = $this->login;
+        $password = $this->password;
+        $sql      = $this->sql;
+        
+        $rss_encoding = $this->rss_encoding;
+        /*
+        Connect to the Mysql server and run the query.
+        */
+        if (!mysql_connect($host,$login,$password)) {
+            print "No connection made\n";
+            exit();
+        }
+        mysql_select_db( $db ) or die ( "Error opening the database\n" );
+        $result = mysql($db, $sql);
+        
+        
+        if (!$file=fopen($outputfile,w)) {
+        
+            print "could not open the file";
+            
+        } else {
+
+            /*
+            Print header, doctype, etc..
+            */
+            fputs ( $file, "<?xml version=\"1.0\" encoding=\"$rss_encoding\"?>\n\n" );
+            
+            fputs ( $file, "<!DOCTYPE rss PUBLIC \"-//Netscape Communications//DTD RSS 0.91//EN\"\n \"http://my.netscape.com/publish/formats/rss-0.91.dtd\">\n" );
+              
+            fputs ( $file, "<rss version=\"0.91\">\n\n" );
+            fputs ( $file, "<channel>\n" );
+            
+            
+            $rss_title = $this->rss_title;
+            $rss_link  = $this->rss_link;
+            $rss_descr = $this->rss_descr;
+            $rss_lang  = $this->rss_lang;
+            
+            fputs ( $file, "<title>$rss_title</title>\n ");
+            fputs ( $file, "<link>$rss_link</link>\n");
+            fputs ( $file, "<description>$rss_descr</description>\n");
+            fputs ( $file, "<language>$rss_lang</language>\n\n");
+
+
+            /*
+            Loop for printing the 10 items.
+            */
+
+            while ($row=mysql_fetch_array($result)) {
+            
+                $title = $this->title_field;
+                $news = $this->descr_field;
+                $link = $this->link_field;
+            
+                fputs ( $file, "<item>\n" );
+            
+                $title = "<title>" . htmlspecialchars(stripslashes($row[$title])) . "</title>\n";
+                $link  = "<link>" . htmlspecialchars(stripslashes($row[$link])) . "</link>\n";
+                $news  = "<description>" . htmlspecialchars(stripslashes($row[$news])) . "</description>\n";
+
+                fputs ( $file,  $title );
+                fputs ( $file,  $link );
+                fputs ( $file,  $news );
+            
+                fputs ( $file, "</item>\n\n" );
+                
+            }        
+        
+        
+        }
+        
+        fputs ( $file, "</channel>\n");
+        fputs ( $file, "</rss>\n");
+        
+        fclose( $file );
+    }
+
+
+    
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF xmlns:rdf = "http://www.w3.org/1999/02/22-rdf-syntax-ns#"  
+xmlns:rdfs = "http://www.w3.org/2000/01/rdf-schema#" 
+xmlns:dc="http://purl.org/dc/elements/1.0/"  
+xmlns = "http://www.citnames.com/2001/04/rpp#">
+
+<Profile rdf:about="http://www.w3.org/2000/10/swap/cwm.py">
+
+    <dc:Title>Closed World Machine</dc:Title>
+    <dc:Description>
+This is an engine which knows a certian amount of stuff and can manipulate it.
+It is a query engine, not an inference engine: that is, it will apply rules
+but won't figure out which ones to apply to prove something.
+    </dc:Description>
+    <dc:Creator>TimBL</dc:Creator>
+
+	<availability rdf:resource="#source"/>
+	<in rdf:resource="http://www.w3.org/2000/10/swap/log.n3#"/>
+	<in rdf:resource="http://www.w3.org/DesignIssues/Notation3.html"/>
+	<in rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+	<implementationOf rdf:resource="http://www.agfa.com/w3c/euler/"/>
+	<location rdf:resource="http://www.w3.org/2000/10/swap/cwm.py"/>
+	<hasDependency rdf:resource="UNIX"/>
+	<hasDependency rdf:resource="http://www.w3.org/2000/10/swap/notation3.py"/>
+	<out rdf:resource="http://www.w3.org/DesignIssues/Notation3.html"/>
+	<out rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+</Profile>
+
+</rdf:RDF>

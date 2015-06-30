@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<HTML><!-- #BeginTemplate "/Templates/Isacat.dwt" --><HEAD>
+<!-- #BeginEditable "doctitle" --> 
+<TITLE>Untitled Document</TITLE>
+<!-- #EndEditable -->
+<meta content="text/html; charset=ISO-8859-1" http-equiv=Content-Type>
+<!-- #BeginEditable "metatags" --> 
+<meta http-equiv="Content-Type" content="text/html; charset=">
+<link rel="stylesheet" href="../../../../css/style.css">
+<meta name="Author" content="Danny Ayers">
+<meta name="keywords" content="Danny Ayers, Isacat, Java, XML, Sri Lanka, Artificial Intelligence">
+<meta name="description" content="Danny Ayers provides a selection of resources, largely related to Java programming though bits are about Sri Lanka.">
+<!-- #EndEditable -->
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+<p align="center"><a href="../../../../index.htm" title="Danny Ayers's Stuff Home Page">Home</a> | <a href="../../../../links/links.htm" title="Links to related resources">Links</a></p>
+<!-- #BeginEditable "Body" --> 
+<p><b>Kex Log</b></p>
+<p>KVM stdout: 15 Oct 2000, 0:28</p>
+<p>Searching for &quot;example&quot;</p>
+<p>Reading record 0</p>
+<p>Searching for &quot;example&quot;</p>
+<p>*Reading record 1</p>
+<p>Found a Kex KB :</p>
+<p>Kex &quot;Fish&quot;</p>
+<p>&lt;?xml ver...</p>
+<p>Searching for &quot;example&quot;</p>
+<p>**Reading record 2</p>
+<p>Searching for &quot;example&quot;</p>
+<p>***Reading record 3</p>
+<p>Searching for &quot;example&quot;</p>
+<p>****Reading record 4</p>
+<p>Found a Kex KB :</p>
+<p>Kex &quot;Example&quot;</p>
+<p>&lt;?xml ...</p>
+<p>Loading example...</p>
+<p>Start Document</p>
+<p>Domain Name = Test Data</p>
+<p>Adding fact : 1</p>
+<p>Adding fact : 2</p>
+<p>Adding fact : 3</p>
+<p>Adding fact : 4</p>
+<p>Adding fact : 5</p>
+<p>Adding fact : 6</p>
+<p>Adding fact : 7</p>
+<p>Adding rule : 1</p>
+<p>Adding rule : 2</p>
+<p>Adding rule : 3</p>
+<p>Adding rule : 4</p>
+<p>End Document</p>
+<p>*** Domain : Test Data ***</p>
+<p>--- Facts ---</p>
+<p>0 Stone*</p>
+<p>1 Helicopter*</p>
+<p>2 Bird*</p>
+<p>3 Mouse*</p>
+<p>4 Is it alive? [[3]]</p>
+<p>5 Can it fly? [[0, 1, 2]]</p>
+<p>6 alive [[0, 1, 2]]</p>
+<p>--- Rules ---</p>
+<p>0 IF NOT alive AND Can it fly THEN Helicopter</p>
+<p>1 IF NOT alive AND NOT Can it fly THEN Stone</p>
+<p>2 IF alive AND NOT Can it fly THEN Mouse</p>
+<p>3 IF Is it alive THEN alive</p>
+<p>*** End Test Data ***</p>
+<p>4 rules, 7 facts including 4 goals.</p>
+<p>Initialising, please wait...</p>
+<p>**** Run 1 ****</p>
+<p>+++ Selected question : Can it fly?</p>
+<p>Response : Yes.</p>
+<p>Processing, please wait...</p>
+<p>Assertion 1: 5 Can it fly? [[0, 1, 2]] [TRUE]</p>
+<p>Checking rule : 0 IF NOT alive AND Can it fly THEN Helicopter</p>
+<p>Updating : 0 IF NOT alive THEN Helicopter</p>
+<p>Checking rule : 1 IF NOT alive AND NOT Can it fly THEN Stone</p>
+<p>Updating : 0 Stone* [FALSE]</p>
+<p>No rules matching 0 Stone* [FALSE]</p>
+<p>Checking rule : 2 IF alive AND NOT Can it fly THEN Mouse</p>
+<p>Updating : 3 Mouse* [FALSE]</p>
+<p>No rules matching 3 Mouse* [FALSE]</p>
+<p>Remaining goals : </p>
+<p>Helicopter</p>
+<p>Bird</p>
+<p>+++ Selected question : Is it alive?</p>
+<p>Response : No.</p>
+<p>Processing, please wait...</p>
+<p>Assertion 2: 4 Is it alive? [[3]] [FALSE]</p>
+<p>Checking rule : 3 IF Is it alive THEN alive</p>
+<p>Updating : 6 alive [[0, 1, 2]] [FALSE]</p>
+<p>Assertion 3: 6 alive [[0, 1, 2]] [FALSE]</p>
+<p>Checking rule : 0 IF NOT alive THEN Helicopter</p>
+<p>Updating : 0 IF  THEN Helicopter</p>
+<p>*** Conclusions ***</p>
+<p>Solution is : Helicopter</p>
+<p>***************</p>
+<p>Exit Pressed.</p>
+<!-- #EndEditable --> 
+<p align="right">&copy; 2001 <a href="../../../../misc/biog.htm">Danny Ayers</a> All rights 
+  reserved.</p>
+
+<div align="center"><a href="http://www.isacat.net/isacat_site.rdf" title="RDF Metadata"><img src="../../../../citnames/rdf.png" alt="RDF" width="36" height="14" border="0"/></a> 
+</div>
+<p align="center"><a href="http://www.citnames.com">citnames</a></p>
+</BODY>
+<!-- #EndTemplate --></HTML>

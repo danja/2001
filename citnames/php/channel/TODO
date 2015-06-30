@@ -1,0 +1,24 @@
+phpChannel To Do List
+
+General:
+
+ + Write documentation in other languages.
+ 
+ + Find more testers.
+
+ + Perl/CGI sript for getting (wget) the channels you want to 
+   show with a cronjob. Would be nice if there was an interface 
+   for it but this would only work on Unix systems.
+ 
+ 
+Class: parserss.php
+
+ + A copy that stores the data on a database.
+ 
+
+Class: createrss.php 
+
+ + Support for other database servers.
+ 
+ + Seperate class for making a database connection.
+

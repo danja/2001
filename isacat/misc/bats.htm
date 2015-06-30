@@ -1,0 +1,232 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML><HEAD><TITLE>Bats</TITLE>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type>
+
+<STYLE type=text/css>.bat {
+	HEIGHT: 30px; POSITION: absolute; VISIBILITY: hidden; WIDTH: 75px
+}
+</STYLE>
+
+<SCRIPT language=JavaScript src="Bats_files/dhtmllib.js"></SCRIPT>
+
+<SCRIPT language=JavaScript>
+
+
+
+// These variables will hold the current mouse pointer position.
+
+
+
+var mouseX = 0;
+
+var mouseY = 0;
+
+
+
+// Set up event capturing.
+
+
+
+if (isMinNS4)
+
+  document.captureEvents(Event.MOUSEMOVE);
+
+document.onmousemove = getMousePosition;
+
+
+
+function getMousePosition(e) {
+
+
+
+  // Save cursor position using browser-specific code.
+
+
+
+  if (isMinNS4) {
+
+    mouseX = e.pageX;
+
+    mouseY = e.pageY;
+
+  }
+
+  if (isMinIE4) {
+
+    mouseX = event.clientX + document.body.scrollLeft;
+
+    mouseY = event.clientY + document.body.scrollTop;
+
+  }
+
+  return true;
+
+}
+
+
+
+// Function to return a random number from a given range.
+
+
+
+function random(min, max) {
+
+
+
+  return Math.random() * (max - min) + min;
+
+}
+
+
+
+var bats = new Array();
+
+
+
+function initBats() {
+
+
+
+  var i, j, layer;
+
+
+
+  // Get handles to all the bat layers and set orbit parameters.
+
+
+
+  i = 0;
+
+  j = 1;
+
+  while ((layer = getLayer("bat" + (i + 1))) != null) {
+
+    bats[i] = layer;
+
+
+
+    if (isMinNS4)
+
+      bats[i].image = bats[i].document.images["batimg" + (i + 1)];
+
+    if (isMinIE4)
+
+      bats[i].image = document.images["batimg" + (i + 1)];
+
+
+
+    bats[i].a = random(75, 200);
+
+    bats[i].b = random(50, 80);
+
+    bats[i].theta = Math.random() * 2 * Math.PI;
+
+    bats[i].delta = random(4 * Math.PI / 100, 8 * Math.PI / 100);
+
+    if (Math.random() >= 0.5)
+
+      bats[i].delta = -bats[i].delta;
+
+    bats[i].phi = Math.random() * 2 * Math.PI;
+
+
+
+    bats[i].imageIndex = j;
+
+    if (++j > 3)
+
+      j = 1;
+
+    moveLayerTo(bats[i], 0, 0);
+
+    showLayer(bats[i]);
+
+    i++;
+
+  }
+
+  updateBats();
+
+}
+
+
+
+function updateBats() {
+
+
+
+  var i, x1, y1, x2, y2;
+
+
+
+  for (i = 0; i < bats.length; i++) {
+
+    bats[i].theta += bats[i].delta;
+
+    if (bats[i].theta > 2 * Math.PI)
+
+      bats[i].theta -= 2 * Math.PI;
+
+    if (bats[i].theta < 0)
+
+      bats[i].theta += 2 * Math.PI;
+
+    x1 = Math.round(bats[i].a * Math.sin(bats[i].theta));
+
+    y1 = Math.round(bats[i].b * Math.cos(bats[i].theta));
+
+    x2 = mouseX + Math.round(x1 * Math.cos(bats[i].phi) + y1 * Math.sin(bats[i].phi));
+
+    y2 = mouseY - Math.round(y1 * Math.cos(bats[i].phi) - x1 * Math.sin(bats[i].phi));
+
+    moveLayerTo(bats[i], x2, y2);
+
+    bats[i].image.src = "images/bat" + bats[i].imageIndex + ".gif";
+
+    if (++bats[i].imageIndex > 3)
+
+      bats[i].imageIndex = 1;
+
+  }
+
+
+
+  // Set up next call.
+
+
+
+  setTimeout('updateBats()', 25);
+
+  return;
+
+}
+
+
+
+</SCRIPT>
+
+<META content="MSHTML 5.00.3103.1000" name=GENERATOR></HEAD>
+<BODY bgColor=#99FFFF onload=initBats();>
+<!-- bats --> 
+<DIV class=bat id=bat1><IMG height=30 name=batimg1 src="Bats_files/bat1.gif" 
+width=75></DIV>
+<DIV class=bat id=bat2><IMG height=30 name=batimg2 src="Bats_files/bat2.gif" 
+width=75></DIV>
+<DIV class=bat id=bat3><IMG height=30 name=batimg3 src="Bats_files/bat3.gif" 
+width=75></DIV>
+<DIV class=bat id=bat4><IMG height=30 name=batimg4 src="Bats_files/bat1.gif" 
+width=75></DIV>
+<DIV class=bat id=bat5><IMG height=30 name=batimg5 src="Bats_files/bat2.gif" 
+width=75></DIV>
+<div align="left"><a href="../index.htm">home</a></div>
+<CENTER>
+  <h1>&nbsp;</h1>
+  <h1>&nbsp;</h1>
+  <h1>Bats to make Devin happy, </h1>
+  <h1>bats for Anna Simone to chase </h1>
+  <h1>and</h1>
+  <h1>bats to make Mary Jo say <i>EEK!</i></h1>
+  <h1>&nbsp;</h1>
+  <h1><a href="http://members.aol.com/bats4kids/">More Bats</a></h1>
+</CENTER></BODY></HTML>

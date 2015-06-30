@@ -1,0 +1,84 @@
+<rdf:RDF
+  xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'
+  xmlns:RDFNsId1='http://www.isacat.net/ns/rdb-exposed#' >
+  <rdf:Description rdf:about='schema.wrox'>
+    <rdf:type rdf:resource='http://www.isacat.net/ns/rdb-exposed#Schema'/>
+    <RDFNsId1:name>wrox</RDFNsId1:name>
+    <RDFNsId1:contains rdf:resource='catalog.simple'/>
+  </rdf:Description>
+  <rdf:Description rdf:about='table.food'>
+    <rdf:type rdf:resource='http://www.isacat.net/ns/rdb-exposed#Table'/>
+    <RDFNsId1:name>food</RDFNsId1:name>
+    <RDFNsId1:tableType>TABLE</RDFNsId1:tableType>
+    <RDFNsId1:contains rdf:resource='column.food.id'/>
+    <RDFNsId1:contains rdf:resource='column.food.name'/>
+  </rdf:Description>
+  <rdf:Description rdf:about='column.bears.food'>
+    <rdf:type rdf:resource='http://www.isacat.net/ns/rdb-exposed#Column'/>
+    <RDFNsId1:name>food</RDFNsId1:name>
+    <RDFNsId1:columnType>INTEGER</RDFNsId1:columnType>
+    <RDFNsId1:columnSize>10</RDFNsId1:columnSize>
+    <RDFNsId1:isKey>none</RDFNsId1:isKey>
+  </rdf:Description>
+  <rdf:Description rdf:about='mydatabase'>
+    <rdf:type rdf:resource='http://www.isacat.net/ns/rdb-exposed#Database'/>
+    <RDFNsId1:name>Publishers</RDFNsId1:name>
+    <RDFNsId1:qname>thisisqname</RDFNsId1:qname>
+    <RDFNsId1:xsdUrl>thisisthexsdurl</RDFNsId1:xsdUrl>
+    <RDFNsId1:description>This is the description of the db</RDFNsId1:description>
+    <RDFNsId1:queryUrl>thisisthequeryurl</RDFNsId1:queryUrl>
+    <RDFNsId1:hasConnection rdf:resource='myconnection'/>
+    <RDFNsId1:contains rdf:resource='schema.wrox'/>
+  </rdf:Description>
+  <rdf:Description rdf:about='column.food.id'>
+    <rdf:type rdf:resource='http://www.isacat.net/ns/rdb-exposed#Column'/>
+    <RDFNsId1:name>id</RDFNsId1:name>
+    <RDFNsId1:columnType>INTEGER</RDFNsId1:columnType>
+    <RDFNsId1:columnSize>10</RDFNsId1:columnSize>
+    <RDFNsId1:isKey>primary</RDFNsId1:isKey>
+  </rdf:Description>
+  <rdf:Description rdf:about='column.bears.id'>
+    <rdf:type rdf:resource='http://www.isacat.net/ns/rdb-exposed#Column'/>
+    <RDFNsId1:name>id</RDFNsId1:name>
+    <RDFNsId1:columnType>INTEGER</RDFNsId1:columnType>
+    <RDFNsId1:columnSize>10</RDFNsId1:columnSize>
+    <RDFNsId1:isKey>primary</RDFNsId1:isKey>
+  </rdf:Description>
+  <rdf:Description rdf:about='catalog.simple'>
+    <rdf:type rdf:resource='http://www.isacat.net/ns/rdb-exposed#Catalog'/>
+    <RDFNsId1:name>simple</RDFNsId1:name>
+    <RDFNsId1:contains rdf:resource='table.bears'/>
+    <RDFNsId1:contains rdf:resource='table.food'/>
+  </rdf:Description>
+  <rdf:Description rdf:about='column.bears.name'>
+    <rdf:type rdf:resource='http://www.isacat.net/ns/rdb-exposed#Column'/>
+    <RDFNsId1:name>name</RDFNsId1:name>
+    <RDFNsId1:columnType>VARCHAR</RDFNsId1:columnType>
+    <RDFNsId1:columnSize>10</RDFNsId1:columnSize>
+    <RDFNsId1:isKey>none</RDFNsId1:isKey>
+  </rdf:Description>
+  <rdf:Description rdf:about='column.food.name'>
+    <rdf:type rdf:resource='http://www.isacat.net/ns/rdb-exposed#Column'/>
+    <RDFNsId1:name>name</RDFNsId1:name>
+    <RDFNsId1:columnType>VARCHAR</RDFNsId1:columnType>
+    <RDFNsId1:columnSize>10</RDFNsId1:columnSize>
+    <RDFNsId1:isKey>none</RDFNsId1:isKey>
+  </rdf:Description>
+  <rdf:Description rdf:about='myconnection'>
+    <rdf:type rdf:resource='http://www.isacat.net/ns/rdb-exposed#Connection'/>
+    <RDFNsId1:name>My connection</RDFNsId1:name>
+    <RDFNsId1:driver>com.inet.tds.TdsDriver</RDFNsId1:driver>
+    <RDFNsId1:dbcType>JDBC</RDFNsId1:dbcType>
+    <RDFNsId1:connUrl>jdbc:inetdae:localhost:1433</RDFNsId1:connUrl>
+    <RDFNsId1:login>wrox</RDFNsId1:login>
+    <RDFNsId1:password>xorw</RDFNsId1:password>
+  </rdf:Description>
+  <rdf:Description rdf:about='table.bears'>
+    <rdf:type rdf:resource='http://www.isacat.net/ns/rdb-exposed#Table'/>
+    <RDFNsId1:name>bears</RDFNsId1:name>
+    <RDFNsId1:tableType>TABLE</RDFNsId1:tableType>
+    <RDFNsId1:contains rdf:resource='column.bears.id'/>
+    <RDFNsId1:contains rdf:resource='column.bears.name'/>
+    <RDFNsId1:contains rdf:resource='column.bears.food'/>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,34 @@
+
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/TR/WD-rdf-syntax#"
+  xmlns:dc="http://purl.org/dc/elements/1.0/">
+  <rdf:Description about="http://www.ukoln.ac.uk/">
+    <dc:Title>
+      UKOLN: UK Office for Library and Information Networking
+    </dc:Title>
+    <dc:Creator>
+      UKOLN Information Services Group
+    </dc:Creator>
+    <dc:Subject>
+      national centre; network information support; library
+      community; awareness; research; information services;
+      public library networking; bibliographic management;
+      distributed library systems; metadata; resource discovery;
+      conferences; lectures; workshops
+    </dc:Subject>
+    <dc:Description>
+      UKOLN is a national centre for support in network
+      information management in the library and information
+      communities. It provides awareness, research and
+      information services
+    </dc:Description>
+    <dc:Date>
+      1998-02-17
+    </dc:Date>
+    <dc:Format>
+      text/html
+    </dc:Format>
+  </rdf:Description>
+</rdf:RDF>
+
+

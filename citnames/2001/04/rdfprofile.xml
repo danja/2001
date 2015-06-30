@@ -1,0 +1,12 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:dc="http://purl.org/DC/elements/1.1/" 
+     xmlns:wcag="http://uwimp.com/1.0/wcag/" >
+<rdf:Description rdf:about="http://www.citnames.com"
+     dc:title="citnamesemantic"
+     dc:description="Material relating to the Semantic Web."
+     dc:author="Danny Ayers"
+     dc:creator="danny@panlanka.net"
+     dc:date="01st April 2001 12:00:00 AM" 
+     wcag:level="none" />
+</rdf:RDF>
+

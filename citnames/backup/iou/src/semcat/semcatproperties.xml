@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "jproperties.dtd">
+<!-- XML Wrapper for Properties -->
+<properties>
+	<propertylist name="pool">
+		<property name="database">jdbc:odbc:Driver do MS Access (*.mdb);DBQ="D:/semcat.mdb"</property>
+		<property name="driver">sun.jdbc.odbc.JdbcOdbcDriver</property>
+		<property name="catalog"></property>
+		<property name="user">admin</property>
+		<property name="password">isacat</property>
+		<property name="size">5</property>
+		<property name="timeout">30</property>
+		<property name="delay">10000</property>
+		<property name="period">10000</property>
+		<property name="lifespan">10000</property>
+</propertylist>
+ 
+</properties>
+
+<!--   A few alternate drivers databases for non-DataSource pool 
+ 
+  // jdbc:odbc:" + ODBCSource + ";DBQ=" + dbq + ";DefaultDir=" + defdir + "UID=Admin"
+Driver={Microsoft Access Driver(*.mdb)};
+jdbc:inetdae:localHost:1433
+com.inet.tds.TdsDriver
+			postgresql.Driver                       
+			jdbc:postgresql://localhost:5432/wroxcon 
+			sun.jdbc.odbc.JdbcOdbcDriver            
+			jdbc:odbc:wroxcon                     
+			org.gjt.mm.mysql.Driver                 
+            	jdbc:mysql://localhost:3306/wroxcon     -->
+

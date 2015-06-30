@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf = "http://www.w3.org/1999/02/22-rdf-syntax-ns#"  
+xmlns:rdfs = "http://www.w3.org/2000/01/rdf-schema#" 
+xmlns:dc="http://purl.org/dc/elements/1.0/"  
+xmlns = "http://www.citnames.com/2001/04/rpp#">
+
+  <rdf:Description about="http://www.w3.org/2000/10/swap/cwm.py">
+    <dc:Title>Closed World Machine</dc:Title>
+    <dc:Description>
+This is an engine which knows a certian amount of stuff and can manipulate it.
+It is a query engine, not an inference engine: that is, it will apply rules
+but won't figure out which ones to apply to prove something.
+    </dc:Description>
+    <dc:Creator>TimBL</dc:Creator>
+
+<!--
+location 
+availability
+in
+out
+alang
+hasDependency
+implementationOf
+equivalentTo -->
+
+<!--
+Resource
+Profile
+Component 
+Availability 
+Dependency 
+Environment 
+Library 
+Algorithm
+Interface 
+DataFormat
+Encoding
+-->
+ 
+
+
+<profile rdf:about="http://www.w3.org/2000/10/swap/cwm.py" />
+<location>http://www.w3.org/2000/10/swap/cwm.py</location>
+<algorithm>http://www.w3.org/2000/10/swap/cwm.py</algorithm>
+<availability>source</availability>
+<alang>Python"</alang>
+
+<in>
+      <rdf:Bag>
+
+        	<rdf:li resource="http://www.w3.org/DesignIssues/Notation3.html">
+			<rdfs:comment>N3 syntax</rdfs:comment>
+
+		</rdf:li>
+		<rdf:li resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+			<rdfs:comment>RDF syntax</rdfs:comment>
+		</rdf:li>
+        	<rdf:li resource="http://www.w3.org/2000/10/swap/log.n3#">
+			<rdfs:comment>N3 syntax rule file</rdfs:comment>
+		</rdf:li>
+      </rdf:Bag>
+</in>
+
+<out>
+      <rdf:Bag>
+
+        	<rdf:li resource="http://www.w3.org/DesignIssues/Notation3.html">
+			<rdfs:comment>N3 syntax</rdfs:comment>
+		</rdf:li>
+		<rdf:li resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+			<rdfs:comment>RDF syntax</rdfs:comment>
+		</rdf:li>
+        	<rdf:li resource="http://www.w3.org/2000/10/swap/log.n3#">
+			<rdfs:comment>N3 syntax rule file</rdfs:comment>
+		</rdf:li>
+      </rdf:Bag>
+</out>
+
+
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+//////<br>
+Test database was called 'simple' and created in SQL Server using :<br>
+CREATE TABLE food (id INT PRIMARY KEY, foodtype VARCHAR(10));<br>
+INSERT INTO food VALUES (1,'kapok');<br>
+INSERT INTO food VALUES (2,'honey');<br>
+INSERT INTO food VALUES (3,'campers');
+<p>CREATE TABLE bears (id INT PRIMARY KEY, name VARCHAR(10), food INT FOREIGN 
+  KEY REFERENCES food(id));<br>
+  INSERT INTO bears VALUES (1,'pooh', 2);<br>
+  INSERT INTO bears VALUES (2,'teddy', 1);<br>
+  INSERT INTO bears VALUES (3,'grizzly', 3);<br>
+  ///////</p>
+<p></p>
+<p>In addition to the standard Java 2 class libraries (included with a default 
+  installation of the Java SDK) the code is dependent on the Jena API, which is 
+  in turn dependent on several other class libraries. The Jena package should 
+  first be downloaded (URL????) and unzipped to any convenient location. The easiest 
+  way to make everything available is to copy the jar files from the jena\lib 
+  directory into a working directory, here we use C:\rdbexposed, so that the directory 
+  now contains :</p>
+<p>C:\rdbexposed\sax2.jar<br>
+  C:\rdbexposed\rdffilter.jar<br>
+  C:\rdbexposed\jena.jar<br>
+  C:\rdbexposed\xerces.jar </p>
+<p>A JDBC driver be needed at runtime, in the example we used the i-net SQL Server 
+  driver 'Opta2000' (URL???). The jar file contained in the zipped package should 
+  also be extracted to the working directory : </p>
+<p>C:\rdbexposed\Opta2000.jar</p>
+<p>First of all the code has to be compiled. The source files are :</p>
+<p>C:\rdbexposed\com\wrapper\dbmodel\JCatalog.java<br>
+  C:\rdbexposed\com\wrapper\dbmodel\JDatabase.java<br>
+  C:\rdbexposed\com\wrapper\dbmodel\JSchema.java<br>
+  C:\rdbexposed\com\wrapper\dbmodel\JDataset.java<br>
+  C:\rdbexposed\com\wrapper\dbmodel\JTable.java<br>
+  C:\rdbexposed\com\wrapper\dbmodel\JColumn.java<br>
+  C:\rdbexposed\com\wrapper\dbmodel\JConnection.java<br>
+  C:\rdbexposed\com\wrapper\util\TypesUtil.java<br>
+  C:\rdbexposed\com\wrapper\vocabulary\RDBExposed.java<br>
+  C:\rdbexposed\com\wrapper\expose\ExposeDB.java</p>
+<p>Here the files have been extracted into the C:\rdbexposed directory which will 
+  be our working directory. The main class of the application is in ExposeDB.java, 
+  and entering the following at a command prompt (all on one line) will compile 
+  this and all the other files :</p>
+<p>javac -classpath .;sax2.jar;rdffilter.jar;jena.jar;xerces.jar com\wrapper\expose\ExposeDB.java</p>
+<p>(for convenience this command is supplied in the file compile.bat)</p>
+<p>Before we can run the application a suitable RDF source file needs to be available. 
+  The example in the text used the file source.rdf, which should also be copied 
+  into the working directory :</p>
+<p>C:\rdbexposed\source.rdf</p>
+<p>To run the application, a suitable command line is :<br>
+  <br>
+  java -classpath .;sax2.jar;rdffilter.jar;jena.jar;xerces.jar;Opta2000.jar com.wrapper.expose.ExposeDB 
+  source.rdf output.rdf mydatabase wrox simple myconnection<br>
+  (which can be found in run.bat)</p>
+<p>The arguments given here are as follows :</p>
+<p>source.rdf - file containing metadata about the connection etc.<br>
+  output.rdf - target filename for the program's output<br>
+  mydatabase - name of the database (as specified in source.rdf)<br>
+  wrox - the database schema entity (SQL Server user)<br>
+  simple - the name of the catalog (database as specified in SQL Server)<br>
+  myconnection - the JDBC connection to use (as specified in source.rdf)</p>
+<p>After a few seconds the resultant RDF text should be output to the console. 
+  It will also be saved to the file output.rdf.<br>
+</p>
+</body>
+</html>

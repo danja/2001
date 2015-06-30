@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<HTML><!-- #BeginTemplate "/Templates/Isacat.dwt" --><HEAD>
+<!-- #BeginEditable "doctitle" --> 
+<TITLE>AutoHelp 1</TITLE>
+<!-- #EndEditable -->
+<meta content="text/html; charset=ISO-8859-1" http-equiv=Content-Type>
+<!-- #BeginEditable "metatags" --> 
+<meta http-equiv="Content-Type" content="text/html; charset=">
+<link rel="stylesheet" href="../../css/style.css">
+<meta name="Author" content="Danny Ayers">
+<meta name="keywords" content="AutoHelp, JavaHelp, Java, XML, Index, search, automatic">
+<meta name="description" content="A free tool (with Java source) for generating JavaHelp helpset (XML) files based on the directory structure of a HTML document set.">
+<!-- #EndEditable -->
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+<p align="center"><a href="../../index.htm" title="Danny Ayers's Stuff Home Page">Home</a> | <a href="../../links/links.htm" title="Links to related resources">Links</a></p>
+<!-- #BeginEditable "Body" --> 
+<h1 align="center">AutoHelp </h1>
+<h5 align="center"><font color="#00FF00">NEW (07/04/2001) :</font> Latest Version 
+  : 1.1 <a href="#Download">download</a> </h5>
+<h5 align="center"><font color="#00FF00">NEW (03/05/2001) :</font> Additional 
+  Documentation </h5>
+<h5 align="center">Autohelp Page <font color="#FF0000">1</font> <a href="autohelp/autohelp2.htm">2</a> 
+  <a href="autohelp/autohelp3.htm">3</a> <a href="autohelp/autohelp4.htm">4</a> 
+  <a href="autohelp/autohelp5.htm">5 </a></h5>
+<h2>OVERVIEW</h2>
+<p>This is a utility to automatically create the four XML index files needed by 
+  JavaHelp. If your HTML documents are in a filesystem like this :</p>
+<p align="center"><img src="images/book.gif" width="121" height="98"></p>
+<table width="12%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <p><code>book\contents.html<br>
+        book\Chapter1\Page1.html<br>
+        book\Chapter1\Page2.html <br>
+        ... </code></p>
+    </td>
+  </tr>
+</table>
+<div align="center"></div>
+<p>you can create JavaHelp views like this :</p>
+<p align="center"><img src="images/help.gif" width="581" height="328"> </p>
+<p>The tool uses the file and directory names as entry titles, and the directory 
+  structure as the contents tree structure. All you need to supply is the root 
+  directory name where the HTML files are stored.</p>
+<p>There's a little bit more info about this in the form of<a href="../bombay/mumjava.htm"> 
+  presentation materials</a>, though your best bet is to get the download and 
+  try it. Note that the presentation materials were prepared for v 1.01, so there 
+  may be minor differences between these and the latest release. The latest version 
+  of the code is strongly recommended - no known bugs, unlike v 1.01. </p>
+<h5>Download<a name="Download"></a> Files :</h5>
+<h6>Latest version - 1.1 </h6>
+<p><a href="../04/autohelp1.1/autohelp_1.1.jar">autohelp_1.1.jar </a>- compiled 
+  classes </p>
+<p><a href="../04/autohelp1.1/autohelp_1.1_src.zip">autohelp_1.1_src.zip</a> - 
+  source code</p>
+<p><a href="autohelp_release_1.1.zip">autohelp_release_1.1.zip</a> - everything 
+  - including source, javadoc, sample HelpSet, batch files</p>
+changes from 1.01 : bug fixes, major refactoring, improved command-line options. 
+<h6>Older version - 1.01</h6>
+<p><a href="download/autohelp.zip">autohelp.zip</a> - source etc.</p>
+<p><a href="download/autohelp.jar">autohelp.jar</a> - built classes </p>
+<h5>Use :</h5>
+Where the title for the HelpSet will be <b>Book </b>and the directory tree containing 
+the html files starts at <b>./book</b> : 
+<p><code>java -classpath .;%classpath%;jaxp.jar;crimson.jar;autohelp.jar com.isacat.autohelp.AutoHelp 
+  "Book" book </code></p>
+(see included batch files for more examples) 
+<h5>Prerequisites :</h5>
+<h5><font face="Verdana, Arial, Helvetica, sans-serif"><b><font color="#FF0000">Read 
+  the JavaHelp Documentation !</font></b></font></h5>
+<table width="70%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td height="82" width="75%"> 
+      <p>Java 2 SDK<br>
+        JavaHelp Package (I think there's a JavaHelp patch needed if your using 
+        JDK 1.3)<br>
+        JAXP Package<br>
+        Crimson XML parser (I think this is included in the JAXP package)</p>
+    </td>
+    <td height="82" width="25%"> 
+      <p><a href="http://www.java.sun.com">http://www.java.sun.com</a><br>
+        <a href="http://www.java.sun.com">http://www.java.sun.com</a> <br>
+        <a href="http://www.java.sun.com">http://www.java.sun.com</a><br>
+        <a href="http://www.apache.org">http://www.apache.org </a></p>
+    </td>
+  </tr>
+</table>
+<p>Here's the table of contents file generated from the above filesystem :</p>
+<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;toc version="1.0"&gt;
+  	&lt;tocitem text="Appendices"&gt;
+    			&lt;tocitem text="Appendix1"&gt;
+      				&lt;tocitem text="Page1" target="Page1" /&gt;
+      				&lt;tocitem text="Page2" target="Page2" /&gt;
+    			&lt;/tocitem&gt;
+    			&lt;tocitem text="Appendix2"&gt;
+      				&lt;tocitem text="Page1" target="Appendix2Page1" /&gt;
+      				&lt;tocitem text="Page2" target="Appendix2Page2" /&gt;
+   			 &lt;/tocitem&gt;
+ 		 &lt;/tocitem&gt;
+  	 &lt;tocitem text="Chapter1"&gt;
+    			&lt;tocitem text="Page1" target="Chapter1Page1" /&gt;
+    			&lt;tocitem text="Page2" target="Chapter1Page2" /&gt;
+  	 &lt;/tocitem&gt;
+  	 &lt;tocitem text="Chapter2"&gt;
+    			&lt;tocitem text="Page1" target="Chapter2Page1" /&gt;
+    			&lt;tocitem text="Page2" target="Chapter2Page2" /&gt;
+ 		 &lt;/tocitem&gt;
+    &lt;tocitem text="Contents" target="Contents" /&gt;
+&lt;/toc&gt;</pre>
+<p>Further information - see the JavaHelp documentation, and any material on Java/XML. 
+</p>
+<p>There's a <a href="http://archives.java.sun.com/archives/javahelp-interest.html">JavaHelp 
+  mailing list</a> at Sun - Binky has all the answers. There's also an O'Reilly 
+  book &quot;Creating Effective JavaHelp&quot; by Kevin Lewis which I've seen 
+  recommended but haven't looked at myself.</p>
+<h5 align="center">Autohelp Page <font color="#FF0000">1</font> <a href="autohelp/autohelp2.htm">2</a> 
+  <a href="autohelp/autohelp3.htm">3</a> <a href="autohelp/autohelp4.htm">4</a> 
+  <a href="autohelp/autohelp5.htm">5 </a></h5>
+<h5 align="center"><a href="autohelp/autohelp2.htm">Next</a></h5>
+<!-- #EndEditable --> 
+<p align="right">&copy; 2001 <a href="../../misc/biog.htm">Danny Ayers</a> All rights 
+  reserved.</p>
+
+<div align="center"><a href="http://www.isacat.net/isacat_site.rdf" title="RDF Metadata"><img src="../../citnames/rdf.png" alt="RDF" width="36" height="14" border="0"/></a> 
+</div>
+<p align="center"><a href="http://www.citnames.com">citnames</a></p>
+</BODY>
+<!-- #EndTemplate --></HTML>

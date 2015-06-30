@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<HTML><!-- #BeginTemplate "/Templates/Isacat.dwt" --><HEAD>
+<!-- #BeginEditable "doctitle" --> 
+<TITLE>Untitled Document</TITLE>
+<!-- #EndEditable -->
+<meta content="text/html; charset=ISO-8859-1" http-equiv=Content-Type>
+<!-- #BeginEditable "metatags" --> 
+<link rel="stylesheet" href="../../../css/style.css">
+<meta name="Author" content="Danny Ayers">
+<meta name="keywords" content="Danny Ayers, Isacat, Java, XML, Sri Lanka, Artificial Intelligence">
+<meta name="description" content="Danny Ayers provides a selection of resources, largely related to Java programming though bits are about Sri Lanka.">
+<!-- #EndEditable -->
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+<p align="center"><a href="../../../index.htm" title="Danny Ayers's Stuff Home Page">Home</a> | <a href="../../../links/links.htm" title="Links to related resources">Links</a></p>
+<!-- #BeginEditable "Body" --> 
+<p>// DMOZ Cleaner</p>
+<p>// Usage : java -Xmx384M DMOZCleaner [DMOZ source file] [destination file]</p>
+<p><code>import java.io.*;</code></p>
+<p><code>public class DMOZCleaner {</code></p>
+<p><code>  static String[] original = {&quot;&amp;lt;RDF &quot;, &quot;xmlns=\&quot;http://directory.mozilla.org/rdf\&quot;&quot;, 
+  &quot;&amp;lt;/RDF&amp;gt;&quot;, &quot;:id=&quot;};</code></p>
+<p><code>  static String[] replacement = {&quot;&amp;lt;r:RDF &quot;, &quot;&quot;, 
+  &quot;&amp;lt;/r:RDF&amp;gt;&quot;, &quot;:ID=&quot;};</code></p>
+<p><code>  static int nSwaps = original.length;</code></p>
+<p><code>  public static String filter(String input) {</code></p>
+<p><code>    StringBuffer buffer = new StringBuffer();</code></p>
+<p><code>    int index;</code></p>
+<p><code>    for (int i = 0; i &amp;lt; nSwaps; i++) {</code></p>
+<p><code>      if ((index = input.indexOf(original[i])) != -1) {</code></p>
+<p><code>        buffer.append(input.substring(0, index));</code></p>
+<p><code>        buffer.append(replacement[i]);</code></p>
+<p><code>        buffer.append(input.substring(index + original[i].length(), input.length()));</code></p>
+<p><code>        return buffer.toString();</code></p>
+<p><code>      }</code></p>
+<p><code>    }</code></p>
+<p><code>    return input;</code></p>
+<p><code>  }</code></p>
+<p><code>  public static void main(String filenames[]) {</code></p>
+<p><code>    if (filenames.length != 2) {</code></p>
+<p><code>      System.out.println(&quot;java DMOZCleaner [source file] [destination 
+  file]&quot;);</code></p>
+<p><code>      System.exit(1);</code></p>
+<p><code>    }</code></p>
+<p><code>    String line;</code></p>
+<p><code>    BufferedReader reader = null;</code></p>
+<p><code>    BufferedWriter writer = null;</code></p>
+<p><code>    try {</code></p>
+<p><code>//      reader = new BufferedReader(new FileReader(filenames[0]));</code></p>
+<p><code>//      writer = new BufferedWriter(new FileWriter(filenames[1]));</code></p>
+<p><code>      reader = new BufferedReader(new InputStreamReader(new FileInputStream(filenames[0])), 
+  65536);</code></p>
+<p><code>      writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(filenames[1])), 
+  65536);</code></p>
+<p><code>      int counter = 0;</code></p>
+<p><code>      while (true) {</code></p>
+<p><code>        line = reader.readLine();</code></p>
+<p><code>        if (line == null) {</code></p>
+<p><code>          break;</code></p>
+<p><code>        }</code></p>
+<p><code>        line = filter(line);</code></p>
+<p><code>        writer.write(line + &quot;\n&quot;);</code></p>
+<p><code>        if (++counter % 10000 == 0) {</code></p>
+<p><code>          System.out.println(counter);</code></p>
+<p><code>          writer.flush();</code></p>
+<p><code>          System.gc();</code></p>
+<p><code>        }</code></p>
+<p><code>      }</code></p>
+<p><code>    } catch (Exception e) {</code></p>
+<p><code>      e.printStackTrace();</code></p>
+<p><code>    }</code></p>
+<p><code>    try {</code></p>
+<p><code>      reader.close();</code></p>
+<p><code>      writer.close();</code></p>
+<p><code>    } catch (Exception e) {</code></p>
+<p><code>      e.printStackTrace();</code></p>
+<p><code>    }</code></p>
+<p><code>  }</code></p>
+<p><code>}</code></p>
+<!-- #EndEditable --> 
+<p align="right">&copy; 2001 <a href="../../../misc/biog.htm">Danny Ayers</a> All rights 
+  reserved.</p>
+
+<div align="center"><a href="http://www.isacat.net/isacat_site.rdf" title="RDF Metadata"><img src="../../../citnames/rdf.png" alt="RDF" width="36" height="14" border="0"/></a> 
+</div>
+<p align="center"><a href="http://www.citnames.com">citnames</a></p>
+</BODY>
+<!-- #EndTemplate --></HTML>

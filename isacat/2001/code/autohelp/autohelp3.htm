@@ -1,0 +1,66 @@
+ 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<!-- #BeginTemplate "/Templates/Isacat.dwt" --> 
+<HEAD>
+<!-- #BeginEditable "doctitle" --> 
+<TITLE>Autohelp Page 3</TITLE>
+<!-- #EndEditable --> 
+<meta content="text/html; charset=ISO-8859-1" http-equiv=Content-Type>
+<!-- #BeginEditable "metatags" --> 
+<link rel="stylesheet" href="../../../css/style.css">
+<meta name="Author" content="Danny Ayers">
+<meta name="keywords" content="Danny Ayers, Isacat, Java, XML, rdf, Sri Lanka, Artificial Intelligence, semantic web">
+<meta name="description" content="Danny Ayers provides a selection of resources, largely related to Java programming though bits are about Sri Lanka.">
+<!-- #EndEditable --> 
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<p align="center"><a href="../../../index.htm" title="Danny Ayers's Stuff Home Page">Home</a> 
+  | <a href="../../../links/links.htm" title="Links to related resources">Links</a></p>
+<!-- #BeginEditable "Body" -->
+<h5 align="center">Autohelp Page <a href="../autohelp.htm">1</a> <a href="autohelp2.htm">2</a> 
+  <font color="#FF0000">3</font> <a href="autohelp4.htm">4</a> <a href="autohelp5.htm">5 
+  </a></h5>
+<h3>Creating XML for JavaHelp</h3>
+<p>We have just seen how we may use DOM to build structured XML, which may have 
+  seemed merely an exercise, however interesting. We will now briefly a look at 
+  a real-world system that uses structured XML, and coincidentally we will again 
+  get the structure from the filesystem. The system in question is JavaHelp. As 
+  the name suggests, this was primarily designed with 'help' facilities in mind, 
+  but the system is in no way tied to 'help' information, and can be used as a 
+  standalone presentation tool for any set of documents that are in HTML format.  
+</p>
+<p>We will look at :</p>
+<p> ·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; How the JavaHelp system 
+  uses XML data</p>
+<p> ·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; An overview of a tool 
+  based on the same principles as DirToXML for generating this data</p>
+<p> ·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; How to use this to 
+  to generate indexes for a set of HTML files to create custom electronic books 
+  viewable with the JavaHelp system </p>
+<p>The code for this application runs into many pages, so will not be described 
+  here in any detail. The source may be downloaded from <a href="http://www.wrox.com/">http://www.wrox.com</a> 
+  or <a
+href="http://www.isacat.net/">http://www.isacat.net</a>.</p>
+<p>The application can be used to automatically catalog virtually any tree of 
+  HTML documents, the catalog data being output as XML files. JavaHelp can use 
+  this catalog to present the tree of documents in a hierarchical 'Contents' form 
+  or as a 'Index' list.   </p>
+<p>The overall system we are aiming for will looks this :</p>
+<p align=center style='text-align:center'> <img border=0 width=367 height=316
+src="images/image002.jpg" v:shapes="_x0000_i1025"> </p>
+<p>The structured information is a set of HTML files arranged into directories, 
+  each file being one page to be presented. The presentation tool is part of the 
+  JavaHelp system, and here we will be using one particularly straightforward 
+  configuration. As we will see shortly, the XML Indexes provide the presentation 
+  tool with navigation information for viewing the structured information.</p>
+<h5 align="center"><a href="autohelp4.htm">Next</a></h5>
+<!-- #EndEditable --> 
+<p align="right">&copy; 2001 <a href="../../../misc/biog.htm">Danny Ayers</a> All 
+  rights reserved.</p>
+<div align="center"><a href="http://www.isacat.net/isacat_site.rdf" title="RDF Metadata"><img src="../../../citnames/rdf.png" alt="RDF" width="36" height="14" border="0"/></a> 
+</div>
+<p align="center"><a href="http://www.citnames.com">citnames</a></p>
+</BODY>
+<!-- #EndTemplate -->
+</HTML>

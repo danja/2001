@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<HTML><!-- #BeginTemplate "/Templates/Isacat.dwt" --><HEAD>
+<!-- #BeginEditable "doctitle" --> 
+<TITLE>CSVToXML</TITLE>
+<!-- #EndEditable -->
+<meta content="text/html; charset=ISO-8859-1" http-equiv=Content-Type>
+<!-- #BeginEditable "metatags" --> 
+<meta http-equiv="Content-Type" content="text/html; charset=">
+<link rel="stylesheet" href="../../css/style.css">
+<meta name="Author" content="Danny Ayers">
+<meta name="keywords" content="Danny Ayers, Isacat, Java, XML, Sri Lanka, Artificial Intelligence">
+<meta name="description" content="Danny Ayers provides a selection of resources, largely related to Java programming though bits are about Sri Lanka.">
+<!-- #EndEditable -->
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+<p align="center"><a href="../../index.htm" title="Danny Ayers's Stuff Home Page">Home</a> | <a href="../../links/links.htm" title="Links to related resources">Links</a></p>
+<!-- #BeginEditable "Body" --> 
+<h1 align="center">CSV To XML and XML To CSV</h1>
+<h5 align="center">Versions 1.0</h5>
+<h1 align="center">&nbsp;</h1>
+<dfn>Command-line utilities to convert data contained in a comma separated value 
+text file into XML, or an XML file into comma separated values.</dfn> 
+<h5>Updated 25/02/2001 :</h5>
+<p>I actually found a use for CSVToXML, so I did a bit of refactoring and tidied 
+  the code up, changing its functionality slightly to make it more useful. To 
+  celebrate I've given it a version number. </p>
+<p>I've also added another app to do the reverse process. converting <a href="#xmltocsv">XML 
+  to CSV</a>.</p>
+<h5>Files :</h5>
+<p><a href="download/CSVToXML.java">CSVToXML.java</a> - source</p>
+<p><a href="download/csvtoxml.zip">CSVToXML.zip</a> - source, compiled class &amp; 
+  examples</p>
+<p><a href="download/XMLToCSV.java">XMLToCSV.java</a> - source</p>
+<p><a href="download/xmltocsv.zip">XMLToCSV.zip</a> - source, compiled class &amp; 
+  examples </p>
+<p>&nbsp;</p>
+<h3>CSV To XML</h3>
+<p><i><b>Note</b></i> : </p>
+<p>CSVToXML app started life as a hack to make a point. The point being that you 
+  don't need any fancy APIs to convert text to XML. If you don't need DOM, why 
+  use it? </p>
+<h5>What it does :</h5>
+<blockquote> 
+  <p> Starting with a text file containing CSV data :</p>
+</blockquote>
+<table width="23%" border="0" cellspacing="0" cellpadding="5" align="center" bgcolor="#FFFFCC">
+  <tr> 
+    <td> 
+      <p><code>John Smith, The Nook, john@home.com,<br>
+        Tim Bot, High Street, tim@bonker.co.uk, <br>
+        Fred Gregory, Tidza, fred@large.com </code></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<blockquote> 
+  <p>and a properties file :</p>
+  <table width="12%" border="0" cellspacing="0" cellpadding="5" align="center" bgcolor="#FFFFCC">
+    <tr> 
+      <td><code>dtd=addresses.dtd comment=Generated using CSVToXML delimiter=, 
+        rootname=addressbook recordname=address fields=3 field0=name field1=address 
+        field2=email</code></td>
+    </tr>
+  </table>
+  <p>running the app will produce the following file:</p>
+  <table width="41%" border="0" cellspacing="0" cellpadding="0" height="177" align="center">
+    <tr> 
+      <td> 
+        <pre>&lt;?xml version="1.0"?&gt;
+&lt;DOCTYPE addressbook SYSTEM addresses.dtd&gt;
+
+&lt;!-- Generated using CSVToXML --&gt;
+
+&lt;addressbook&gt;
+	&lt;address&gt;
+		&lt;name&gt;John Smith&lt;/name&gt;
+		&lt;address&gt;The Nook&lt;/address&gt;
+		&lt;email&gt;john@home.com&lt;/email&gt;
+	&lt;/address&gt;
+	&lt;address&gt;
+		&lt;name&gt;Tim Bot&lt;/name&gt;
+		&lt;address&gt;High Street&lt;/address&gt;
+		&lt;email&gt;tim@bonker.co.uk&lt;/email&gt;
+	&lt;/address&gt;
+	&lt;address&gt;
+		&lt;name&gt;Fred Gregory&lt;/name&gt;
+		&lt;address&gt;Tidza&lt;/address&gt;
+		&lt;email&gt;fred@large.com&lt;/email&gt;
+	&lt;/address&gt;
+&lt;/addressbook&gt;</pre>
+      </td>
+    </tr>
+    <tr> 
+      <td>&nbsp;</td>
+    </tr>
+  </table>
+</blockquote>
+<div align="center"></div>
+<p>&nbsp;</p>
+<h5>Usage : </h5>
+<p><code>java CSVToXML [properties file] [source file] [destination file] </code> 
+</p>
+<p>where</p>
+<p><code>properties file</code> = standard format Java Properties file </p>
+<p><code>source file</code> = comma separated values text file </p>
+<p><code>output file</code> = destination to write to </p>
+<p>example :</p>
+<p><tt>java CSVToXML csvprops.txt source.txt output.xml </tt></p>
+<h3>&nbsp;</h3>
+<h3><font color="#000000">XML To CSV<a name="xmltocsv"></a></font></h3>
+Takes an XML file (as above) and converts this into a CSV file (again, as above). 
+<p>Uses SAX2 - needs jaxp.jar and crimson.jar in the classpath. </p>
+<h5>Usage : </h5>
+<p><code>java XMLToCSV [source] [destination] [delimiter] [number of fields] </code></p>
+<p>where</p>
+<p><code>source file</code> = XML text file<br>
+  <code>destination file </code>= output to write to <br>
+  <code>delimiter</code> = character(s) that will separate data items (e.g. ",") 
+  <br>
+  <code>number of fields</code> = number of items to put in each row of the output 
+  file </p>
+<p> example :</p>
+<p><code>java XMLToCSV source.xml output.txt , 3</code></p>
+<!-- #EndEditable --> 
+<p align="right">&copy; 2001 <a href="../../misc/biog.htm">Danny Ayers</a> All rights 
+  reserved.</p>
+
+<div align="center"><a href="http://www.isacat.net/isacat_site.rdf" title="RDF Metadata"><img src="../../citnames/rdf.png" alt="RDF" width="36" height="14" border="0"/></a> 
+</div>
+<p align="center"><a href="http://www.citnames.com">citnames</a></p>
+</BODY>
+<!-- #EndTemplate --></HTML>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<attributes version="1.0">
+   <fileobject name="VocabComboBox.java">
+      <attr name="class_dependency_javax.swing.JComboBox" stringvalue="VocabComboBox"/>
+   </fileobject>
+</attributes>

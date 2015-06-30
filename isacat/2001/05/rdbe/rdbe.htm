@@ -1,0 +1,54 @@
+ 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><!-- #BeginTemplate "/Templates/Citnames.dwt" --><HEAD>
+<!-- #BeginEditable "doctitle" --> 
+<TITLE>S E M A N T I C I T N A M E S</TITLE>
+<!-- #EndEditable -->
+<meta content="text/html; charset=ISO-8859-1" http-equiv=Content-Type>
+<!-- #BeginEditable "metatags" --> 
+<link rel="stylesheet" href="../../../css/semstyle.css">
+<meta name="Author" content="Danny Ayers">
+<meta name="keywords" content="Semantic Web, semantic, web, RDF, XML">
+<meta name="description" content="A selection of resources relating to the Semantic Web.">
+<!-- #EndEditable -->
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+<p align="center"><a href="http://www.isacat.net" title="Semantic citnameS"><font face="Courier New, Courier, mono">S 
+  E M A N T I C I T N A M E S</font></a></p>
+<!-- #BeginEditable "Body" --> 
+<h2>RDB-Exposed</h2>
+<p>Extracting metadata in RDF format from relational databases</p>
+<p>Command-line app takes in manually-created RDF (including JDBC connection parameters) 
+  connects to DB &amp; populates the RDF with discovered DB metadata</p>
+<p><a href="rdbe.zip">Java code etc.</a></p>
+<p><a href="instructions.htm">Instructions </a>for code</p>
+<p>/----- this stuff below is a little out of date</p>
+<p><a href="rdb-exposed.rdfs">RDF Schema</a></p>
+<p><a href="onto1.gif">RDF Schema Diagram</a></p>
+<p><a href="source.rdf">Source RDF file</a> including manually entered properties</p>
+<p><a href="anrdftest.rdf">RDF after</a> automatic addition of database properties</p>
+<p><a href="onto2.gif">Diagram </a>including instance of simple database :</p>
+<p><code>CREATE TABLE bears (id int primary key, name VARCHAR(10), int food foreign 
+  key);<br>
+  INSERT INTO bears VALUES (1,'pooh', 2);<br>
+  INSERT INTO bears VALUES (2,'teddy', 1);<br>
+  INSERT INTO bears VALUES (2,'grizzly', 3);<br>
+  CREATE TABLE food (id int primary key, name VARCHAR(10));<br>
+  INSERT INTO food VALUES (1,'kapoc');<br>
+  INSERT INTO food VALUES (2,'honey');<br>
+  INSERT INTO food VALUES (3,'campers')</code></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<!-- #EndEditable --> 
+<p align="right">&copy; 2001 <a href="http://www.isacat.net/misc/biog.htm">Danny Ayers</a> All rights 
+  reserved.</p>
+  
+<div align="center">
+  <p><a href="http://www.citnames.com/site.rdf" title="RDF Metadata"><img src="http://www.citnames.com/icons/rdf.png" alt="RDF" width="36" height="14" border="0"/><br>
+    </a></p>
+  <p><a href="http://www.isacat.net">stuff</a></p>
+</div>
+</BODY>
+<!-- #EndTemplate --></HTML>
+

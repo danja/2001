@@ -1,0 +1,202 @@
+
+
+: pat hayes:
+: >
+: > PS. There seems to be an implicit assumption in some of the RDF
+: > literature that the only two things to do with a sentence
+(triple)
+: > are to either assert it or to reify it, so any use that doesnt
+: > involve asserting a triple must reify it. This is just wrong.
+Logical
+: > notation is full of examples of sentences being used but not
+being
+: > asserted. The simplest is probably negation: when one writes (not
+P),
+: > P is being used (not mentioned or reified), but it is not being
+: > asserted: on the contrary, in fact. Now, it might be that RDF is
+: > incapable of making this distinction. So much the worse for RDF,
+if
+: > so.
+:
+: Jonathan Borden:
+: *light goes off in head*
+: 
+: you are absolutely correct.
+: 
+: note that my use of statements in _fragment identifiers_ is
+_syntactically
+: distinct_ from statements in XML syntax.
+: 
+: The RDF 'model' (in the current RDF usage of the term 'model') is a
+set of
+: triples. No partition is provided that distinguishes triples that
+are
+: asserted vs. merely being used. Current RDF 'reification' is a
+technique
+: that allows a statement to be represented without being directly
+contained
+: (hence asserted) in the model.
+: 
+: by introduction of a distinct syntax, one that allows the formation
+of a
+: _URI reference_ that directly represents, quotes if you will, a
+triple, such
+: a triple is partitioned from the triples that are asserted (hence
+my thought
+: is that this mechanism is compatible with the current RDF abstract
+syntax)
+: 
+: What you are suggesting appears to require reworking of the RDF
+model. Any
+: suggestions on how to best do this?
+: 
+
+Maybe no change is needed. 
+
+I observe real disconnect on the list between reification in RDF and 
+reification as understood in logic and KR circles, very like the RDF 
+use of the term Model, as was beaten to death last year and caused 
+some hostility. I'd like to put up a straw man hack for mentioning in RDF. 
+Then I'd like to consider the implications of moving between use and 
+mention, when M&S reification only is used as someone who's had a crack 
+at implementing query for RDF stores and whose conclusion is that handling 
+RDF reification is at least difficult.
+
+I think that these two are not at all the same:
+
+1: RDF reification is a technique to make statements about
+statements. 
+
+2: KR reification is a technique for objectifying a statement. 
+
+
+I think both can be done in RDF. KR reification can be approximated 
+if an RDF serialization is embedded in a string literal. Assume we 
+have a Noddy linear form for RDF that we can use as an object language:
+
+  s:X, p:Y, o:Z.
+
+where s: p: o: are markers for subject property object and on their
+right is a URI or a literal, '.' is just a terminator and ',' is a
+separator (we could easily use brackets/arrows or some such, doesn't
+really matter). String literals are inside double quotes, nesting
+these quotes is ok. For brevity, let's pretend that anything which
+isn't double quoted to the right of s: p: o: is a URI as per the M&S
+etc (many URIs can be an eyesore). 
+
+To KR reify this statement:
+
+  s:sky, p:is o:blue
+
+I'd suggest simply doing this:
+
+  "s:sky, p:is o:blue"
+
+Since RDF literals are just strings, they'll be mentioned not used: 
+
+  s:elvis, p:says, o:"s:sky, p:is o:blue".
+
+You can do this with the XML form as well (with some escaping) and
+nothing stops you from writing a machine that will try to parse the
+literal and lift it into a statement: the idea is that you quote an
+object language. One way to put opaque quoting and statement mention
+into RDF might be to specialize literals, best done by making
+literals types of RDF resource...? Btw, a number of 
+implementations do this. Or maybe specialize some anonymous URIs to
+be opaque quotes, since anonymous URIs are often used as reified
+statements...
+
+RDF reification is just as per the M&S. No change. Given an RDF
+statement:
+
+  s:sky, p:is, o:blue.
+
+and an extension to the Noddy form thus: *r is the "reified
+statement" as per the M&S. Then the RDF reification of the statement
+given is:
+
+  s:*r, p:type, o:statement.
+  s:*r, p:s:, o:sky.  
+  s:*r, p:p:, o:is. 
+  s:*r, p:o:, o:blue.
+ 
+p:s: just means that the property is set to s: (subject) and so forth
+[not clearly distinguishing between the reified statement and the
+reification confused me for the longest time, I'm just being
+careful...]. 
+
+
+
+What you get from the straw man:
+
+This can be a use:
+
+  s:elvis, p:says, o:*r.
+  s:*r, p:type, o:statement.
+  s:*r, p:s:, o:sky. 
+  s:*r, p:p:, o:is. 
+  s:*r, p:o:, o:blue.
+ 
+This can be a mention:
+
+  s:elvis, p:says, o:"s:sky, p:is o:blue".
+
+Given that, if I was to type "?x says "the sky is blue"" into an RDF 
+query engine that used the straw man I would expect it to break it down 
+as a mention:
+
+  -?x is a variable that needs to be bound for my results.
+  -says is a property that must be matched.
+  -"the sky is blue" is a string literal that needs to be matched.
+
+Is that cheating? I don't think so: "the sky is blue" looks awfully
+like a mention to me. If I was to type s:?x, p:says, o:*r[s:sky,
+p:is, o:?y]., I would expect it to run a pattern match. Normally, 
+simple query engines do simple pattern matching. Good examples of 
+this are how the Linda derivative javaspaces works and section 
+4.4 in the MIT wizard book. Jena and Sirpac seem to work a bit 
+like javaspaces from the outside. 
+
+
+What you have to put up without it:
+
+Without a different form for KR reification, query engines will have
+to know how to treat the reification:
+
+  s:*r, p:type, o:statement.
+  s:*r, p:s:, o:sky. 
+  s:*r, p:p:, o:is. 
+  s:*r, p:o:, o:blue.
+
+as opaque for quote like use and modal operators, possibly by looking 
+up the property's properties or some other extra logical heuristic. Lots 
+of times, machines will set the reified statement to be an anonymous URI, 
+which is not something that can be syntax matched like a literal. So it 
+will need to look into the reification to perform a match irregardless of 
+use or mention. 
+
+If you don't make a distinction between RDF and KR reification, you
+seem to need a nifty query engine that can move between sense and
+reference, and a nifty statement maintenance engine to keep an RDF
+store coherent. 
+
+I think Pat Hayes' concern is that it's quite difficult to write code to 
+do this kind of nifty and keep the RDF store and its answers sensible 
+and maybe it's impossible to do this using first order logic. I don't think 
+it's some kind of rarified philosophical hand wringing as has been implied. 
+This concern along with the limitations of first order logic substitution 
+for modal operators are well understood in the fields of logic, KR and 
+software agents and I genuinely expect these to become a mainstream issue 
+in computing in the next decade or so as we build out increasingly 
+automated and autonomous software on our networks and expect that 
+software not to behave coherently. 
+
+There's nothing wrong with flyweight pattern matching or inference for 
+RDF so long as the engine builders and users know the limitations of 
+what they can sensibly ask of such a system.
+
+regards,
+Bill
+
+- ----
+Bill de hOra : InterX : bdehora@interx.com 

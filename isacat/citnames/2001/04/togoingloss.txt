@@ -1,0 +1,43 @@
+Just take as an axiom that the relationship between
+a URI and a resource *is* the same as the relationship
+between a logical name and what it denotes. Try it
+on for size for a while.
+
+
+the contents of a file (a byte sequence) is not the file
+(a mutable object whose state at any given time is a byte sequence).
+The value stored in a database cell is not the cell.
+A picture of me is not me.
+Just because the current trading price of ATT was $100 at
+one time does not mean that $100 is equal
+to the function that returns the trading price of ATT
+given the current time.
+
+You might think of a resource (what a URI denotes)
+as a function from requests to responses, much
+like a variable is a function from the state
+of the program to a value.
+
+
+
+Huh? This is a fallacy of undistributed middle:
+
+	All URIs are names.
+	My computer can find [out about] denotations of URIs.
+	-> my computer should be able to find out about denotations
+	of all names.
+
+http://www.intrepidsoftware.com/fallacy/undist.htm
+
+all from connolly on rdfig
+
+Ontology: A formal, explicit specification of how to represent the objects, concepts, and other entities in a particular system, as well as the relationships between them 
+
+Morphological: A morpheme is the smallest part of a word that can carry a discrete meaning. Morphological analysis works with words at this level. Typically, a natural-language processor knows how to understand multiple forms of a word: its plural and singular, for example. 
+
+Syntactic: At this level, natural-language processors focus on structural information and relationships. 
+
+Semantic: Natural-language processors derive an absolute (dictionary definition) meaning from context. 
+
+Pragmatic: Natural-language processors derive knowledge from external commonsense information. 
+

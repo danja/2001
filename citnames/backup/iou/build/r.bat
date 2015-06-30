@@ -1,0 +1,1 @@
+java -classpath crimson.jar;jaxp.jar;%classpath% TestRDFFilter content.rdf
